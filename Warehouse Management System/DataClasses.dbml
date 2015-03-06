@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="Warehouse_Management_System.Properties.Settings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Dane_firmy" Member="Dane_firmies">
+    <Type Name="Dane_firmy">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Ulica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nr_budynku" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Nr_mieszkania" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nip" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Dane_firmy_Faktury" Member="Fakturies" ThisKey="Id" OtherKey="Id_naszej_firmy" Type="Faktury" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Uzytkownicy" Member="Uzytkownicies">
+    <Type Name="Uzytkownicy">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Imie" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Nazwisko" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Haslo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Uprawnienie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Uprawnienia_Uzytkownicy" Member="Uprawnienia" ThisKey="Uprawnienie" OtherKey="Id" Type="Uprawnienia" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Faktury" Member="Fakturies">
+    <Type Name="Faktury">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_klienta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_naszej_firmy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Nr_faktury" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Data_wystawienia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Faktury_Opis_faktury" Member="Opis_fakturies" ThisKey="Id" OtherKey="Id_faktury" Type="Opis_faktury" />
+      <Association Name="Dane_firmy_Faktury" Member="Dane_firmy" ThisKey="Id_naszej_firmy" OtherKey="Id" Type="Dane_firmy" IsForeignKey="true" />
+      <Association Name="Klienci_Faktury" Member="Klienci" ThisKey="Id_klienta" OtherKey="Id" Type="Klienci" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Klienci" Member="Kliencis">
+    <Type Name="Klienci">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Ulica" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Nr_budynku" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Nr_mieszkania" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Nip" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Klienci_Faktury" Member="Fakturies" ThisKey="Id" OtherKey="Id_klienta" Type="Faktury" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Opis_faktury" Member="Opis_fakturies">
+    <Type Name="Opis_faktury">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_faktury" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Faktury_Opis_faktury" Member="Faktury" ThisKey="Id_faktury" OtherKey="Id" Type="Faktury" IsForeignKey="true" />
+      <Association Name="Produkty_Opis_faktury" Member="Produkty" ThisKey="Id_produktu" OtherKey="Id" Type="Produkty" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produkty" Member="Produkties">
+    <Type Name="Produkty">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Opis" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Cena_netto" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Vat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Produkty_Opis_faktury" Member="Opis_fakturies" ThisKey="Id" OtherKey="Id_produktu" Type="Opis_faktury" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Uprawnienia" Member="Uprawnienias">
+    <Type Name="Uprawnienia">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Uprawnienia_Uzytkownicy" Member="Uzytkownicies" ThisKey="Id" OtherKey="Uprawnienie" Type="Uzytkownicy" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,12 @@
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\bin\Debug\Warehouse Management System.exe.config
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\bin\Debug\Database.mdf
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\bin\Debug\Database_log.ldf
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\bin\Debug\Warehouse Management System.exe
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\bin\Debug\Warehouse Management System.pdb
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.csprojResolveAssemblyReference.cache
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Form1.resources
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Properties.Resources.resources
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.csproj.GenerateResource.Cache
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.exe
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.pdb
+C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse_Management_System.LoginForm.resources
