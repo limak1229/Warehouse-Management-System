@@ -28,29 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAnuluj = new System.Windows.Forms.Button();
-            this.btnWybierz = new System.Windows.Forms.Button();
             this.dataGridListaKlienci = new System.Windows.Forms.DataGridView();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaKlienci)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnAnuluj
-            // 
-            this.btnAnuluj.Location = new System.Drawing.Point(12, 256);
-            this.btnAnuluj.Name = "btnAnuluj";
-            this.btnAnuluj.Size = new System.Drawing.Size(147, 33);
-            this.btnAnuluj.TabIndex = 5;
-            this.btnAnuluj.Text = "Anuluj";
-            this.btnAnuluj.UseVisualStyleBackColor = true;
-            // 
-            // btnWybierz
-            // 
-            this.btnWybierz.Location = new System.Drawing.Point(400, 256);
-            this.btnWybierz.Name = "btnWybierz";
-            this.btnWybierz.Size = new System.Drawing.Size(147, 33);
-            this.btnWybierz.TabIndex = 4;
-            this.btnWybierz.Text = "Wybierz";
-            this.btnWybierz.UseVisualStyleBackColor = true;
             // 
             // dataGridListaKlienci
             // 
@@ -61,24 +43,42 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridListaKlienci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridListaKlienci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridListaKlienci.Location = new System.Drawing.Point(12, 12);
+            this.dataGridListaKlienci.Location = new System.Drawing.Point(23, 63);
             this.dataGridListaKlienci.Name = "dataGridListaKlienci";
             this.dataGridListaKlienci.ReadOnly = true;
-            this.dataGridListaKlienci.Size = new System.Drawing.Size(535, 238);
+            this.dataGridListaKlienci.Size = new System.Drawing.Size(513, 186);
             this.dataGridListaKlienci.TabIndex = 3;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(461, 255);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Wybierz";
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(23, 255);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "Anuluj";
             // 
             // ListaKlientówForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(559, 301);
-            this.Controls.Add(this.btnAnuluj);
-            this.Controls.Add(this.btnWybierz);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridListaKlienci);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListaKlientówForm";
+            this.Resizable = false;
             this.Text = "Lista Klientów";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.ListaKlientówForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaKlienci)).EndInit();
             this.ResumeLayout(false);
@@ -87,8 +87,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAnuluj;
-        private System.Windows.Forms.Button btnWybierz;
         private System.Windows.Forms.DataGridView dataGridListaKlienci;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
     }
 }

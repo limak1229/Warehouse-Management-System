@@ -28,96 +28,160 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.programToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informacjeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            this.metroTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.FakturyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.KlienciTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.UżytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.metroStyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.UstawieniaTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.DodajFaktureButton = new MetroFramework.Controls.MetroButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
+            this.metroTabControl.SuspendLayout();
+            this.FakturyTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // metroTabControl
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 27);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(638, 301);
-            this.tabControl1.TabIndex = 0;
+            this.metroTabControl.Controls.Add(this.FakturyTabPage);
+            this.metroTabControl.Controls.Add(this.ProduktyTabPage);
+            this.metroTabControl.Controls.Add(this.KlienciTabPage);
+            this.metroTabControl.Controls.Add(this.UżytkownicyTabPage);
+            this.metroTabControl.Controls.Add(this.UstawieniaTabPage);
+            this.metroTabControl.Location = new System.Drawing.Point(23, 63);
+            this.metroTabControl.Name = "metroTabControl";
+            this.metroTabControl.SelectedIndex = 0;
+            this.metroTabControl.SelectedTab = FakturyTabPage;
+            this.metroTabControl.Size = new System.Drawing.Size(616, 254);
+            this.metroTabControl.TabIndex = 0;
             // 
-            // tabPage1
+            // FakturyTabPage
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(630, 275);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.FakturyTabPage.Controls.Add(this.UsunFaktureButton);
+            this.FakturyTabPage.Controls.Add(this.dataGridView1);
+            this.FakturyTabPage.Controls.Add(this.DodajFaktureButton);
+            this.FakturyTabPage.HorizontalScrollbarBarColor = true;
+            this.FakturyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.FakturyTabPage.Name = "FakturyTabPage";
+            this.FakturyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.FakturyTabPage.TabIndex = 0;
+            this.FakturyTabPage.Text = "Faktury";
+            this.FakturyTabPage.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.FakturyTabPage.VerticalScrollbarBarColor = true;
             // 
-            // tabPage2
+            // ProduktyTabPage
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(630, 275);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
+            this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.ProduktyTabPage.Name = "ProduktyTabPage";
+            this.ProduktyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.ProduktyTabPage.TabIndex = 1;
+            this.ProduktyTabPage.Text = "Produkty";
+            this.ProduktyTabPage.VerticalScrollbarBarColor = true;
             // 
-            // menuStrip1
+            // KlienciTabPage
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.programToolStripMenuItem,
-            this.informacjeToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(662, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.KlienciTabPage.HorizontalScrollbarBarColor = true;
+            this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
+            this.KlienciTabPage.Name = "KlienciTabPage";
+            this.KlienciTabPage.Size = new System.Drawing.Size(608, 215);
+            this.KlienciTabPage.TabIndex = 2;
+            this.KlienciTabPage.Text = "Klienci";
+            this.KlienciTabPage.VerticalScrollbarBarColor = true;
             // 
-            // programToolStripMenuItem
+            // UżytkownicyTabPage
             // 
-            this.programToolStripMenuItem.Name = "programToolStripMenuItem";
-            this.programToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.programToolStripMenuItem.Text = "Program";
+            this.UżytkownicyTabPage.HorizontalScrollbarBarColor = true;
+            this.UżytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.UżytkownicyTabPage.Name = "UżytkownicyTabPage";
+            this.UżytkownicyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.UżytkownicyTabPage.TabIndex = 3;
+            this.UżytkownicyTabPage.Text = "Użytkownicy";
+            this.UżytkownicyTabPage.VerticalScrollbarBarColor = true;
             // 
-            // informacjeToolStripMenuItem
+            // metroStyleManager
             // 
-            this.informacjeToolStripMenuItem.Name = "informacjeToolStripMenuItem";
-            this.informacjeToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.informacjeToolStripMenuItem.Text = "Informacje";
+            this.metroStyleManager.Owner = this;
+            this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
+            // 
+            // UstawieniaTabPage
+            // 
+            this.UstawieniaTabPage.HorizontalScrollbarBarColor = true;
+            this.UstawieniaTabPage.Location = new System.Drawing.Point(4, 35);
+            this.UstawieniaTabPage.Name = "UstawieniaTabPage";
+            this.UstawieniaTabPage.Size = new System.Drawing.Size(608, 215);
+            this.UstawieniaTabPage.TabIndex = 4;
+            this.UstawieniaTabPage.Text = "Ustawienia";
+            this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // DodajFaktureButton
+            // 
+            this.DodajFaktureButton.Location = new System.Drawing.Point(4, 4);
+            this.DodajFaktureButton.Name = "DodajFaktureButton";
+            this.DodajFaktureButton.Size = new System.Drawing.Size(101, 23);
+            this.DodajFaktureButton.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajFaktureButton.TabIndex = 2;
+            this.DodajFaktureButton.Text = "Dodaj fakture";
+            this.DodajFaktureButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajFaktureButton.Click += new System.EventHandler(this.DodajFaktureButton_Click);
+            // 
+            // dataGridView1
+            // 
+            this.metroStyleExtender.SetApplyMetroTheme(this.dataGridView1, true);
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 34);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(608, 185);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // UsunFaktureButton
+            // 
+            this.UsunFaktureButton.Location = new System.Drawing.Point(111, 4);
+            this.UsunFaktureButton.Name = "UsunFaktureButton";
+            this.UsunFaktureButton.Size = new System.Drawing.Size(89, 23);
+            this.UsunFaktureButton.TabIndex = 4;
+            this.UsunFaktureButton.Text = "Usuń fakture";
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(662, 340);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.menuStrip1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.metroTabControl);
             this.Name = "HomeForm";
+            this.Resizable = false;
             this.Text = "Warehouse Management System";
-            this.tabControl1.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.metroTabControl.ResumeLayout(false);
+            this.FakturyTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem programToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informacjeToolStripMenuItem;
+        private MetroFramework.Controls.MetroTabControl metroTabControl;
+        private MetroFramework.Controls.MetroTabPage FakturyTabPage;
+        private MetroFramework.Controls.MetroTabPage ProduktyTabPage;
+        private MetroFramework.Controls.MetroTabPage KlienciTabPage;
+        private MetroFramework.Controls.MetroTabPage UżytkownicyTabPage;
+        private MetroFramework.Components.MetroStyleManager metroStyleManager;
+        private MetroFramework.Components.MetroStyleExtender metroStyleExtender;
+        private MetroFramework.Controls.MetroTabPage UstawieniaTabPage;
+        private MetroFramework.Controls.MetroButton DodajFaktureButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private MetroFramework.Controls.MetroButton UsunFaktureButton;
+
+
 
     }
 }

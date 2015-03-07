@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MetroFramework.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,7 +11,7 @@ using System.Windows.Forms;
 
 namespace Warehouse_Management_System
 {
-    public partial class ListaProduktowForm : Form
+    public partial class ListaProduktowForm : MetroForm
     {
         public ListaProduktowForm()
         {

@@ -17,13 +17,11 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.exe
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.pdb
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.csprojResolveAssemblyReference.cache
-C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Form1.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ListaKlientówForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ListaProduktowForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.LoginForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.NowaFakturaForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Nowy_KlientForm.resources
-C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.NowyParagonForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.NowyProduktForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.NowyUzytkownikForm.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Pomoc.resources
@@ -33,3 +31,6 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\Database_log.ldf
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\Warehouse Management System.exe
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\Warehouse Management System.pdb
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\MetroFramework.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.HomeForm.resources

@@ -28,71 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.loginTextBox = new System.Windows.Forms.TextBox();
-            this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.ZalogujBtn = new System.Windows.Forms.Button();
-            this.Loginlabel = new System.Windows.Forms.Label();
-            this.Haslolabel = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // loginTextBox
+            // metroLabel1
             // 
-            this.loginTextBox.Location = new System.Drawing.Point(50, 11);
-            this.loginTextBox.Name = "loginTextBox";
-            this.loginTextBox.Size = new System.Drawing.Size(125, 20);
-            this.loginTextBox.TabIndex = 0;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 64);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel1.TabIndex = 0;
+            this.metroLabel1.Text = "Login:";
             // 
-            // passwordTextBox
+            // metroLabel2
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(50, 37);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(125, 20);
-            this.passwordTextBox.TabIndex = 1;
-            this.passwordTextBox.UseSystemPasswordChar = true;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(23, 93);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel2.TabIndex = 1;
+            this.metroLabel2.Text = "Hasło:";
             // 
-            // ZalogujBtn
+            // metroTextBox1
             // 
-            this.ZalogujBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ZalogujBtn.Location = new System.Drawing.Point(100, 63);
-            this.ZalogujBtn.Name = "ZalogujBtn";
-            this.ZalogujBtn.Size = new System.Drawing.Size(75, 23);
-            this.ZalogujBtn.TabIndex = 2;
-            this.ZalogujBtn.Text = "Zaloguj";
-            this.ZalogujBtn.UseVisualStyleBackColor = true;
+            this.metroTextBox1.Location = new System.Drawing.Point(73, 64);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(146, 23);
+            this.metroTextBox1.TabIndex = 2;
             // 
-            // Loginlabel
+            // metroTextBox2
             // 
-            this.Loginlabel.AutoSize = true;
-            this.Loginlabel.Location = new System.Drawing.Point(9, 14);
-            this.Loginlabel.Name = "Loginlabel";
-            this.Loginlabel.Size = new System.Drawing.Size(33, 13);
-            this.Loginlabel.TabIndex = 3;
-            this.Loginlabel.Text = "Login";
+            this.metroTextBox2.Location = new System.Drawing.Point(73, 93);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(146, 23);
+            this.metroTextBox2.TabIndex = 3;
             // 
-            // Haslolabel
+            // metroButton1
             // 
-            this.Haslolabel.AutoSize = true;
-            this.Haslolabel.Location = new System.Drawing.Point(9, 40);
-            this.Haslolabel.Name = "Haslolabel";
-            this.Haslolabel.Size = new System.Drawing.Size(36, 13);
-            this.Haslolabel.TabIndex = 4;
-            this.Haslolabel.Text = "Hasło";
+            this.metroButton1.Location = new System.Drawing.Point(144, 122);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Zaloguj";
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(186, 96);
-            this.Controls.Add(this.Haslolabel);
-            this.Controls.Add(this.Loginlabel);
-            this.Controls.Add(this.ZalogujBtn);
-            this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.loginTextBox);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(242, 168);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
             this.Name = "LoginForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Resizable = false;
             this.Text = "Logowanie";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -100,10 +98,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox loginTextBox;
-        private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.Button ZalogujBtn;
-        private System.Windows.Forms.Label Loginlabel;
-        private System.Windows.Forms.Label Haslolabel;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroButton metroButton1;
+
     }
 }
