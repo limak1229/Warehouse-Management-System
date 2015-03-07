@@ -10,3 +10,6 @@ C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj
 C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.exe
 C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse Management System.pdb
 C:\Users\pc1\Desktop\Warehouse Management System\Warehouse Management System\obj\Debug\Warehouse_Management_System.LoginForm.resources
+C:\Users\sajan\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Debug\Warehouse Management System.exe.config
+C:\Users\sajan\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.exe
+C:\Users\sajan\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.pdb
