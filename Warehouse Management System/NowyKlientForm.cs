@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Warehouse_Management_System
 {
-    public partial class Nowy_Klient : Form
+    public partial class Nowy_KlientForm : Form
     {
-        public Nowy_Klient()
+        public Nowy_KlientForm()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace Warehouse_Management_System
 {
-    partial class Nowy_Klient
+    partial class Nowy_KlientForm
     {
         /// <summary>
         /// Required designer variable.
