@@ -71,11 +71,29 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaKlientówForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaKlientówForm.Designer.cs">
+      <DependentUpon>ListaKlientówForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListaProduktowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaProduktowForm.Designer.cs">
+      <DependentUpon>ListaProduktowForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowaFakturaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowaFakturaForm.Designer.cs">
+      <DependentUpon>NowaFakturaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NowyKlientForm.cs">
       <SubType>Form</SubType>
@@ -83,11 +101,23 @@
     <Compile Include="NowyKlientForm.Designer.cs">
       <DependentUpon>NowyKlientForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="NowyParagonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowyParagonForm.Designer.cs">
+      <DependentUpon>NowyParagonForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="NowyProduktForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="NowyProduktForm.Designer.cs">
       <DependentUpon>NowyProduktForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowyUzytkownikForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowyUzytkownikForm.Designer.cs">
+      <DependentUpon>NowyUzytkownikForm.cs</DependentUpon>
     </Compile>
     <Compile Include="PomocForm.cs">
       <SubType>Form</SubType>
@@ -103,14 +133,29 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListaKlientówForm.resx">
+      <DependentUpon>ListaKlientówForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaProduktowForm.resx">
+      <DependentUpon>ListaProduktowForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowaFakturaForm.resx">
+      <DependentUpon>NowaFakturaForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NowyKlientForm.resx">
       <DependentUpon>NowyKlientForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NowyParagonForm.resx">
+      <DependentUpon>NowyParagonForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NowyProduktForm.resx">
       <DependentUpon>NowyProduktForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowyUzytkownikForm.resx">
+      <DependentUpon>NowyUzytkownikForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PomocForm.resx">
       <DependentUpon>PomocForm.cs</DependentUpon>
