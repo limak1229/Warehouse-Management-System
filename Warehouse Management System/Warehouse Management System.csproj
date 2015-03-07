@@ -77,11 +77,23 @@
     <Compile Include="LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pomoc.cs">
+    <Compile Include="NowyKlientForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pomoc.Designer.cs">
-      <DependentUpon>Pomoc.cs</DependentUpon>
+    <Compile Include="NowyKlientForm.Designer.cs">
+      <DependentUpon>NowyKlientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NowyProduktForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NowyProduktForm.Designer.cs">
+      <DependentUpon>NowyProduktForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PomocForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PomocForm.Designer.cs">
+      <DependentUpon>PomocForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -94,8 +106,14 @@
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pomoc.resx">
-      <DependentUpon>Pomoc.cs</DependentUpon>
+    <EmbeddedResource Include="NowyKlientForm.resx">
+      <DependentUpon>NowyKlientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NowyProduktForm.resx">
+      <DependentUpon>NowyProduktForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PomocForm.resx">
+      <DependentUpon>PomocForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
