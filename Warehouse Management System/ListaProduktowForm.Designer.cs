@@ -44,47 +44,53 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridProduktyLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridProduktyLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridProduktyLista.Location = new System.Drawing.Point(30, 21);
+            this.dataGridProduktyLista.Location = new System.Drawing.Point(11, 11);
+            this.dataGridProduktyLista.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridProduktyLista.Name = "dataGridProduktyLista";
             this.dataGridProduktyLista.ReadOnly = true;
             this.dataGridProduktyLista.RowTemplate.Height = 24;
-            this.dataGridProduktyLista.Size = new System.Drawing.Size(390, 374);
+            this.dataGridProduktyLista.Size = new System.Drawing.Size(325, 368);
             this.dataGridProduktyLista.TabIndex = 1;
             // 
             // txtIlosc
             // 
-            this.txtIlosc.Location = new System.Drawing.Point(75, 455);
+            this.txtIlosc.Location = new System.Drawing.Point(125, 388);
+            this.txtIlosc.Margin = new System.Windows.Forms.Padding(2);
             this.txtIlosc.Name = "txtIlosc";
-            this.txtIlosc.Size = new System.Drawing.Size(126, 22);
+            this.txtIlosc.Size = new System.Drawing.Size(96, 20);
             this.txtIlosc.TabIndex = 6;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 455);
+            this.label1.Location = new System.Drawing.Point(89, 391);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.Size = new System.Drawing.Size(32, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Ilość:";
             // 
             // btnDodaj
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(270, 455);
+            this.btnDodaj.Location = new System.Drawing.Point(225, 383);
+            this.btnDodaj.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(148, 35);
+            this.btnDodaj.Size = new System.Drawing.Size(111, 28);
             this.btnDodaj.TabIndex = 4;
             this.btnDodaj.Text = "Dodaj";
             this.btnDodaj.UseVisualStyleBackColor = true;
             // 
             // ListaProduktowForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(463, 520);
+            this.ClientSize = new System.Drawing.Size(347, 422);
             this.Controls.Add(this.txtIlosc);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnDodaj);
             this.Controls.Add(this.dataGridProduktyLista);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ListaProduktowForm";
             this.Text = "Lista Produktow";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduktyLista)).EndInit();

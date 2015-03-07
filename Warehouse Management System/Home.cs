@@ -10,13 +10,12 @@ using System.Windows.Forms;
 
 namespace Warehouse_Management_System
 {
-    public partial class Form1 : Form
+    public partial class HomeForm : Form
     {
-        public Form1()
+        public HomeForm()
         {
             InitializeComponent();
             DataClassesDataContext dbContext = new DataClassesDataContext();
-            dataGridView.DataSource = dbContext.Uzytkownicy;
         }
     }
 }

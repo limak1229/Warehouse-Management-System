@@ -35,29 +35,32 @@
             // 
             // btnPomocOk
             // 
-            this.btnPomocOk.Location = new System.Drawing.Point(13, 446);
+            this.btnPomocOk.Location = new System.Drawing.Point(9, 349);
+            this.btnPomocOk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPomocOk.Name = "btnPomocOk";
-            this.btnPomocOk.Size = new System.Drawing.Size(92, 38);
+            this.btnPomocOk.Size = new System.Drawing.Size(69, 31);
             this.btnPomocOk.TabIndex = 0;
             this.btnPomocOk.Text = "OK";
             this.btnPomocOk.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
+            this.textBox1.Location = new System.Drawing.Point(9, 10);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(448, 411);
+            this.textBox1.Size = new System.Drawing.Size(337, 335);
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // Pomoc
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 511);
+            this.ClientSize = new System.Drawing.Size(356, 385);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnPomocOk);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Pomoc";
             this.Text = "Pomoc";
             this.ResumeLayout(false);
