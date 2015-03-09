@@ -22,5 +22,10 @@ namespace Warehouse_Management_System
         {
 
         }
+
+        private void ListaKlientówForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["NowaFakturaForm"].Activate();
+        }
     }
 }

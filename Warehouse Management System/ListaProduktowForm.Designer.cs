@@ -91,6 +91,7 @@
             this.Resizable = false;
             this.Text = "Lista Produktów";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaProduktowForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProduktyLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

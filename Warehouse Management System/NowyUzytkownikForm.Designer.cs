@@ -165,6 +165,7 @@
             this.Resizable = false;
             this.Text = "Nowy Uzytkownik";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NowyUzytkownikForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

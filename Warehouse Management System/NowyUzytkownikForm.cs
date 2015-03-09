@@ -17,5 +17,10 @@ namespace Warehouse_Management_System
         {
             InitializeComponent();
         }
+
+        private void NowyUzytkownikForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["HomeForm"].Activate();
+        }
     }
 }

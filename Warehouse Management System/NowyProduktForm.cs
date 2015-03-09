@@ -18,9 +18,9 @@ namespace Warehouse_Management_System
             InitializeComponent();
         }
 
-        private void NowyProduktForm_Load(object sender, EventArgs e)
+        private void NowyProduktForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            Application.OpenForms["HomeForm"].Activate();
         }
     }
 }

@@ -322,6 +322,7 @@
             this.Resizable = false;
             this.Text = "Nowa Faktura";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NowaFakturaForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridNowaFaktura)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

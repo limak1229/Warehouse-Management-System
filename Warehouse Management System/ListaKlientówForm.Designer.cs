@@ -79,6 +79,7 @@
             this.Resizable = false;
             this.Text = "Lista Klientów";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaKlientówForm_FormClosed);
             this.Load += new System.EventHandler(this.ListaKlientówForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaKlienci)).EndInit();
             this.ResumeLayout(false);

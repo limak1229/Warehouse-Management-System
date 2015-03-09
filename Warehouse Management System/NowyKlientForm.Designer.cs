@@ -201,6 +201,7 @@
             this.Resizable = false;
             this.Text = "Nowy klient";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Nowy_KlientForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

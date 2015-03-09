@@ -18,11 +18,6 @@ namespace Warehouse_Management_System
             InitializeComponent();
         }
 
-        private void metroLabel4_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void metroButton3_Click(object sender, EventArgs e)
         {
             ListaProduktowForm ListaProduktowForm = new ListaProduktowForm();
@@ -33,6 +28,11 @@ namespace Warehouse_Management_System
         {
             ListaKlientówForm ListaKlientówForm = new ListaKlientówForm();
             ListaKlientówForm.Show();
+        }
+
+        private void NowaFakturaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.OpenForms["HomeForm"].Activate();
         }
     }
 }

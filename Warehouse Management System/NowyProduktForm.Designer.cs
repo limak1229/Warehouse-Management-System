@@ -165,7 +165,7 @@
             this.Resizable = false;
             this.Text = "Nowy Produkt";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
-            this.Load += new System.EventHandler(this.NowyProduktForm_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NowyProduktForm_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 
