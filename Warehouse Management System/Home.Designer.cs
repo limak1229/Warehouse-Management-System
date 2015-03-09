@@ -96,7 +96,7 @@
             this.metroTabControl.Controls.Add(this.metroTabPage1);
             this.metroTabControl.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.SelectedIndex = 5;
+            this.metroTabControl.SelectedIndex = 0;
             this.metroTabControl.Size = new System.Drawing.Size(616, 254);
             this.metroTabControl.TabIndex = 0;
             // 
@@ -504,6 +504,7 @@
             this.Resizable = false;
             this.Text = "Warehouse Management System";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
             this.metroTabControl.ResumeLayout(false);
             this.FakturyTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

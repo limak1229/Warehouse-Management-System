@@ -14,6 +14,7 @@ namespace Warehouse_Management_System
 {
     public partial class HomeForm : MetroForm
     {
+        bool logout = false;
         public HomeForm()
         {
             InitializeComponent();
@@ -45,10 +46,19 @@ namespace Warehouse_Management_System
 
         private void WylogujBtn_Click(object sender, EventArgs e)
         {
+            this.logout = true;
             this.Close();
             Form LF = Application.OpenForms["LoginForm"];
             LF.Show();
             LF.Activate();
+        }
+
+        private void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (!this.logout)
+            {
+                Application.Exit();
+            }
         }
     }
 }
