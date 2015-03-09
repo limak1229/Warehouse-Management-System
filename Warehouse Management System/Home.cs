@@ -23,25 +23,25 @@ namespace Warehouse_Management_System
         private void DodajFaktureBtn_Click(object sender, EventArgs e)
         {
             NowaFakturaForm NowaFakturaForm = new NowaFakturaForm();
-            NowaFakturaForm.Show();
+            NowaFakturaForm.ShowDialog();
         }
 
         private void DodajProduktBtn_Click(object sender, EventArgs e)
         {
             NowyProduktForm NowyProduktForm = new NowyProduktForm();
-            NowyProduktForm.Show();
+            NowyProduktForm.ShowDialog();
         }
 
         private void DodajKlientaBtn_Click(object sender, EventArgs e)
         {
             Nowy_KlientForm NowyKlientForm = new Nowy_KlientForm();
-            NowyKlientForm.Show();
+            NowyKlientForm.ShowDialog();
         }
 
         private void DodajUzytkownikaBtn_Click(object sender, EventArgs e)
         {
             NowyUzytkownikForm NowyUzytkownikForm = new NowyUzytkownikForm();
-            NowyUzytkownikForm.Show();
+            NowyUzytkownikForm.ShowDialog();
         }
 
         private void WylogujBtn_Click(object sender, EventArgs e)

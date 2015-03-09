@@ -21,13 +21,13 @@ namespace Warehouse_Management_System
         private void metroButton3_Click(object sender, EventArgs e)
         {
             ListaProduktowForm ListaProduktowForm = new ListaProduktowForm();
-            ListaProduktowForm.Show();
+            ListaProduktowForm.ShowDialog();
         }
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
             ListaKlientówForm ListaKlientówForm = new ListaKlientówForm();
-            ListaKlientówForm.Show();
+            ListaKlientówForm.ShowDialog();
         }
 
         private void NowaFakturaForm_FormClosed(object sender, FormClosedEventArgs e)
