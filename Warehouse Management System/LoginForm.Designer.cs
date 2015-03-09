@@ -32,7 +32,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.ZalogujButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -67,14 +67,14 @@
             this.metroTextBox2.Size = new System.Drawing.Size(146, 23);
             this.metroTextBox2.TabIndex = 3;
             // 
-            // metroButton1
+            // ZalogujButton
             // 
-            this.metroButton1.Location = new System.Drawing.Point(144, 122);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Zaloguj";
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
+            this.ZalogujButton.Location = new System.Drawing.Point(144, 122);
+            this.ZalogujButton.Name = "ZalogujButton";
+            this.ZalogujButton.Size = new System.Drawing.Size(75, 23);
+            this.ZalogujButton.TabIndex = 4;
+            this.ZalogujButton.Text = "Zaloguj";
+            this.ZalogujButton.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // LoginForm
             // 
@@ -82,7 +82,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(242, 168);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.ZalogujButton);
             this.Controls.Add(this.metroTextBox2);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroLabel2);
@@ -102,7 +102,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton ZalogujButton;
 
     }
 }

@@ -16,6 +16,7 @@ namespace Warehouse_Management_System
         public LoginForm()
         {
             InitializeComponent();
+            this.AcceptButton = ZalogujButton;
         }
 
         private void metroButton1_Click(object sender, EventArgs e)

@@ -28,165 +28,179 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAnuluj = new System.Windows.Forms.Button();
-            this.btnDodaj = new System.Windows.Forms.Button();
-            this.NumerMieszkaniaTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.NrBudynkuTextBox = new System.Windows.Forms.TextBox();
-            this.UlicaTextBox = new System.Windows.Forms.TextBox();
-            this.NazwaTextBox = new System.Windows.Forms.TextBox();
-            this.KodTextBox = new System.Windows.Forms.TextBox();
-            this.MiastoTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // btnAnuluj
+            // metroLabel1
             // 
-            this.btnAnuluj.Location = new System.Drawing.Point(97, 113);
-            this.btnAnuluj.Name = "btnAnuluj";
-            this.btnAnuluj.Size = new System.Drawing.Size(100, 33);
-            this.btnAnuluj.TabIndex = 17;
-            this.btnAnuluj.Text = "Anuluj";
-            this.btnAnuluj.UseVisualStyleBackColor = true;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(53, 63);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel1.TabIndex = 60;
+            this.metroLabel1.Text = "Nazwa:";
             // 
-            // btnDodaj
+            // metroTextBox1
             // 
-            this.btnDodaj.Location = new System.Drawing.Point(203, 113);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(100, 33);
-            this.btnDodaj.TabIndex = 16;
-            this.btnDodaj.Text = "Dodaj";
-            this.btnDodaj.UseVisualStyleBackColor = true;
+            this.metroTextBox1.Location = new System.Drawing.Point(110, 63);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(247, 23);
+            this.metroTextBox1.TabIndex = 61;
             // 
-            // NumerMieszkaniaTextBox
+            // metroLabel2
             // 
-            this.NumerMieszkaniaTextBox.Location = new System.Drawing.Point(245, 60);
-            this.NumerMieszkaniaTextBox.Name = "NumerMieszkaniaTextBox";
-            this.NumerMieszkaniaTextBox.Size = new System.Drawing.Size(58, 20);
-            this.NumerMieszkaniaTextBox.TabIndex = 59;
-            this.NumerMieszkaniaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(183, 92);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel2.TabIndex = 62;
+            this.metroLabel2.Text = "Ulica:";
             // 
-            // label11
+            // metroTextBox2
             // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(160, 63);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(79, 13);
-            this.label11.TabIndex = 58;
-            this.label11.Text = "Nr. mieszkania:";
+            this.metroTextBox2.Location = new System.Drawing.Point(229, 91);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(128, 23);
+            this.metroTextBox2.TabIndex = 63;
             // 
-            // label5
+            // metroLabel3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(12, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 13);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Nr. budynku:";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(23, 121);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel3.TabIndex = 64;
+            this.metroLabel3.Text = "Nr. budynku:";
             // 
-            // NrBudynkuTextBox
+            // metroTextBox3
             // 
-            this.NrBudynkuTextBox.Location = new System.Drawing.Point(86, 61);
-            this.NrBudynkuTextBox.Name = "NrBudynkuTextBox";
-            this.NrBudynkuTextBox.Size = new System.Drawing.Size(68, 20);
-            this.NrBudynkuTextBox.TabIndex = 56;
-            this.NrBudynkuTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroTextBox3.Location = new System.Drawing.Point(110, 121);
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.Size = new System.Drawing.Size(75, 23);
+            this.metroTextBox3.TabIndex = 65;
             // 
-            // UlicaTextBox
+            // metroLabel4
             // 
-            this.UlicaTextBox.Location = new System.Drawing.Point(86, 35);
-            this.UlicaTextBox.Name = "UlicaTextBox";
-            this.UlicaTextBox.Size = new System.Drawing.Size(217, 20);
-            this.UlicaTextBox.TabIndex = 55;
-            this.UlicaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(191, 121);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(95, 19);
+            this.metroLabel4.TabIndex = 66;
+            this.metroLabel4.Text = "Nr. mieszkania:";
             // 
-            // NazwaTextBox
+            // metroTextBox4
             // 
-            this.NazwaTextBox.Location = new System.Drawing.Point(86, 9);
-            this.NazwaTextBox.Name = "NazwaTextBox";
-            this.NazwaTextBox.Size = new System.Drawing.Size(217, 20);
-            this.NazwaTextBox.TabIndex = 54;
-            this.NazwaTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroTextBox4.Location = new System.Drawing.Point(292, 121);
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.Size = new System.Drawing.Size(65, 23);
+            this.metroTextBox4.TabIndex = 67;
             // 
-            // KodTextBox
+            // metroLabel5
             // 
-            this.KodTextBox.Location = new System.Drawing.Point(245, 87);
-            this.KodTextBox.Name = "KodTextBox";
-            this.KodTextBox.Size = new System.Drawing.Size(58, 20);
-            this.KodTextBox.TabIndex = 53;
-            this.KodTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(53, 150);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel5.TabIndex = 68;
+            this.metroLabel5.Text = "Miasto:";
             // 
-            // MiastoTextBox
+            // metroLabel6
             // 
-            this.MiastoTextBox.Location = new System.Drawing.Point(86, 87);
-            this.MiastoTextBox.Name = "MiastoTextBox";
-            this.MiastoTextBox.Size = new System.Drawing.Size(118, 20);
-            this.MiastoTextBox.TabIndex = 52;
-            this.MiastoTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(251, 150);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(35, 19);
+            this.metroLabel6.TabIndex = 69;
+            this.metroLabel6.Text = "Kod:";
             // 
-            // label9
+            // metroButton1
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(210, 90);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(29, 13);
-            this.label9.TabIndex = 51;
-            this.label9.Text = "Kod:";
+            this.metroButton1.Location = new System.Drawing.Point(23, 182);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 70;
+            this.metroButton1.Text = "Anuluj";
             // 
-            // label8
+            // metroButton2
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(46, 38);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(34, 13);
-            this.label8.TabIndex = 50;
-            this.label8.Text = "Ulica:";
+            this.metroButton2.Location = new System.Drawing.Point(300, 182);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 71;
+            this.metroButton2.Text = "Dodaj";
             // 
-            // label7
+            // metroTextBox5
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(39, 90);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 13);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Miasto:";
+            this.metroTextBox5.Location = new System.Drawing.Point(110, 150);
+            this.metroTextBox5.Name = "metroTextBox5";
+            this.metroTextBox5.Size = new System.Drawing.Size(135, 23);
+            this.metroTextBox5.TabIndex = 72;
             // 
-            // label6
+            // metroTextBox6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 12);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 13);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Nazwa:";
+            this.metroTextBox6.Location = new System.Drawing.Point(292, 150);
+            this.metroTextBox6.Name = "metroTextBox6";
+            this.metroTextBox6.Size = new System.Drawing.Size(65, 23);
+            this.metroTextBox6.TabIndex = 73;
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(71, 92);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel7.TabIndex = 74;
+            this.metroLabel7.Text = "NIP:";
+            // 
+            // metroTextBox7
+            // 
+            this.metroTextBox7.Location = new System.Drawing.Point(110, 92);
+            this.metroTextBox7.Name = "metroTextBox7";
+            this.metroTextBox7.Size = new System.Drawing.Size(67, 23);
+            this.metroTextBox7.TabIndex = 75;
             // 
             // Nowy_KlientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(315, 158);
-            this.Controls.Add(this.NumerMieszkaniaTextBox);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.NrBudynkuTextBox);
-            this.Controls.Add(this.UlicaTextBox);
-            this.Controls.Add(this.NazwaTextBox);
-            this.Controls.Add(this.KodTextBox);
-            this.Controls.Add(this.MiastoTextBox);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnAnuluj);
-            this.Controls.Add(this.btnDodaj);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(398, 228);
+            this.Controls.Add(this.metroTextBox7);
+            this.Controls.Add(this.metroLabel7);
+            this.Controls.Add(this.metroTextBox6);
+            this.Controls.Add(this.metroTextBox5);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroTextBox4);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroTextBox3);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Nowy_KlientForm";
-            this.Text = "Nowy_Klient";
+            this.Resizable = false;
+            this.Text = "Nowy klient";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,19 +208,21 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAnuluj;
-        private System.Windows.Forms.Button btnDodaj;
-        private System.Windows.Forms.TextBox NumerMieszkaniaTextBox;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox NrBudynkuTextBox;
-        private System.Windows.Forms.TextBox UlicaTextBox;
-        private System.Windows.Forms.TextBox NazwaTextBox;
-        private System.Windows.Forms.TextBox KodTextBox;
-        private System.Windows.Forms.TextBox MiastoTextBox;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox metroTextBox7;
     }
 }

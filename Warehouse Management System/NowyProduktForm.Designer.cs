@@ -28,150 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtNowyProduktIlosc = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNowyProduktCena = new System.Windows.Forms.TextBox();
-            this.txtNowyProduktKod = new System.Windows.Forms.TextBox();
-            this.txtNowyProduktNazwa = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnNowyProduktAnuluj = new System.Windows.Forms.Button();
-            this.btnNowyProduktZapisz = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
-            // txtNowyProduktIlosc
+            // metroLabel1
             // 
-            this.txtNowyProduktIlosc.Location = new System.Drawing.Point(77, 84);
-            this.txtNowyProduktIlosc.Name = "txtNowyProduktIlosc";
-            this.txtNowyProduktIlosc.Size = new System.Drawing.Size(46, 20);
-            this.txtNowyProduktIlosc.TabIndex = 14;
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(48, 63);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel1.TabIndex = 22;
+            this.metroLabel1.Text = "Nazwa:";
             // 
-            // label4
+            // metroTextBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(127, 62);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(16, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "zł";
+            this.metroTextBox1.Location = new System.Drawing.Point(105, 63);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(106, 23);
+            this.metroTextBox1.TabIndex = 23;
             // 
-            // txtNowyProduktCena
+            // metroLabel2
             // 
-            this.txtNowyProduktCena.Location = new System.Drawing.Point(77, 59);
-            this.txtNowyProduktCena.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNowyProduktCena.Name = "txtNowyProduktCena";
-            this.txtNowyProduktCena.Size = new System.Drawing.Size(46, 20);
-            this.txtNowyProduktCena.TabIndex = 12;
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(64, 92);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(35, 19);
+            this.metroLabel2.TabIndex = 24;
+            this.metroLabel2.Text = "Kod:";
             // 
-            // txtNowyProduktKod
+            // metroTextBox2
             // 
-            this.txtNowyProduktKod.Location = new System.Drawing.Point(77, 35);
-            this.txtNowyProduktKod.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNowyProduktKod.Name = "txtNowyProduktKod";
-            this.txtNowyProduktKod.Size = new System.Drawing.Size(129, 20);
-            this.txtNowyProduktKod.TabIndex = 11;
+            this.metroTextBox2.Location = new System.Drawing.Point(105, 92);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(73, 23);
+            this.metroTextBox2.TabIndex = 25;
             // 
-            // txtNowyProduktNazwa
+            // metroLabel3
             // 
-            this.txtNowyProduktNazwa.Location = new System.Drawing.Point(77, 11);
-            this.txtNowyProduktNazwa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.txtNowyProduktNazwa.Name = "txtNowyProduktNazwa";
-            this.txtNowyProduktNazwa.Size = new System.Drawing.Size(129, 20);
-            this.txtNowyProduktNazwa.TabIndex = 10;
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(23, 121);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(76, 19);
+            this.metroLabel3.TabIndex = 26;
+            this.metroLabel3.Text = "Cena netto:";
             // 
-            // label1
+            // metroTextBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Nazwa:";
+            this.metroTextBox3.Location = new System.Drawing.Point(105, 121);
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.Size = new System.Drawing.Size(73, 23);
+            this.metroTextBox3.TabIndex = 27;
             // 
-            // label5
+            // metroLabel4
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(32, 13);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "Ilość:";
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(62, 150);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel4.TabIndex = 28;
+            this.metroLabel4.Text = "Ilość:";
             // 
-            // label3
+            // metroTextBox4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Cena netto:";
+            this.metroTextBox4.Location = new System.Drawing.Point(105, 150);
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.Size = new System.Drawing.Size(73, 23);
+            this.metroTextBox4.TabIndex = 29;
             // 
-            // label2
+            // metroLabel5
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(44, 38);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "Kod:";
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(186, 121);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(18, 19);
+            this.metroLabel5.TabIndex = 30;
+            this.metroLabel5.Text = "zł";
             // 
-            // btnNowyProduktAnuluj
+            // metroLabel6
             // 
-            this.btnNowyProduktAnuluj.Location = new System.Drawing.Point(90, 111);
-            this.btnNowyProduktAnuluj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNowyProduktAnuluj.Name = "btnNowyProduktAnuluj";
-            this.btnNowyProduktAnuluj.Size = new System.Drawing.Size(56, 22);
-            this.btnNowyProduktAnuluj.TabIndex = 20;
-            this.btnNowyProduktAnuluj.Text = "Anuluj";
-            this.btnNowyProduktAnuluj.UseVisualStyleBackColor = true;
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(186, 150);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(27, 19);
+            this.metroLabel6.TabIndex = 31;
+            this.metroLabel6.Text = "szt.";
             // 
-            // btnNowyProduktZapisz
+            // metroButton1
             // 
-            this.btnNowyProduktZapisz.Location = new System.Drawing.Point(150, 111);
-            this.btnNowyProduktZapisz.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnNowyProduktZapisz.Name = "btnNowyProduktZapisz";
-            this.btnNowyProduktZapisz.Size = new System.Drawing.Size(56, 22);
-            this.btnNowyProduktZapisz.TabIndex = 19;
-            this.btnNowyProduktZapisz.Text = "Zapisz";
-            this.btnNowyProduktZapisz.UseVisualStyleBackColor = true;
+            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton1.Location = new System.Drawing.Point(23, 182);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 32;
+            this.metroButton1.Text = "Anuluj";
             // 
-            // label6
+            // metroButton2
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(129, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 13);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "szt.";
+            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.metroButton2.Location = new System.Drawing.Point(150, 182);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 33;
+            this.metroButton2.Text = "Zapisz";
             // 
             // NowyProduktForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(217, 142);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnNowyProduktAnuluj);
-            this.Controls.Add(this.btnNowyProduktZapisz);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNowyProduktIlosc);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNowyProduktCena);
-            this.Controls.Add(this.txtNowyProduktKod);
-            this.Controls.Add(this.txtNowyProduktNazwa);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(248, 228);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroLabel6);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroTextBox4);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroTextBox3);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NowyProduktForm";
+            this.Resizable = false;
             this.Text = "Nowy Produkt";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.Load += new System.EventHandler(this.NowyProduktForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -180,17 +173,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNowyProduktIlosc;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNowyProduktCena;
-        private System.Windows.Forms.TextBox txtNowyProduktKod;
-        private System.Windows.Forms.TextBox txtNowyProduktNazwa;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnNowyProduktAnuluj;
-        private System.Windows.Forms.Button btnNowyProduktZapisz;
-        private System.Windows.Forms.Label label6;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+
     }
 }

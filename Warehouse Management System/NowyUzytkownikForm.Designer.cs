@@ -28,144 +28,143 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TypSelect = new System.Windows.Forms.ComboBox();
-            this.HasloTextBox = new System.Windows.Forms.TextBox();
-            this.LoginTextBox = new System.Windows.Forms.TextBox();
-            this.btnAnuluj = new System.Windows.Forms.Button();
-            this.btnZapisz = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ImieTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.NazwiskoTextBox = new System.Windows.Forms.TextBox();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
-            // label3
+            // metroLabel1
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 113);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Typ:";
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(52, 63);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(37, 19);
+            this.metroLabel1.TabIndex = 17;
+            this.metroLabel1.Text = "Imie:";
             // 
-            // label2
+            // metroLabel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Hasło:";
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(23, 92);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(66, 19);
+            this.metroLabel2.TabIndex = 18;
+            this.metroLabel2.Text = "Nazwisko:";
             // 
-            // label1
+            // metroLabel3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Login:";
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(45, 121);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel3.TabIndex = 19;
+            this.metroLabel3.Text = "Login:";
             // 
-            // TypSelect
+            // metroLabel4
             // 
-            this.TypSelect.FormattingEnabled = true;
-            this.TypSelect.Items.AddRange(new object[] {
-            "Pracownik",
-            "Kierownik",
-            "Szef"});
-            this.TypSelect.Location = new System.Drawing.Point(71, 110);
-            this.TypSelect.Name = "TypSelect";
-            this.TypSelect.Size = new System.Drawing.Size(120, 21);
-            this.TypSelect.TabIndex = 10;
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(45, 150);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(44, 19);
+            this.metroLabel4.TabIndex = 20;
+            this.metroLabel4.Text = "Hasło:";
             // 
-            // HasloTextBox
+            // metroLabel5
             // 
-            this.HasloTextBox.Location = new System.Drawing.Point(71, 84);
-            this.HasloTextBox.Name = "HasloTextBox";
-            this.HasloTextBox.Size = new System.Drawing.Size(120, 20);
-            this.HasloTextBox.TabIndex = 9;
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(57, 183);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(32, 19);
+            this.metroLabel5.TabIndex = 21;
+            this.metroLabel5.Text = "Typ:";
             // 
-            // LoginTextBox
+            // metroComboBox1
             // 
-            this.LoginTextBox.Location = new System.Drawing.Point(71, 58);
-            this.LoginTextBox.Name = "LoginTextBox";
-            this.LoginTextBox.Size = new System.Drawing.Size(120, 20);
-            this.LoginTextBox.TabIndex = 8;
+            this.metroComboBox1.FormattingEnabled = true;
+            this.metroComboBox1.ItemHeight = 23;
+            this.metroComboBox1.Location = new System.Drawing.Point(96, 179);
+            this.metroComboBox1.Name = "metroComboBox1";
+            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
+            this.metroComboBox1.TabIndex = 22;
             // 
-            // btnAnuluj
+            // metroButton1
             // 
-            this.btnAnuluj.Location = new System.Drawing.Point(35, 137);
-            this.btnAnuluj.Name = "btnAnuluj";
-            this.btnAnuluj.Size = new System.Drawing.Size(75, 24);
-            this.btnAnuluj.TabIndex = 12;
-            this.btnAnuluj.Text = "Anuluj";
-            this.btnAnuluj.UseVisualStyleBackColor = true;
+            this.metroButton1.Location = new System.Drawing.Point(23, 241);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(75, 23);
+            this.metroButton1.TabIndex = 23;
+            this.metroButton1.Text = "Anuluj";
             // 
-            // btnZapisz
+            // metroButton2
             // 
-            this.btnZapisz.Location = new System.Drawing.Point(116, 137);
-            this.btnZapisz.Name = "btnZapisz";
-            this.btnZapisz.Size = new System.Drawing.Size(75, 24);
-            this.btnZapisz.TabIndex = 11;
-            this.btnZapisz.Text = "Zapisz";
-            this.btnZapisz.UseVisualStyleBackColor = true;
+            this.metroButton2.Location = new System.Drawing.Point(163, 241);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(75, 23);
+            this.metroButton2.TabIndex = 24;
+            this.metroButton2.Text = "Zapisz";
             // 
-            // label4
+            // metroTextBox1
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Imie:";
+            this.metroTextBox1.Location = new System.Drawing.Point(95, 63);
+            this.metroTextBox1.Name = "metroTextBox1";
+            this.metroTextBox1.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBox1.TabIndex = 25;
             // 
-            // ImieTextBox
+            // metroTextBox2
             // 
-            this.ImieTextBox.Location = new System.Drawing.Point(71, 6);
-            this.ImieTextBox.Name = "ImieTextBox";
-            this.ImieTextBox.Size = new System.Drawing.Size(120, 20);
-            this.ImieTextBox.TabIndex = 14;
+            this.metroTextBox2.Location = new System.Drawing.Point(95, 92);
+            this.metroTextBox2.Name = "metroTextBox2";
+            this.metroTextBox2.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBox2.TabIndex = 26;
             // 
-            // label5
+            // metroTextBox3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 35);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(56, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Nazwisko:";
+            this.metroTextBox3.Location = new System.Drawing.Point(95, 121);
+            this.metroTextBox3.Name = "metroTextBox3";
+            this.metroTextBox3.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBox3.TabIndex = 27;
             // 
-            // NazwiskoTextBox
+            // metroTextBox4
             // 
-            this.NazwiskoTextBox.Location = new System.Drawing.Point(71, 32);
-            this.NazwiskoTextBox.Name = "NazwiskoTextBox";
-            this.NazwiskoTextBox.Size = new System.Drawing.Size(120, 20);
-            this.NazwiskoTextBox.TabIndex = 16;
+            this.metroTextBox4.Location = new System.Drawing.Point(95, 150);
+            this.metroTextBox4.Name = "metroTextBox4";
+            this.metroTextBox4.PasswordChar = '●';
+            this.metroTextBox4.Size = new System.Drawing.Size(122, 23);
+            this.metroTextBox4.TabIndex = 28;
+            this.metroTextBox4.UseSystemPasswordChar = true;
             // 
             // NowyUzytkownikForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(199, 168);
-            this.Controls.Add(this.NazwiskoTextBox);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.ImieTextBox);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.btnAnuluj);
-            this.Controls.Add(this.btnZapisz);
-            this.Controls.Add(this.TypSelect);
-            this.Controls.Add(this.HasloTextBox);
-            this.Controls.Add(this.LoginTextBox);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
+            this.ClientSize = new System.Drawing.Size(261, 287);
+            this.Controls.Add(this.metroTextBox4);
+            this.Controls.Add(this.metroTextBox3);
+            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.metroLabel5);
+            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.metroLabel3);
+            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.metroLabel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NowyUzytkownikForm";
+            this.Resizable = false;
             this.Text = "Nowy Uzytkownik";
+            this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -173,17 +172,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox TypSelect;
-        private System.Windows.Forms.TextBox HasloTextBox;
-        private System.Windows.Forms.TextBox LoginTextBox;
-        private System.Windows.Forms.Button btnAnuluj;
-        private System.Windows.Forms.Button btnZapisz;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ImieTextBox;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox NazwiskoTextBox;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel metroLabel3;
+        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+
     }
 }
