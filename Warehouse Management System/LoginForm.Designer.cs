@@ -30,8 +30,8 @@
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.loginTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.passwordTextBox = new MetroFramework.Controls.MetroTextBox();
             this.ZalogujButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
@@ -53,19 +53,21 @@
             this.metroLabel2.TabIndex = 1;
             this.metroLabel2.Text = "Hasło:";
             // 
-            // metroTextBox1
+            // loginTextBox
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(73, 64);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(146, 23);
-            this.metroTextBox1.TabIndex = 2;
+            this.loginTextBox.Location = new System.Drawing.Point(73, 64);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(146, 23);
+            this.loginTextBox.TabIndex = 2;
             // 
-            // metroTextBox2
+            // passwordTextBox
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(73, 93);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(146, 23);
-            this.metroTextBox2.TabIndex = 3;
+            this.passwordTextBox.Location = new System.Drawing.Point(73, 93);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '●';
+            this.passwordTextBox.Size = new System.Drawing.Size(146, 23);
+            this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // ZalogujButton
             // 
@@ -74,7 +76,7 @@
             this.ZalogujButton.Size = new System.Drawing.Size(75, 23);
             this.ZalogujButton.TabIndex = 4;
             this.ZalogujButton.Text = "Zaloguj";
-            this.ZalogujButton.Click += new System.EventHandler(this.metroButton1_Click);
+            this.ZalogujButton.Click += new System.EventHandler(this.ZalogujButton_Click);
             // 
             // LoginForm
             // 
@@ -83,8 +85,8 @@
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(242, 168);
             this.Controls.Add(this.ZalogujButton);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.Name = "LoginForm";
@@ -100,8 +102,8 @@
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox loginTextBox;
+        private MetroFramework.Controls.MetroTextBox passwordTextBox;
         private MetroFramework.Controls.MetroButton ZalogujButton;
 
     }

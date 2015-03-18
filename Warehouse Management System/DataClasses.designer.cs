@@ -1160,8 +1160,8 @@ namespace Warehouse_Management_System
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnId_produktuChanging(int value);
-    partial void OnId_produktuChanged();
+    partial void OnIdChanging(int value);
+    partial void OnIdChanged();
     partial void OnId_fakturyChanging(int value);
     partial void OnId_fakturyChanged();
     partial void OnNazwa_produktuChanging(string value);
@@ -1180,8 +1180,8 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id_produktu
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Id_produktu", Storage="_Id_produktu", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		public int Id
 		{
 			get
 			{
@@ -1191,11 +1191,11 @@ namespace Warehouse_Management_System
 			{
 				if ((this._Id_produktu != value))
 				{
-					this.OnId_produktuChanging(value);
+					this.OnIdChanging(value);
 					this.SendPropertyChanging();
 					this._Id_produktu = value;
-					this.SendPropertyChanged("Id_produktu");
-					this.OnId_produktuChanged();
+					this.SendPropertyChanged("Id");
+					this.OnIdChanged();
 				}
 			}
 		}

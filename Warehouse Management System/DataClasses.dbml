@@ -51,7 +51,7 @@
   </Table>
   <Table Name="dbo.Produkty_sprzedane" Member="Produkty_sprzedanes">
     <Type Name="Produkty_sprzedane">
-      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_produktu" Member="Id" Storage="_Id_produktu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="Id_faktury" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Nazwa_produktu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Cena_jednostkowa_netto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />

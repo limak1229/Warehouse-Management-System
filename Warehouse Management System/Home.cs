@@ -15,10 +15,18 @@ namespace Warehouse_Management_System
     public partial class HomeForm : MetroForm
     {
         bool logout = false;
+        private Uzytkownicy zalogowanyUzytkownik;
         public HomeForm()
         {
             InitializeComponent();
             DataClassesDataContext dbContext = new DataClassesDataContext();
+        }
+
+        public HomeForm(Uzytkownicy zalogowanyUzytkownik)
+        {
+            this.zalogowanyUzytkownik = zalogowanyUzytkownik;
+            InitializeComponent();
+            userInfolabel.Text = "Jesteś zalogowany jako: " + zalogowanyUzytkownik.Imie.ToString() + " " + zalogowanyUzytkownik.Nazwisko.ToString();
         }
         private void DodajFaktureBtn_Click(object sender, EventArgs e)
         {

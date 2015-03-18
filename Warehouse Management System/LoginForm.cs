@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,11 +20,35 @@ namespace Warehouse_Management_System
             this.AcceptButton = ZalogujButton;
         }
 
-        private void metroButton1_Click(object sender, EventArgs e)
+        private void ZalogujButton_Click(object sender, EventArgs e)
         {
-            HomeForm HomeForm = new HomeForm();
-            HomeForm.Show();
-            this.Hide();
+            Uzytkownicy zalogowanyUzytkownik = Login(loginTextBox.Text, passwordTextBox.Text);
+            if (zalogowanyUzytkownik != null)
+            {
+                HomeForm HomeForm = new HomeForm(zalogowanyUzytkownik);
+                HomeForm.FormClosed += HomeForm_FormClosed;
+                HomeForm.Show();
+                this.Hide();
+            }
+            
+        }
+
+        void HomeForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            loginTextBox.Text = "";
+            passwordTextBox.Text = "";     
+        }
+
+        private Uzytkownicy Login(String login, String password)
+        {
+            byte[] bytes = Encoding.Unicode.GetBytes(password);
+            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
+            byte[] md5data = md5.ComputeHash(bytes);
+            String passwordString = Convert.ToBase64String(md5data);
+
+            DataClassesDataContext DC = new DataClassesDataContext();
+            Uzytkownicy user = DC.Uzytkownicies.SingleOrDefault(u => u.Login == login && u.Haslo == passwordString);
+            return user;
         }
     }
 }

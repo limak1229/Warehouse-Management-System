@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.metroTabControl = new MetroFramework.Controls.MetroTabControl();
             this.FakturyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
@@ -40,6 +41,7 @@
             this.DodajKlientaBtn = new MetroFramework.Controls.MetroButton();
             this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
             this.UżytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
             this.UzytkownicyDataGridView = new System.Windows.Forms.DataGridView();
@@ -61,17 +63,16 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
             this.metroStyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.WylogujBtn = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.userInfolabel = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl.SuspendLayout();
             this.FakturyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -82,8 +83,8 @@
             this.UżytkownicyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UzytkownicyDataGridView)).BeginInit();
             this.UstawieniaTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.metroTabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTabControl
@@ -114,6 +115,14 @@
             this.FakturyTabPage.Text = "Faktury";
             this.FakturyTabPage.Theme = MetroFramework.MetroThemeStyle.Light;
             this.FakturyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Location = new System.Drawing.Point(111, 3);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(95, 23);
+            this.metroButton1.TabIndex = 4;
+            this.metroButton1.Text = "Zapisz fakture";
             // 
             // UsunFaktureButton
             // 
@@ -152,7 +161,7 @@
             this.KlienciTabPage.HorizontalScrollbarBarColor = true;
             this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
             this.KlienciTabPage.Name = "KlienciTabPage";
-            this.KlienciTabPage.Size = new System.Drawing.Size(608, 215);
+            this.KlienciTabPage.Size = new System.Drawing.Size(824, 215);
             this.KlienciTabPage.TabIndex = 2;
             this.KlienciTabPage.Text = "Klienci";
             this.KlienciTabPage.VerticalScrollbarBarColor = true;
@@ -194,7 +203,7 @@
             this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
             this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
             this.ProduktyTabPage.Name = "ProduktyTabPage";
-            this.ProduktyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.ProduktyTabPage.Size = new System.Drawing.Size(824, 215);
             this.ProduktyTabPage.TabIndex = 1;
             this.ProduktyTabPage.Text = "Produkty";
             this.ProduktyTabPage.VerticalScrollbarBarColor = true;
@@ -208,6 +217,14 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.Size = new System.Drawing.Size(612, 187);
             this.dataGridView2.TabIndex = 6;
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.Location = new System.Drawing.Point(110, 3);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(89, 23);
+            this.metroButton2.TabIndex = 5;
+            this.metroButton2.Text = "Usuń produkt";
             // 
             // DodajProduktBtn
             // 
@@ -228,7 +245,7 @@
             this.UżytkownicyTabPage.HorizontalScrollbarBarColor = true;
             this.UżytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
             this.UżytkownicyTabPage.Name = "UżytkownicyTabPage";
-            this.UżytkownicyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.UżytkownicyTabPage.Size = new System.Drawing.Size(824, 215);
             this.UżytkownicyTabPage.TabIndex = 3;
             this.UżytkownicyTabPage.Text = "Użytkownicy";
             this.UżytkownicyTabPage.VerticalScrollbarBarColor = true;
@@ -282,7 +299,7 @@
             this.UstawieniaTabPage.HorizontalScrollbarBarColor = true;
             this.UstawieniaTabPage.Location = new System.Drawing.Point(4, 35);
             this.UstawieniaTabPage.Name = "UstawieniaTabPage";
-            this.UstawieniaTabPage.Size = new System.Drawing.Size(608, 215);
+            this.UstawieniaTabPage.Size = new System.Drawing.Size(824, 215);
             this.UstawieniaTabPage.TabIndex = 4;
             this.UstawieniaTabPage.Text = "Dane firmy";
             this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
@@ -407,6 +424,61 @@
             this.metroLabel1.TabIndex = 76;
             this.metroLabel1.Text = "Nazwa:";
             // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.Controls.Add(this.dateTimePicker2);
+            this.metroTabPage1.Controls.Add(this.dateTimePicker1);
+            this.metroTabPage1.Controls.Add(this.metroButton4);
+            this.metroTabPage1.Controls.Add(this.metroLabel10);
+            this.metroTabPage1.Controls.Add(this.metroLabel9);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(824, 215);
+            this.metroTabPage1.TabIndex = 5;
+            this.metroTabPage1.Text = "Zestawienia";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(267, 70);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker2.TabIndex = 73;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(267, 44);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
+            this.dateTimePicker1.TabIndex = 72;
+            // 
+            // metroButton4
+            // 
+            this.metroButton4.Location = new System.Drawing.Point(247, 96);
+            this.metroButton4.Name = "metroButton4";
+            this.metroButton4.Size = new System.Drawing.Size(128, 23);
+            this.metroButton4.TabIndex = 6;
+            this.metroButton4.Text = "Zapisz zestawienie";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(166, 70);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(95, 19);
+            this.metroLabel10.TabIndex = 3;
+            this.metroLabel10.Text = "Data Końcowa:";
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(150, 44);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(111, 19);
+            this.metroLabel9.TabIndex = 2;
+            this.metroLabel9.Text = "Data Początkowa:";
+            // 
             // metroStyleManager
             // 
             this.metroStyleManager.Owner = this;
@@ -421,76 +493,14 @@
             this.WylogujBtn.Text = "Wyloguj";
             this.WylogujBtn.Click += new System.EventHandler(this.WylogujBtn_Click);
             // 
-            // metroButton2
+            // userInfolabel
             // 
-            this.metroButton2.Location = new System.Drawing.Point(110, 3);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(89, 23);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Usuń produkt";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(111, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(95, 23);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Zapisz fakture";
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.Controls.Add(this.dateTimePicker2);
-            this.metroTabPage1.Controls.Add(this.dateTimePicker1);
-            this.metroTabPage1.Controls.Add(this.metroButton4);
-            this.metroTabPage1.Controls.Add(this.metroLabel10);
-            this.metroTabPage1.Controls.Add(this.metroLabel9);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(608, 215);
-            this.metroTabPage1.TabIndex = 5;
-            this.metroTabPage1.Text = "Zestawienia";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(150, 44);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(111, 19);
-            this.metroLabel9.TabIndex = 2;
-            this.metroLabel9.Text = "Data Początkowa:";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(166, 70);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(95, 19);
-            this.metroLabel10.TabIndex = 3;
-            this.metroLabel10.Text = "Data Końcowa:";
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(247, 96);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(128, 23);
-            this.metroButton4.TabIndex = 6;
-            this.metroButton4.Text = "Zapisz zestawienie";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 72;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(267, 70);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker2.TabIndex = 73;
+            this.userInfolabel.AutoSize = true;
+            this.userInfolabel.Location = new System.Drawing.Point(23, 7);
+            this.userInfolabel.Name = "userInfolabel";
+            this.userInfolabel.Size = new System.Drawing.Size(83, 19);
+            this.userInfolabel.TabIndex = 2;
+            this.userInfolabel.Text = "userInfolabel";
             // 
             // HomeForm
             // 
@@ -498,6 +508,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(662, 340);
+            this.Controls.Add(this.userInfolabel);
             this.Controls.Add(this.WylogujBtn);
             this.Controls.Add(this.metroTabControl);
             this.Name = "HomeForm";
@@ -516,10 +527,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.UzytkownicyDataGridView)).EndInit();
             this.UstawieniaTabPage.ResumeLayout(false);
             this.UstawieniaTabPage.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.metroTabPage1.ResumeLayout(false);
             this.metroTabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -568,6 +580,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private MetroFramework.Controls.MetroLabel userInfolabel;
 
 
 
