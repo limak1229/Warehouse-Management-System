@@ -23,13 +23,16 @@ namespace Warehouse_Management_System
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Database")]
-	public partial class DataClassesDataContext : System.Data.Linq.DataContext
+	public partial class bazaDCDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
 		
     #region Extensibility Method Definitions
     partial void OnCreated();
+    partial void InsertDaneFirmy(DaneFirmy instance);
+    partial void UpdateDaneFirmy(DaneFirmy instance);
+    partial void DeleteDaneFirmy(DaneFirmy instance);
     partial void InsertUzytkownicy(Uzytkownicy instance);
     partial void UpdateUzytkownicy(Uzytkownicy instance);
     partial void DeleteUzytkownicy(Uzytkownicy instance);
@@ -50,34 +53,42 @@ namespace Warehouse_Management_System
     partial void DeleteUprawnienia(Uprawnienia instance);
     #endregion
 		
-		public DataClassesDataContext() : 
+		public bazaDCDataContext() : 
 				base(global::Warehouse_Management_System.Properties.Settings.Default.DatabaseConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesDataContext(string connection) : 
+		public bazaDCDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesDataContext(System.Data.IDbConnection connection) : 
+		public bazaDCDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public bazaDCDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public DataClassesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public bazaDCDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
+		}
+		
+		public System.Data.Linq.Table<DaneFirmy> DaneFirmies
+		{
+			get
+			{
+				return this.GetTable<DaneFirmy>();
+			}
 		}
 		
 		public System.Data.Linq.Table<Uzytkownicy> Uzytkownicies
@@ -129,6 +140,288 @@ namespace Warehouse_Management_System
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.DaneFirmy")]
+	public partial class DaneFirmy : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_firmy;
+		
+		private string _Nazwa;
+		
+		private string _Ulica;
+		
+		private string _Nr_budynku;
+		
+		private string _Nr_mieszkania;
+		
+		private string _Miasto;
+		
+		private string _Kod_pocztowy;
+		
+		private string _Nip;
+		
+		private string _Telefon;
+		
+		private EntitySet<Faktury> _Fakturies;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_firmyChanging(int value);
+    partial void OnId_firmyChanged();
+    partial void OnNazwaChanging(string value);
+    partial void OnNazwaChanged();
+    partial void OnUlicaChanging(string value);
+    partial void OnUlicaChanged();
+    partial void OnNr_budynkuChanging(string value);
+    partial void OnNr_budynkuChanged();
+    partial void OnNr_mieszkaniaChanging(string value);
+    partial void OnNr_mieszkaniaChanged();
+    partial void OnMiastoChanging(string value);
+    partial void OnMiastoChanged();
+    partial void OnKod_pocztowyChanging(string value);
+    partial void OnKod_pocztowyChanged();
+    partial void OnNipChanging(string value);
+    partial void OnNipChanged();
+    partial void OnTelefonChanging(string value);
+    partial void OnTelefonChanged();
+    #endregion
+		
+		public DaneFirmy()
+		{
+			this._Fakturies = new EntitySet<Faktury>(new Action<Faktury>(this.attach_Fakturies), new Action<Faktury>(this.detach_Fakturies));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_firmy", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_firmy
+		{
+			get
+			{
+				return this._Id_firmy;
+			}
+			set
+			{
+				if ((this._Id_firmy != value))
+				{
+					this.OnId_firmyChanging(value);
+					this.SendPropertyChanging();
+					this._Id_firmy = value;
+					this.SendPropertyChanged("Id_firmy");
+					this.OnId_firmyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nazwa
+		{
+			get
+			{
+				return this._Nazwa;
+			}
+			set
+			{
+				if ((this._Nazwa != value))
+				{
+					this.OnNazwaChanging(value);
+					this.SendPropertyChanging();
+					this._Nazwa = value;
+					this.SendPropertyChanged("Nazwa");
+					this.OnNazwaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ulica", DbType="NVarChar(50)")]
+		public string Ulica
+		{
+			get
+			{
+				return this._Ulica;
+			}
+			set
+			{
+				if ((this._Ulica != value))
+				{
+					this.OnUlicaChanging(value);
+					this.SendPropertyChanging();
+					this._Ulica = value;
+					this.SendPropertyChanged("Ulica");
+					this.OnUlicaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr_budynku", DbType="NVarChar(10)")]
+		public string Nr_budynku
+		{
+			get
+			{
+				return this._Nr_budynku;
+			}
+			set
+			{
+				if ((this._Nr_budynku != value))
+				{
+					this.OnNr_budynkuChanging(value);
+					this.SendPropertyChanging();
+					this._Nr_budynku = value;
+					this.SendPropertyChanged("Nr_budynku");
+					this.OnNr_budynkuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nr_mieszkania", DbType="NVarChar(10)")]
+		public string Nr_mieszkania
+		{
+			get
+			{
+				return this._Nr_mieszkania;
+			}
+			set
+			{
+				if ((this._Nr_mieszkania != value))
+				{
+					this.OnNr_mieszkaniaChanging(value);
+					this.SendPropertyChanging();
+					this._Nr_mieszkania = value;
+					this.SendPropertyChanged("Nr_mieszkania");
+					this.OnNr_mieszkaniaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Miasto", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Miasto
+		{
+			get
+			{
+				return this._Miasto;
+			}
+			set
+			{
+				if ((this._Miasto != value))
+				{
+					this.OnMiastoChanging(value);
+					this.SendPropertyChanging();
+					this._Miasto = value;
+					this.SendPropertyChanged("Miasto");
+					this.OnMiastoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kod_pocztowy", DbType="NChar(6) NOT NULL", CanBeNull=false)]
+		public string Kod_pocztowy
+		{
+			get
+			{
+				return this._Kod_pocztowy;
+			}
+			set
+			{
+				if ((this._Kod_pocztowy != value))
+				{
+					this.OnKod_pocztowyChanging(value);
+					this.SendPropertyChanging();
+					this._Kod_pocztowy = value;
+					this.SendPropertyChanged("Kod_pocztowy");
+					this.OnKod_pocztowyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nip", DbType="VarChar(20)")]
+		public string Nip
+		{
+			get
+			{
+				return this._Nip;
+			}
+			set
+			{
+				if ((this._Nip != value))
+				{
+					this.OnNipChanging(value);
+					this.SendPropertyChanging();
+					this._Nip = value;
+					this.SendPropertyChanged("Nip");
+					this.OnNipChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Telefon", DbType="VarChar(50)")]
+		public string Telefon
+		{
+			get
+			{
+				return this._Telefon;
+			}
+			set
+			{
+				if ((this._Telefon != value))
+				{
+					this.OnTelefonChanging(value);
+					this.SendPropertyChanging();
+					this._Telefon = value;
+					this.SendPropertyChanged("Telefon");
+					this.OnTelefonChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DaneFirmy_Faktury", Storage="_Fakturies", ThisKey="Id_firmy", OtherKey="Id_firmy")]
+		public EntitySet<Faktury> Fakturies
+		{
+			get
+			{
+				return this._Fakturies;
+			}
+			set
+			{
+				this._Fakturies.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Fakturies(Faktury entity)
+		{
+			this.SendPropertyChanging();
+			entity.DaneFirmy = this;
+		}
+		
+		private void detach_Fakturies(Faktury entity)
+		{
+			this.SendPropertyChanging();
+			entity.DaneFirmy = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Uzytkownicy")]
 	public partial class Uzytkownicy : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -176,7 +469,7 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_uzytkownika", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_uzytkownika", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_uzytkownika
 		{
 			get
@@ -390,6 +683,8 @@ namespace Warehouse_Management_System
 		
 		private int _Id_klienta;
 		
+		private int _Id_firmy;
+		
 		private int _Id_uzytkownika;
 		
 		private string _Nr_faktury;
@@ -401,6 +696,8 @@ namespace Warehouse_Management_System
 		private System.DateTime _Termin_zaplaty;
 		
 		private EntitySet<Produkty_sprzedane> _Produkty_sprzedanes;
+		
+		private EntityRef<DaneFirmy> _DaneFirmy;
 		
 		private EntityRef<Uzytkownicy> _Uzytkownicy;
 		
@@ -414,6 +711,8 @@ namespace Warehouse_Management_System
     partial void OnId_fakturyChanged();
     partial void OnId_klientaChanging(int value);
     partial void OnId_klientaChanged();
+    partial void OnId_firmyChanging(int value);
+    partial void OnId_firmyChanged();
     partial void OnId_uzytkownikaChanging(int value);
     partial void OnId_uzytkownikaChanged();
     partial void OnNr_fakturyChanging(string value);
@@ -429,12 +728,13 @@ namespace Warehouse_Management_System
 		public Faktury()
 		{
 			this._Produkty_sprzedanes = new EntitySet<Produkty_sprzedane>(new Action<Produkty_sprzedane>(this.attach_Produkty_sprzedanes), new Action<Produkty_sprzedane>(this.detach_Produkty_sprzedanes));
+			this._DaneFirmy = default(EntityRef<DaneFirmy>);
 			this._Uzytkownicy = default(EntityRef<Uzytkownicy>);
 			this._Klienci = default(EntityRef<Klienci>);
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_faktury", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_faktury", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_faktury
 		{
 			get
@@ -474,6 +774,30 @@ namespace Warehouse_Management_System
 					this._Id_klienta = value;
 					this.SendPropertyChanged("Id_klienta");
 					this.OnId_klientaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_firmy", DbType="Int NOT NULL")]
+		public int Id_firmy
+		{
+			get
+			{
+				return this._Id_firmy;
+			}
+			set
+			{
+				if ((this._Id_firmy != value))
+				{
+					if (this._DaneFirmy.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnId_firmyChanging(value);
+					this.SendPropertyChanging();
+					this._Id_firmy = value;
+					this.SendPropertyChanged("Id_firmy");
+					this.OnId_firmyChanged();
 				}
 			}
 		}
@@ -592,6 +916,40 @@ namespace Warehouse_Management_System
 			set
 			{
 				this._Produkty_sprzedanes.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="DaneFirmy_Faktury", Storage="_DaneFirmy", ThisKey="Id_firmy", OtherKey="Id_firmy", IsForeignKey=true)]
+		public DaneFirmy DaneFirmy
+		{
+			get
+			{
+				return this._DaneFirmy.Entity;
+			}
+			set
+			{
+				DaneFirmy previousValue = this._DaneFirmy.Entity;
+				if (((previousValue != value) 
+							|| (this._DaneFirmy.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._DaneFirmy.Entity = null;
+						previousValue.Fakturies.Remove(this);
+					}
+					this._DaneFirmy.Entity = value;
+					if ((value != null))
+					{
+						value.Fakturies.Add(this);
+						this._Id_firmy = value.Id_firmy;
+					}
+					else
+					{
+						this._Id_firmy = default(int);
+					}
+					this.SendPropertyChanged("DaneFirmy");
+				}
 			}
 		}
 		
@@ -752,7 +1110,7 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_klienta", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_klienta", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_klienta
 		{
 			get
@@ -1015,7 +1373,7 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_produktu
 		{
 			get
@@ -1142,7 +1500,7 @@ namespace Warehouse_Management_System
 		
 		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
-		private int _Id_produktu;
+		private int _Id_produktu_sprzedanego;
 		
 		private int _Id_faktury;
 		
@@ -1160,8 +1518,8 @@ namespace Warehouse_Management_System
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void OnIdChanging(int value);
-    partial void OnIdChanged();
+    partial void OnId_produktu_sprzedanegoChanging(int value);
+    partial void OnId_produktu_sprzedanegoChanged();
     partial void OnId_fakturyChanging(int value);
     partial void OnId_fakturyChanged();
     partial void OnNazwa_produktuChanging(string value);
@@ -1180,22 +1538,22 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="Id_produktu", Storage="_Id_produktu", DbType="Int NOT NULL", IsPrimaryKey=true)]
-		public int Id
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu_sprzedanego", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_produktu_sprzedanego
 		{
 			get
 			{
-				return this._Id_produktu;
+				return this._Id_produktu_sprzedanego;
 			}
 			set
 			{
-				if ((this._Id_produktu != value))
+				if ((this._Id_produktu_sprzedanego != value))
 				{
-					this.OnIdChanging(value);
+					this.OnId_produktu_sprzedanegoChanging(value);
 					this.SendPropertyChanging();
-					this._Id_produktu = value;
-					this.SendPropertyChanged("Id");
-					this.OnIdChanged();
+					this._Id_produktu_sprzedanego = value;
+					this.SendPropertyChanged("Id_produktu_sprzedanego");
+					this.OnId_produktu_sprzedanegoChanged();
 				}
 			}
 		}
@@ -1387,7 +1745,7 @@ namespace Warehouse_Management_System
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_uprawnienia", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_uprawnienia", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_uprawnienia
 		{
 			get

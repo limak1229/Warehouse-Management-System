@@ -33,13 +33,13 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.typComboBox = new MetroFramework.Controls.MetroComboBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.zapiszButton = new MetroFramework.Controls.MetroButton();
+            this.imieTb = new MetroFramework.Controls.MetroTextBox();
+            this.nazwiskoTb = new MetroFramework.Controls.MetroTextBox();
+            this.loginTb = new MetroFramework.Controls.MetroTextBox();
+            this.hasloTb = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -87,14 +87,14 @@
             this.metroLabel5.TabIndex = 21;
             this.metroLabel5.Text = "Typ:";
             // 
-            // metroComboBox1
+            // typComboBox
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(96, 179);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox1.TabIndex = 22;
+            this.typComboBox.FormattingEnabled = true;
+            this.typComboBox.ItemHeight = 23;
+            this.typComboBox.Location = new System.Drawing.Point(96, 179);
+            this.typComboBox.Name = "typComboBox";
+            this.typComboBox.Size = new System.Drawing.Size(121, 29);
+            this.typComboBox.TabIndex = 22;
             // 
             // metroButton1
             // 
@@ -104,43 +104,44 @@
             this.metroButton1.TabIndex = 23;
             this.metroButton1.Text = "Anuluj";
             // 
-            // metroButton2
+            // zapiszButton
             // 
-            this.metroButton2.Location = new System.Drawing.Point(163, 241);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 24;
-            this.metroButton2.Text = "Zapisz";
+            this.zapiszButton.Location = new System.Drawing.Point(163, 241);
+            this.zapiszButton.Name = "zapiszButton";
+            this.zapiszButton.Size = new System.Drawing.Size(75, 23);
+            this.zapiszButton.TabIndex = 24;
+            this.zapiszButton.Text = "Zapisz";
+            this.zapiszButton.Click += new System.EventHandler(this.zapiszButton_Click);
             // 
-            // metroTextBox1
+            // imieTb
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(95, 63);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBox1.TabIndex = 25;
+            this.imieTb.Location = new System.Drawing.Point(95, 63);
+            this.imieTb.Name = "imieTb";
+            this.imieTb.Size = new System.Drawing.Size(122, 23);
+            this.imieTb.TabIndex = 25;
             // 
-            // metroTextBox2
+            // nazwiskoTb
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(95, 92);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBox2.TabIndex = 26;
+            this.nazwiskoTb.Location = new System.Drawing.Point(95, 92);
+            this.nazwiskoTb.Name = "nazwiskoTb";
+            this.nazwiskoTb.Size = new System.Drawing.Size(122, 23);
+            this.nazwiskoTb.TabIndex = 26;
             // 
-            // metroTextBox3
+            // loginTb
             // 
-            this.metroTextBox3.Location = new System.Drawing.Point(95, 121);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBox3.TabIndex = 27;
+            this.loginTb.Location = new System.Drawing.Point(95, 121);
+            this.loginTb.Name = "loginTb";
+            this.loginTb.Size = new System.Drawing.Size(122, 23);
+            this.loginTb.TabIndex = 27;
             // 
-            // metroTextBox4
+            // hasloTb
             // 
-            this.metroTextBox4.Location = new System.Drawing.Point(95, 150);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '●';
-            this.metroTextBox4.Size = new System.Drawing.Size(122, 23);
-            this.metroTextBox4.TabIndex = 28;
-            this.metroTextBox4.UseSystemPasswordChar = true;
+            this.hasloTb.Location = new System.Drawing.Point(95, 150);
+            this.hasloTb.Name = "hasloTb";
+            this.hasloTb.PasswordChar = '●';
+            this.hasloTb.Size = new System.Drawing.Size(122, 23);
+            this.hasloTb.TabIndex = 28;
+            this.hasloTb.UseSystemPasswordChar = true;
             // 
             // NowyUzytkownikForm
             // 
@@ -148,13 +149,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(261, 287);
-            this.Controls.Add(this.metroTextBox4);
-            this.Controls.Add(this.metroTextBox3);
-            this.Controls.Add(this.metroTextBox2);
-            this.Controls.Add(this.metroTextBox1);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.hasloTb);
+            this.Controls.Add(this.loginTb);
+            this.Controls.Add(this.nazwiskoTb);
+            this.Controls.Add(this.imieTb);
+            this.Controls.Add(this.zapiszButton);
             this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.typComboBox);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
@@ -178,13 +179,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox typComboBox;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroButton zapiszButton;
+        private MetroFramework.Controls.MetroTextBox imieTb;
+        private MetroFramework.Controls.MetroTextBox nazwiskoTb;
+        private MetroFramework.Controls.MetroTextBox loginTb;
+        private MetroFramework.Controls.MetroTextBox hasloTb;
 
     }
 }

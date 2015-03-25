@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.kodTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.cenaTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.iloscTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
@@ -51,12 +51,12 @@
             this.metroLabel1.TabIndex = 22;
             this.metroLabel1.Text = "Nazwa:";
             // 
-            // metroTextBox1
+            // nazwaTb
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(105, 63);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(106, 23);
-            this.metroTextBox1.TabIndex = 23;
+            this.nazwaTb.Location = new System.Drawing.Point(105, 63);
+            this.nazwaTb.Name = "nazwaTb";
+            this.nazwaTb.Size = new System.Drawing.Size(106, 23);
+            this.nazwaTb.TabIndex = 23;
             // 
             // metroLabel2
             // 
@@ -67,12 +67,12 @@
             this.metroLabel2.TabIndex = 24;
             this.metroLabel2.Text = "Kod:";
             // 
-            // metroTextBox2
+            // kodTb
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(105, 92);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(73, 23);
-            this.metroTextBox2.TabIndex = 25;
+            this.kodTb.Location = new System.Drawing.Point(105, 92);
+            this.kodTb.Name = "kodTb";
+            this.kodTb.Size = new System.Drawing.Size(73, 23);
+            this.kodTb.TabIndex = 25;
             // 
             // metroLabel3
             // 
@@ -83,12 +83,12 @@
             this.metroLabel3.TabIndex = 26;
             this.metroLabel3.Text = "Cena netto:";
             // 
-            // metroTextBox3
+            // cenaTb
             // 
-            this.metroTextBox3.Location = new System.Drawing.Point(105, 121);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(73, 23);
-            this.metroTextBox3.TabIndex = 27;
+            this.cenaTb.Location = new System.Drawing.Point(105, 121);
+            this.cenaTb.Name = "cenaTb";
+            this.cenaTb.Size = new System.Drawing.Size(73, 23);
+            this.cenaTb.TabIndex = 27;
             // 
             // metroLabel4
             // 
@@ -99,12 +99,12 @@
             this.metroLabel4.TabIndex = 28;
             this.metroLabel4.Text = "Ilość:";
             // 
-            // metroTextBox4
+            // iloscTb
             // 
-            this.metroTextBox4.Location = new System.Drawing.Point(105, 150);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(73, 23);
-            this.metroTextBox4.TabIndex = 29;
+            this.iloscTb.Location = new System.Drawing.Point(105, 150);
+            this.iloscTb.Name = "iloscTb";
+            this.iloscTb.Size = new System.Drawing.Size(73, 23);
+            this.iloscTb.TabIndex = 29;
             // 
             // metroLabel5
             // 
@@ -141,6 +141,7 @@
             this.metroButton2.Size = new System.Drawing.Size(75, 23);
             this.metroButton2.TabIndex = 33;
             this.metroButton2.Text = "Zapisz";
+            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
             // 
             // NowyProduktForm
             // 
@@ -152,13 +153,13 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
-            this.Controls.Add(this.metroTextBox4);
+            this.Controls.Add(this.iloscTb);
             this.Controls.Add(this.metroLabel4);
-            this.Controls.Add(this.metroTextBox3);
+            this.Controls.Add(this.cenaTb);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroTextBox2);
+            this.Controls.Add(this.kodTb);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.nazwaTb);
             this.Controls.Add(this.metroLabel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NowyProduktForm";
@@ -174,13 +175,13 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox nazwaTb;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox kodTb;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox cenaTb;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroTextBox iloscTb;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroButton metroButton1;

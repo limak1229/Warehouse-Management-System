@@ -1,8 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database" Class="bazaDCDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\Database.mdf;Integrated Security=True" SettingsObjectName="Warehouse_Management_System.Properties.Settings" SettingsPropertyName="DatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DaneFirmy" Member="DaneFirmies">
+    <Type Name="DaneFirmy">
+      <Column Name="Id_firmy" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Ulica" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nr_budynku" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Nr_mieszkania" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Miasto" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Kod_pocztowy" Type="System.String" DbType="NChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="Nip" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="Telefon" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="DaneFirmy_Faktury" Member="Fakturies" ThisKey="Id_firmy" OtherKey="Id_firmy" Type="Faktury" />
+    </Type>
+  </Table>
   <Table Name="dbo.Uzytkownicy" Member="Uzytkownicies">
     <Type Name="Uzytkownicy">
-      <Column Name="Id_uzytkownika" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_uzytkownika" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Imie" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Nazwisko" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Login" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
@@ -14,21 +28,23 @@
   </Table>
   <Table Name="dbo.Faktury" Member="Fakturies">
     <Type Name="Faktury">
-      <Column Name="Id_faktury" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_faktury" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Id_klienta" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id_firmy" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Id_uzytkownika" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Nr_faktury" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="Data_wystawienia" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Data_sprzedazy" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Termin_zaplaty" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Association Name="Faktury_Produkty_sprzedane" Member="Produkty_sprzedanes" ThisKey="Id_faktury" OtherKey="Id_faktury" Type="Produkty_sprzedane" />
+      <Association Name="DaneFirmy_Faktury" Member="DaneFirmy" ThisKey="Id_firmy" OtherKey="Id_firmy" Type="DaneFirmy" IsForeignKey="true" />
       <Association Name="Uzytkownicy_Faktury" Member="Uzytkownicy" ThisKey="Id_uzytkownika" OtherKey="Id_uzytkownika" Type="Uzytkownicy" IsForeignKey="true" />
       <Association Name="Klienci_Faktury" Member="Klienci" ThisKey="Id_klienta" OtherKey="Id_klienta" Type="Klienci" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Klienci" Member="Kliencis">
     <Type Name="Klienci">
-      <Column Name="Id_klienta" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_klienta" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Ulica" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Nr_budynku" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
@@ -42,7 +58,7 @@
   </Table>
   <Table Name="dbo.Produkty" Member="Produkties">
     <Type Name="Produkty">
-      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Cena_netto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
       <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
@@ -51,7 +67,7 @@
   </Table>
   <Table Name="dbo.Produkty_sprzedane" Member="Produkty_sprzedanes">
     <Type Name="Produkty_sprzedane">
-      <Column Name="Id_produktu" Member="Id" Storage="_Id_produktu" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_produktu_sprzedanego" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Id_faktury" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Nazwa_produktu" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Cena_jednostkowa_netto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
@@ -62,7 +78,7 @@
   </Table>
   <Table Name="dbo.Uprawnienia" Member="Uprawnienias">
     <Type Name="Uprawnienia">
-      <Column Name="Id_uprawnienia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id_uprawnienia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Uprawnienia_Uzytkownicy" Member="Uzytkownicies" ThisKey="Id_uprawnienia" OtherKey="Id_uprawnienia" Type="Uzytkownicy" />
     </Type>

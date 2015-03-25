@@ -29,6 +29,11 @@ namespace Warehouse_Management_System
                 HomeForm.FormClosed += HomeForm_FormClosed;
                 HomeForm.Show();
                 this.Hide();
+                loginInfoLabel.Hide();
+            }
+            else
+            {
+                loginInfoLabel.Show();
             }
             
         }
@@ -45,9 +50,7 @@ namespace Warehouse_Management_System
             MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
             byte[] md5data = md5.ComputeHash(bytes);
             String passwordString = Convert.ToBase64String(md5data);
-
-            DataClassesDataContext DC = new DataClassesDataContext();
-            Uzytkownicy user = DC.Uzytkownicies.SingleOrDefault(u => u.Login == login && u.Haslo == passwordString);
+            Uzytkownicy user = BazaDanych.Polaczenie.Uzytkownicies.SingleOrDefault(u => u.Login == login && u.Haslo == passwordString);
             return user;
         }
     }

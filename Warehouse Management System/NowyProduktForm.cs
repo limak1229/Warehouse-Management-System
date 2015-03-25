@@ -22,5 +22,19 @@ namespace Warehouse_Management_System
         {
             Application.OpenForms["HomeForm"].Activate();
         }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            Uzytkownicy nowyUzytkownik = new Uzytkownicy();
+            Produkty nowyProdukt = new Produkty();
+
+            BazaDanych.Polaczenie.Produkties.InsertOnSubmit(nowyProdukt);
+            nowyProdukt.Nazwa = nazwaTb.Text;
+            nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
+            nowyProdukt.Kod_produktu = kodTb.Text;
+            nowyProdukt.Cena_netto = decimal.Parse(cenaTb.Text);
+            BazaDanych.Polaczenie.SubmitChanges();
+            this.Close();
+        }
     }
 }

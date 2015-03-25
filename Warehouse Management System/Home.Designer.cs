@@ -35,33 +35,33 @@
             this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
+            this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.produktyDataGridView = new System.Windows.Forms.DataGridView();
+            this.usunBtn = new MetroFramework.Controls.MetroButton();
+            this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
+            this.UżytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.UzytkownicyDataGridView = new System.Windows.Forms.DataGridView();
+            this.deleteUserButton = new MetroFramework.Controls.MetroButton();
+            this.DodajUzytkownikaBtn = new MetroFramework.Controls.MetroButton();
             this.KlienciTabPage = new MetroFramework.Controls.MetroTabPage();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
             this.DodajKlientaBtn = new MetroFramework.Controls.MetroButton();
-            this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
-            this.UżytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.UzytkownicyDataGridView = new System.Windows.Forms.DataGridView();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.DodajUzytkownikaBtn = new MetroFramework.Controls.MetroButton();
             this.UstawieniaTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton7 = new MetroFramework.Controls.MetroButton();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
+            this.zapiszBtn = new MetroFramework.Controls.MetroButton();
+            this.nipFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
+            this.kodFTb = new MetroFramework.Controls.MetroTextBox();
+            this.miastoFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
+            this.numerMFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
+            this.numerBFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.ulicaFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.nazwaFTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -76,12 +76,12 @@
             this.metroTabControl.SuspendLayout();
             this.FakturyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.KlienciTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.ProduktyTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktyDataGridView)).BeginInit();
             this.UżytkownicyTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UzytkownicyDataGridView)).BeginInit();
+            this.KlienciTabPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.UstawieniaTabPage.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
@@ -90,14 +90,14 @@
             // metroTabControl
             // 
             this.metroTabControl.Controls.Add(this.FakturyTabPage);
-            this.metroTabControl.Controls.Add(this.KlienciTabPage);
             this.metroTabControl.Controls.Add(this.ProduktyTabPage);
             this.metroTabControl.Controls.Add(this.UżytkownicyTabPage);
+            this.metroTabControl.Controls.Add(this.KlienciTabPage);
             this.metroTabControl.Controls.Add(this.UstawieniaTabPage);
             this.metroTabControl.Controls.Add(this.metroTabPage1);
             this.metroTabControl.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.SelectedIndex = 0;
+            this.metroTabControl.SelectedIndex = 4;
             this.metroTabControl.Size = new System.Drawing.Size(616, 254);
             this.metroTabControl.TabIndex = 0;
             // 
@@ -153,6 +153,103 @@
             this.DodajFaktureBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.DodajFaktureBtn.Click += new System.EventHandler(this.DodajFaktureBtn_Click);
             // 
+            // ProduktyTabPage
+            // 
+            this.ProduktyTabPage.Controls.Add(this.produktyDataGridView);
+            this.ProduktyTabPage.Controls.Add(this.usunBtn);
+            this.ProduktyTabPage.Controls.Add(this.DodajProduktBtn);
+            this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
+            this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.ProduktyTabPage.Name = "ProduktyTabPage";
+            this.ProduktyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.ProduktyTabPage.TabIndex = 1;
+            this.ProduktyTabPage.Text = "Produkty";
+            this.ProduktyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // produktyDataGridView
+            // 
+            this.produktyDataGridView.AllowUserToAddRows = false;
+            this.produktyDataGridView.AllowUserToDeleteRows = false;
+            this.metroStyleExtender.SetApplyMetroTheme(this.produktyDataGridView, true);
+            this.produktyDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.produktyDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.produktyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.produktyDataGridView.Location = new System.Drawing.Point(0, 32);
+            this.produktyDataGridView.MultiSelect = false;
+            this.produktyDataGridView.Name = "produktyDataGridView";
+            this.produktyDataGridView.ReadOnly = true;
+            this.produktyDataGridView.Size = new System.Drawing.Size(608, 187);
+            this.produktyDataGridView.TabIndex = 6;
+            // 
+            // usunBtn
+            // 
+            this.usunBtn.Location = new System.Drawing.Point(110, 3);
+            this.usunBtn.Name = "usunBtn";
+            this.usunBtn.Size = new System.Drawing.Size(89, 23);
+            this.usunBtn.TabIndex = 5;
+            this.usunBtn.Text = "Usuń produkt";
+            this.usunBtn.Click += new System.EventHandler(this.usunBtn_Click);
+            // 
+            // DodajProduktBtn
+            // 
+            this.DodajProduktBtn.Location = new System.Drawing.Point(3, 3);
+            this.DodajProduktBtn.Name = "DodajProduktBtn";
+            this.DodajProduktBtn.Size = new System.Drawing.Size(101, 23);
+            this.DodajProduktBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajProduktBtn.TabIndex = 3;
+            this.DodajProduktBtn.Text = "Dodaj produkt";
+            this.DodajProduktBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajProduktBtn.Click += new System.EventHandler(this.DodajProduktBtn_Click);
+            // 
+            // UżytkownicyTabPage
+            // 
+            this.UżytkownicyTabPage.Controls.Add(this.UzytkownicyDataGridView);
+            this.UżytkownicyTabPage.Controls.Add(this.deleteUserButton);
+            this.UżytkownicyTabPage.Controls.Add(this.DodajUzytkownikaBtn);
+            this.UżytkownicyTabPage.HorizontalScrollbarBarColor = true;
+            this.UżytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.UżytkownicyTabPage.Name = "UżytkownicyTabPage";
+            this.UżytkownicyTabPage.Size = new System.Drawing.Size(608, 215);
+            this.UżytkownicyTabPage.TabIndex = 3;
+            this.UżytkownicyTabPage.Text = "Użytkownicy";
+            this.UżytkownicyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // UzytkownicyDataGridView
+            // 
+            this.UzytkownicyDataGridView.AllowUserToAddRows = false;
+            this.UzytkownicyDataGridView.AllowUserToDeleteRows = false;
+            this.metroStyleExtender.SetApplyMetroTheme(this.UzytkownicyDataGridView, true);
+            this.UzytkownicyDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.UzytkownicyDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.UzytkownicyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UzytkownicyDataGridView.Location = new System.Drawing.Point(0, 32);
+            this.UzytkownicyDataGridView.MultiSelect = false;
+            this.UzytkownicyDataGridView.Name = "UzytkownicyDataGridView";
+            this.UzytkownicyDataGridView.ReadOnly = true;
+            this.UzytkownicyDataGridView.RowTemplate.ReadOnly = true;
+            this.UzytkownicyDataGridView.Size = new System.Drawing.Size(608, 187);
+            this.UzytkownicyDataGridView.TabIndex = 12;
+            // 
+            // deleteUserButton
+            // 
+            this.deleteUserButton.Location = new System.Drawing.Point(132, 3);
+            this.deleteUserButton.Name = "deleteUserButton";
+            this.deleteUserButton.Size = new System.Drawing.Size(119, 23);
+            this.deleteUserButton.TabIndex = 11;
+            this.deleteUserButton.Text = "Usuń użytkownika";
+            this.deleteUserButton.Click += new System.EventHandler(this.deleteUserButton_Click);
+            // 
+            // DodajUzytkownikaBtn
+            // 
+            this.DodajUzytkownikaBtn.Location = new System.Drawing.Point(3, 3);
+            this.DodajUzytkownikaBtn.Name = "DodajUzytkownikaBtn";
+            this.DodajUzytkownikaBtn.Size = new System.Drawing.Size(123, 23);
+            this.DodajUzytkownikaBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajUzytkownikaBtn.TabIndex = 10;
+            this.DodajUzytkownikaBtn.Text = "Dodaj użytkownika";
+            this.DodajUzytkownikaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajUzytkownikaBtn.Click += new System.EventHandler(this.DodajUzytkownikaBtn_Click);
+            // 
             // KlienciTabPage
             // 
             this.KlienciTabPage.Controls.Add(this.dataGridView3);
@@ -161,7 +258,7 @@
             this.KlienciTabPage.HorizontalScrollbarBarColor = true;
             this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
             this.KlienciTabPage.Name = "KlienciTabPage";
-            this.KlienciTabPage.Size = new System.Drawing.Size(824, 215);
+            this.KlienciTabPage.Size = new System.Drawing.Size(608, 215);
             this.KlienciTabPage.TabIndex = 2;
             this.KlienciTabPage.Text = "Klienci";
             this.KlienciTabPage.VerticalScrollbarBarColor = true;
@@ -195,129 +292,46 @@
             this.DodajKlientaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.DodajKlientaBtn.Click += new System.EventHandler(this.DodajKlientaBtn_Click);
             // 
-            // ProduktyTabPage
-            // 
-            this.ProduktyTabPage.Controls.Add(this.dataGridView2);
-            this.ProduktyTabPage.Controls.Add(this.metroButton2);
-            this.ProduktyTabPage.Controls.Add(this.DodajProduktBtn);
-            this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
-            this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
-            this.ProduktyTabPage.Name = "ProduktyTabPage";
-            this.ProduktyTabPage.Size = new System.Drawing.Size(824, 215);
-            this.ProduktyTabPage.TabIndex = 1;
-            this.ProduktyTabPage.Text = "Produkty";
-            this.ProduktyTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // dataGridView2
-            // 
-            this.metroStyleExtender.SetApplyMetroTheme(this.dataGridView2, true);
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(-4, 32);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(612, 187);
-            this.dataGridView2.TabIndex = 6;
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(110, 3);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(89, 23);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Usuń produkt";
-            // 
-            // DodajProduktBtn
-            // 
-            this.DodajProduktBtn.Location = new System.Drawing.Point(3, 3);
-            this.DodajProduktBtn.Name = "DodajProduktBtn";
-            this.DodajProduktBtn.Size = new System.Drawing.Size(101, 23);
-            this.DodajProduktBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.DodajProduktBtn.TabIndex = 3;
-            this.DodajProduktBtn.Text = "Dodaj produkt";
-            this.DodajProduktBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DodajProduktBtn.Click += new System.EventHandler(this.DodajProduktBtn_Click);
-            // 
-            // UżytkownicyTabPage
-            // 
-            this.UżytkownicyTabPage.Controls.Add(this.UzytkownicyDataGridView);
-            this.UżytkownicyTabPage.Controls.Add(this.metroButton5);
-            this.UżytkownicyTabPage.Controls.Add(this.DodajUzytkownikaBtn);
-            this.UżytkownicyTabPage.HorizontalScrollbarBarColor = true;
-            this.UżytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
-            this.UżytkownicyTabPage.Name = "UżytkownicyTabPage";
-            this.UżytkownicyTabPage.Size = new System.Drawing.Size(824, 215);
-            this.UżytkownicyTabPage.TabIndex = 3;
-            this.UżytkownicyTabPage.Text = "Użytkownicy";
-            this.UżytkownicyTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // UzytkownicyDataGridView
-            // 
-            this.metroStyleExtender.SetApplyMetroTheme(this.UzytkownicyDataGridView, true);
-            this.UzytkownicyDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UzytkownicyDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UzytkownicyDataGridView.Location = new System.Drawing.Point(0, 32);
-            this.UzytkownicyDataGridView.Name = "UzytkownicyDataGridView";
-            this.UzytkownicyDataGridView.Size = new System.Drawing.Size(608, 187);
-            this.UzytkownicyDataGridView.TabIndex = 12;
-            // 
-            // metroButton5
-            // 
-            this.metroButton5.Location = new System.Drawing.Point(132, 3);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(119, 23);
-            this.metroButton5.TabIndex = 11;
-            this.metroButton5.Text = "Usuń użytkownika";
-            // 
-            // DodajUzytkownikaBtn
-            // 
-            this.DodajUzytkownikaBtn.Location = new System.Drawing.Point(3, 3);
-            this.DodajUzytkownikaBtn.Name = "DodajUzytkownikaBtn";
-            this.DodajUzytkownikaBtn.Size = new System.Drawing.Size(123, 23);
-            this.DodajUzytkownikaBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.DodajUzytkownikaBtn.TabIndex = 10;
-            this.DodajUzytkownikaBtn.Text = "Dodaj użytkownika";
-            this.DodajUzytkownikaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DodajUzytkownikaBtn.Click += new System.EventHandler(this.DodajUzytkownikaBtn_Click);
-            // 
             // UstawieniaTabPage
             // 
-            this.UstawieniaTabPage.Controls.Add(this.metroButton7);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox7);
+            this.UstawieniaTabPage.Controls.Add(this.zapiszBtn);
+            this.UstawieniaTabPage.Controls.Add(this.nipFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel7);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox6);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox5);
+            this.UstawieniaTabPage.Controls.Add(this.kodFTb);
+            this.UstawieniaTabPage.Controls.Add(this.miastoFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel6);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel5);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox4);
+            this.UstawieniaTabPage.Controls.Add(this.numerMFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel4);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox3);
+            this.UstawieniaTabPage.Controls.Add(this.numerBFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel3);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox2);
+            this.UstawieniaTabPage.Controls.Add(this.ulicaFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel2);
-            this.UstawieniaTabPage.Controls.Add(this.metroTextBox1);
+            this.UstawieniaTabPage.Controls.Add(this.nazwaFTb);
             this.UstawieniaTabPage.Controls.Add(this.metroLabel1);
             this.UstawieniaTabPage.HorizontalScrollbarBarColor = true;
             this.UstawieniaTabPage.Location = new System.Drawing.Point(4, 35);
             this.UstawieniaTabPage.Name = "UstawieniaTabPage";
-            this.UstawieniaTabPage.Size = new System.Drawing.Size(824, 215);
+            this.UstawieniaTabPage.Size = new System.Drawing.Size(608, 215);
             this.UstawieniaTabPage.TabIndex = 4;
             this.UstawieniaTabPage.Text = "Dane firmy";
             this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
             // 
-            // metroButton7
+            // zapiszBtn
             // 
-            this.metroButton7.Location = new System.Drawing.Point(363, 161);
-            this.metroButton7.Name = "metroButton7";
-            this.metroButton7.Size = new System.Drawing.Size(75, 23);
-            this.metroButton7.TabIndex = 90;
-            this.metroButton7.Text = "Zapisz";
+            this.zapiszBtn.Location = new System.Drawing.Point(363, 161);
+            this.zapiszBtn.Name = "zapiszBtn";
+            this.zapiszBtn.Size = new System.Drawing.Size(75, 23);
+            this.zapiszBtn.TabIndex = 90;
+            this.zapiszBtn.Text = "Zapisz";
+            this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
             // 
-            // metroTextBox7
+            // nipFTb
             // 
-            this.metroTextBox7.Location = new System.Drawing.Point(210, 74);
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.Size = new System.Drawing.Size(67, 23);
-            this.metroTextBox7.TabIndex = 89;
+            this.nipFTb.Location = new System.Drawing.Point(210, 74);
+            this.nipFTb.Name = "nipFTb";
+            this.nipFTb.Size = new System.Drawing.Size(67, 23);
+            this.nipFTb.TabIndex = 89;
             // 
             // metroLabel7
             // 
@@ -328,19 +342,19 @@
             this.metroLabel7.TabIndex = 88;
             this.metroLabel7.Text = "NIP:";
             // 
-            // metroTextBox6
+            // kodFTb
             // 
-            this.metroTextBox6.Location = new System.Drawing.Point(392, 132);
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.Size = new System.Drawing.Size(65, 23);
-            this.metroTextBox6.TabIndex = 87;
+            this.kodFTb.Location = new System.Drawing.Point(392, 132);
+            this.kodFTb.Name = "kodFTb";
+            this.kodFTb.Size = new System.Drawing.Size(65, 23);
+            this.kodFTb.TabIndex = 87;
             // 
-            // metroTextBox5
+            // miastoFTb
             // 
-            this.metroTextBox5.Location = new System.Drawing.Point(210, 132);
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.Size = new System.Drawing.Size(135, 23);
-            this.metroTextBox5.TabIndex = 86;
+            this.miastoFTb.Location = new System.Drawing.Point(210, 132);
+            this.miastoFTb.Name = "miastoFTb";
+            this.miastoFTb.Size = new System.Drawing.Size(135, 23);
+            this.miastoFTb.TabIndex = 86;
             // 
             // metroLabel6
             // 
@@ -360,12 +374,12 @@
             this.metroLabel5.TabIndex = 84;
             this.metroLabel5.Text = "Miasto:";
             // 
-            // metroTextBox4
+            // numerMFTb
             // 
-            this.metroTextBox4.Location = new System.Drawing.Point(392, 103);
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.Size = new System.Drawing.Size(65, 23);
-            this.metroTextBox4.TabIndex = 83;
+            this.numerMFTb.Location = new System.Drawing.Point(392, 103);
+            this.numerMFTb.Name = "numerMFTb";
+            this.numerMFTb.Size = new System.Drawing.Size(65, 23);
+            this.numerMFTb.TabIndex = 83;
             // 
             // metroLabel4
             // 
@@ -376,12 +390,12 @@
             this.metroLabel4.TabIndex = 82;
             this.metroLabel4.Text = "Nr. mieszkania:";
             // 
-            // metroTextBox3
+            // numerBFTb
             // 
-            this.metroTextBox3.Location = new System.Drawing.Point(210, 103);
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.Size = new System.Drawing.Size(75, 23);
-            this.metroTextBox3.TabIndex = 81;
+            this.numerBFTb.Location = new System.Drawing.Point(210, 103);
+            this.numerBFTb.Name = "numerBFTb";
+            this.numerBFTb.Size = new System.Drawing.Size(75, 23);
+            this.numerBFTb.TabIndex = 81;
             // 
             // metroLabel3
             // 
@@ -392,12 +406,12 @@
             this.metroLabel3.TabIndex = 80;
             this.metroLabel3.Text = "Nr. budynku:";
             // 
-            // metroTextBox2
+            // ulicaFTb
             // 
-            this.metroTextBox2.Location = new System.Drawing.Point(329, 73);
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.Size = new System.Drawing.Size(128, 23);
-            this.metroTextBox2.TabIndex = 79;
+            this.ulicaFTb.Location = new System.Drawing.Point(329, 73);
+            this.ulicaFTb.Name = "ulicaFTb";
+            this.ulicaFTb.Size = new System.Drawing.Size(128, 23);
+            this.ulicaFTb.TabIndex = 79;
             // 
             // metroLabel2
             // 
@@ -408,12 +422,12 @@
             this.metroLabel2.TabIndex = 78;
             this.metroLabel2.Text = "Ulica:";
             // 
-            // metroTextBox1
+            // nazwaFTb
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(210, 45);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(247, 23);
-            this.metroTextBox1.TabIndex = 77;
+            this.nazwaFTb.Location = new System.Drawing.Point(210, 45);
+            this.nazwaFTb.Name = "nazwaFTb";
+            this.nazwaFTb.Size = new System.Drawing.Size(247, 23);
+            this.nazwaFTb.TabIndex = 77;
             // 
             // metroLabel1
             // 
@@ -434,7 +448,7 @@
             this.metroTabPage1.HorizontalScrollbarBarColor = true;
             this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
             this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(824, 215);
+            this.metroTabPage1.Size = new System.Drawing.Size(608, 215);
             this.metroTabPage1.TabIndex = 5;
             this.metroTabPage1.Text = "Zestawienia";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
@@ -516,15 +530,16 @@
             this.Text = "Warehouse Management System";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
+            this.Load += new System.EventHandler(this.HomeForm_Load);
             this.metroTabControl.ResumeLayout(false);
             this.FakturyTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.KlienciTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ProduktyTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.produktyDataGridView)).EndInit();
             this.UżytkownicyTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.UzytkownicyDataGridView)).EndInit();
+            this.KlienciTabPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.UstawieniaTabPage.ResumeLayout(false);
             this.UstawieniaTabPage.PerformLayout();
             this.metroTabPage1.ResumeLayout(false);
@@ -549,31 +564,31 @@
         private System.Windows.Forms.DataGridView dataGridView;
         private MetroFramework.Controls.MetroButton UsunFaktureButton;
         private MetroFramework.Controls.MetroButton DodajProduktBtn;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView produktyDataGridView;
         private System.Windows.Forms.DataGridView dataGridView3;
         private MetroFramework.Controls.MetroButton metroButton3;
         private MetroFramework.Controls.MetroButton DodajKlientaBtn;
         private System.Windows.Forms.DataGridView UzytkownicyDataGridView;
-        private MetroFramework.Controls.MetroButton metroButton5;
+        private MetroFramework.Controls.MetroButton deleteUserButton;
         private MetroFramework.Controls.MetroButton DodajUzytkownikaBtn;
-        private MetroFramework.Controls.MetroButton metroButton7;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
+        private MetroFramework.Controls.MetroButton zapiszBtn;
+        private MetroFramework.Controls.MetroTextBox nipFTb;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
+        private MetroFramework.Controls.MetroTextBox kodFTb;
+        private MetroFramework.Controls.MetroTextBox miastoFTb;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
+        private MetroFramework.Controls.MetroTextBox numerMFTb;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
+        private MetroFramework.Controls.MetroTextBox numerBFTb;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox ulicaFTb;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox nazwaFTb;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroButton WylogujBtn;
         private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton usunBtn;
         private MetroFramework.Controls.MetroTabPage metroTabPage1;
         private MetroFramework.Controls.MetroButton metroButton4;
         private MetroFramework.Controls.MetroLabel metroLabel10;
@@ -581,6 +596,11 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private MetroFramework.Controls.MetroLabel userInfolabel;
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn imieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwiskoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nazwaDataGridViewTextBoxColumn;
 
 
 
