@@ -30,9 +30,9 @@ namespace Warehouse_Management_System
 
             BazaDanych.Polaczenie.Produkties.InsertOnSubmit(nowyProdukt);
             nowyProdukt.Nazwa = nazwaTb.Text;
-            nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
             nowyProdukt.Kod_produktu = kodTb.Text;
             nowyProdukt.Cena_netto = decimal.Parse(cenaTb.Text);
+            nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
             BazaDanych.Polaczenie.SubmitChanges();
             this.Close();
         }
