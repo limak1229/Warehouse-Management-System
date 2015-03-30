@@ -53,5 +53,10 @@ namespace Warehouse_Management_System
             Uzytkownicy user = BazaDanych.Polaczenie.Uzytkownicies.SingleOrDefault(u => u.Login == login && u.Haslo == passwordString);
             return user;
         }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+            this.Activate();
+        }
     }
 }

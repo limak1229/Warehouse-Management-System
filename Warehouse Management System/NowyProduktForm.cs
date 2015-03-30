@@ -23,7 +23,7 @@ namespace Warehouse_Management_System
             Application.OpenForms["HomeForm"].Activate();
         }
 
-        private void metroButton2_Click(object sender, EventArgs e)
+        private void ZapiszBtn_Click(object sender, EventArgs e)
         {
             Uzytkownicy nowyUzytkownik = new Uzytkownicy();
             Produkty nowyProdukt = new Produkty();
@@ -34,6 +34,11 @@ namespace Warehouse_Management_System
             nowyProdukt.Cena_netto = decimal.Parse(cenaTb.Text);
             nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
             BazaDanych.Polaczenie.SubmitChanges();
+            this.Close();
+        }
+
+        private void AnulujBtn_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

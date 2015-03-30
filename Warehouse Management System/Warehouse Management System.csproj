@@ -71,10 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BazaDanych.cs" />
-    <Compile Include="bazaDC.designer.cs">
+    <Compile Include="BazaDataClasses.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>bazaDC.dbml</DependentUpon>
+      <DependentUpon>BazaDataClasses.dbml</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -124,16 +124,25 @@
     <Compile Include="NowyUzytkownikForm.Designer.cs">
       <DependentUpon>NowyUzytkownikForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PomocForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PomocForm.Designer.cs">
-      <DependentUpon>PomocForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <None Include="bazaDC.dbml.layout">
-      <DependentUpon>bazaDC.dbml</DependentUpon>
+    <Compile Include="ProductUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductUserControl.Designer.cs">
+      <DependentUpon>ProductUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UzytkownicyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UzytkownicyUserControl.Designer.cs">
+      <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UzytkownicyUserControl.resx">
+      <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="BazaDataClasses.dbml.layout">
+      <DependentUpon>BazaDataClasses.dbml</DependentUpon>
     </None>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -159,8 +168,8 @@
     <EmbeddedResource Include="NowyUzytkownikForm.resx">
       <DependentUpon>NowyUzytkownikForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PomocForm.resx">
-      <DependentUpon>PomocForm.cs</DependentUpon>
+    <EmbeddedResource Include="ProductUserControl.resx">
+      <DependentUpon>ProductUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -171,9 +180,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="bazaDC.dbml">
+    <None Include="BazaDataClasses.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>bazaDC.designer.cs</LastGenOutput>
+      <LastGenOutput>BazaDataClasses.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
@@ -188,16 +197,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database.mdf</DependentUpon>
-    </Content>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

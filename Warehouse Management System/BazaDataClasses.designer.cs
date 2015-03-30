@@ -23,7 +23,7 @@ namespace Warehouse_Management_System
 	
 	
 	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="Database")]
-	public partial class bazaDCDataContext : System.Data.Linq.DataContext
+	public partial class BazaDataClassesDataContext : System.Data.Linq.DataContext
 	{
 		
 		private static System.Data.Linq.Mapping.MappingSource mappingSource = new AttributeMappingSource();
@@ -53,31 +53,31 @@ namespace Warehouse_Management_System
     partial void DeleteUprawnienia(Uprawnienia instance);
     #endregion
 		
-		public bazaDCDataContext() : 
-				base(global::Warehouse_Management_System.Properties.Settings.Default.DatabaseConnectionString, mappingSource)
+		public BazaDataClassesDataContext() : 
+				base(global::Warehouse_Management_System.Properties.Settings.Default.DatabaseConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bazaDCDataContext(string connection) : 
+		public BazaDataClassesDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bazaDCDataContext(System.Data.IDbConnection connection) : 
+		public BazaDataClassesDataContext(System.Data.IDbConnection connection) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bazaDCDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public BazaDataClassesDataContext(string connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();
 		}
 		
-		public bazaDCDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
+		public BazaDataClassesDataContext(System.Data.IDbConnection connection, System.Data.Linq.Mapping.MappingSource mappingSource) : 
 				base(connection, mappingSource)
 		{
 			OnCreated();

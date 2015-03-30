@@ -8,11 +8,11 @@ namespace Warehouse_Management_System
 {
     class BazaDanych
     {
-        private static bazaDCDataContext DT = new bazaDCDataContext();
+        private static BazaDataClassesDataContext DT = new BazaDataClassesDataContext();
         private BazaDanych()
         {
         }
-        public static bazaDCDataContext Polaczenie
+        public static BazaDataClassesDataContext Polaczenie
         {
             get { return DT; }
         }

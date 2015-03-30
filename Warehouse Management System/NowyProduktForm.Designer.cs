@@ -38,8 +38,8 @@
             this.iloscTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
+            this.AnulujBtn = new MetroFramework.Controls.MetroButton();
+            this.ZapiszBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -124,24 +124,25 @@
             this.metroLabel6.TabIndex = 31;
             this.metroLabel6.Text = "szt.";
             // 
-            // metroButton1
+            // AnulujBtn
             // 
-            this.metroButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton1.Location = new System.Drawing.Point(23, 182);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 32;
-            this.metroButton1.Text = "Anuluj";
+            this.AnulujBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnulujBtn.Location = new System.Drawing.Point(23, 182);
+            this.AnulujBtn.Name = "AnulujBtn";
+            this.AnulujBtn.Size = new System.Drawing.Size(75, 23);
+            this.AnulujBtn.TabIndex = 32;
+            this.AnulujBtn.Text = "Anuluj";
+            this.AnulujBtn.Click += new System.EventHandler(this.AnulujBtn_Click);
             // 
-            // metroButton2
+            // ZapiszBtn
             // 
-            this.metroButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.metroButton2.Location = new System.Drawing.Point(150, 182);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 33;
-            this.metroButton2.Text = "Zapisz";
-            this.metroButton2.Click += new System.EventHandler(this.metroButton2_Click);
+            this.ZapiszBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ZapiszBtn.Location = new System.Drawing.Point(150, 182);
+            this.ZapiszBtn.Name = "ZapiszBtn";
+            this.ZapiszBtn.Size = new System.Drawing.Size(75, 23);
+            this.ZapiszBtn.TabIndex = 33;
+            this.ZapiszBtn.Text = "Zapisz";
+            this.ZapiszBtn.Click += new System.EventHandler(this.ZapiszBtn_Click);
             // 
             // NowyProduktForm
             // 
@@ -149,8 +150,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(248, 228);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.ZapiszBtn);
+            this.Controls.Add(this.AnulujBtn);
             this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.iloscTb);
@@ -184,8 +185,8 @@
         private MetroFramework.Controls.MetroTextBox iloscTb;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLabel metroLabel6;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroButton AnulujBtn;
+        private MetroFramework.Controls.MetroButton ZapiszBtn;
 
     }
 }

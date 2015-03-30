@@ -29,10 +29,8 @@ namespace Warehouse_Management_System
         private void zapiszButton_Click(object sender, EventArgs e)
         {
             Uzytkownicy nowyUzytkownik = new Uzytkownicy();
-
             BazaDanych.Polaczenie.Uzytkownicies.InsertOnSubmit(nowyUzytkownik);
-
-            var uprawnienia = (typComboBox.SelectedItem as Uprawnienia);
+            Uprawnienia uprawnienia = (typComboBox.SelectedItem as Uprawnienia);
             nowyUzytkownik.Imie = imieTb.Text;
             nowyUzytkownik.Nazwisko = nazwiskoTb.Text;
             nowyUzytkownik.Login = loginTb.Text;

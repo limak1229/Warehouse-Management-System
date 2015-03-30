@@ -21,6 +21,7 @@ namespace Warehouse_Management_System
         {
             this.zalogowanyUzytkownik = zalogowanyUzytkownik;
             InitializeComponent();
+            iloscProduktowLabel.Text = iloscUzytkownikowLabel.Text = " ";
             userInfolabel.Text = "Jesteś zalogowany jako: " + zalogowanyUzytkownik.Imie.ToString() + " " + zalogowanyUzytkownik.Nazwisko.ToString();
         }
         private void DodajFaktureBtn_Click(object sender, EventArgs e)
@@ -84,16 +85,34 @@ namespace Warehouse_Management_System
             WczytajDaneFirmy();
         }
 
-        private void WczytajUzytkownikow()
+        public void WczytajUzytkownikow()
         {
-            var test = BazaDanych.Polaczenie.Uzytkownicies.AsEnumerable().ToList();
-            UzytkownicyDataGridView.DataSource = BazaDanych.Polaczenie.Uzytkownicies;
+            this.UzytkownicyTabPage.Controls.RemoveByKey("UzytkownicyMetroPanel");
+            this.UzytkownicyTabPage.Controls.Add(this.UzytkownicyMetroPanel);
+            Int32 i = 0;
+            foreach (Uzytkownicy u in BazaDanych.Polaczenie.Uzytkownicies)
+            {
+                UzytkownicyUserControl UUC = new UzytkownicyUserControl(this, u);
+                UUC.Location = new System.Drawing.Point(0, (i++) * (UUC.Height));
+                UUC.Name = "uzytkownik" + i.ToString();
+                this.UzytkownicyMetroPanel.Controls.Add(UUC);
+            }
+            iloscUzytkownikowLabel.Text = "Ilość użytkowników: " + i.ToString();
         }
 
-        private void WczytajProdukty()
+        public void WczytajProdukty()
         {
-            var test = BazaDanych.Polaczenie.Produkties.AsEnumerable().ToList();
-            produktyDataGridView.DataSource = BazaDanych.Polaczenie.Produkties;
+            this.ProduktyTabPage.Controls.RemoveByKey("ProduktyMetroPanel");
+            this.ProduktyTabPage.Controls.Add(this.ProduktyMetroPanel);
+            Int32 i = 0;
+            foreach (Produkty p in BazaDanych.Polaczenie.Produkties)
+            {
+                ProductUserControl PUC = new ProductUserControl(this, p);
+                PUC.Location = new System.Drawing.Point(0, (i++) * (PUC.Height));
+                PUC.Name = "produkt" + i.ToString();
+                this.ProduktyMetroPanel.Controls.Add(PUC);
+            }
+            iloscProduktowLabel.Text = "Ilość produktów: " + i.ToString();
         }
 
         private void WczytajDaneFirmy()
@@ -110,28 +129,6 @@ namespace Warehouse_Management_System
                 miastoFTb.Text = DaneFirmy.Miasto;
                 kodFTb.Text = DaneFirmy.Kod_pocztowy;
             }
-        }
-
-        private void deleteUserButton_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewCell cell in UzytkownicyDataGridView.SelectedCells)
-            {
-                var uzytkownik = (cell.OwningRow.DataBoundItem as Uzytkownicy);
-                BazaDanych.Polaczenie.Uzytkownicies.DeleteOnSubmit(uzytkownik);
-            }
-            BazaDanych.Polaczenie.SubmitChanges();
-            WczytajUzytkownikow();
-        }
-
-        private void usunBtn_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewCell cell in produktyDataGridView.SelectedCells)
-            {
-                var produkt = (cell.OwningRow.DataBoundItem as Produkty);
-                BazaDanych.Polaczenie.Produkties.DeleteOnSubmit(produkt);
-            }
-            BazaDanych.Polaczenie.SubmitChanges();
-            WczytajProdukty();
         }
 
         private void zapiszBtn_Click(object sender, EventArgs e)
