@@ -47,5 +47,10 @@ namespace Warehouse_Management_System
             byte[] md5data = md5.ComputeHash(bytes);
             return Convert.ToBase64String(md5data);
         }
+
+        private void AnulujBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

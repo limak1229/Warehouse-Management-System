@@ -87,8 +87,11 @@ namespace Warehouse_Management_System
 
         public void WczytajUzytkownikow()
         {
-            this.UzytkownicyTabPage.Controls.RemoveByKey("UzytkownicyMetroPanel");
-            this.UzytkownicyTabPage.Controls.Add(this.UzytkownicyMetroPanel);
+            var ListaElementow = this.UzytkownicyTabPage.Controls.Find("UzytkownicyMetroPanel", true).First().Controls.OfType<UzytkownicyUserControl>().ToList();
+            foreach (var el in ListaElementow)
+            {
+                this.UzytkownicyMetroPanel.Controls.Remove(el);
+            }
             Int32 i = 0;
             foreach (Uzytkownicy u in BazaDanych.Polaczenie.Uzytkownicies)
             {
@@ -102,8 +105,11 @@ namespace Warehouse_Management_System
 
         public void WczytajProdukty()
         {
-            this.ProduktyTabPage.Controls.RemoveByKey("ProduktyMetroPanel");
-            this.ProduktyTabPage.Controls.Add(this.ProduktyMetroPanel);
+            var ListaElementow = this.ProduktyTabPage.Controls.Find("ProduktyMetroPanel", true).First().Controls.OfType<ProductUserControl>().ToList();
+            foreach (var el in ListaElementow)
+            {
+                this.ProduktyMetroPanel.Controls.Remove(el);
+            }
             Int32 i = 0;
             foreach (Produkty p in BazaDanych.Polaczenie.Produkties)
             {

@@ -28,7 +28,7 @@ namespace Warehouse_Management_System
             InitializeComponent();
             uprawnieniaCb.DataSource = BazaDanych.Polaczenie.Uprawnienias;
             uprawnieniaCb.DisplayMember = "Nazwa";
-            uprawnieniaCb.SelectedItem = uzytkownik.Uprawnienia.Nazwa;
+            uprawnieniaCb.SelectedItem = uzytkownik.Uprawnienia;
             nazwiskoTb.Text = uzytkownik.Nazwisko;
             imieTb.Text = uzytkownik.Imie;
             loginTb.Text = uzytkownik.Login;
@@ -44,7 +44,8 @@ namespace Warehouse_Management_System
                 uzytkownik.Imie = imieTb.Text;
                 uzytkownik.Nazwisko = nazwiskoTb.Text;
                 uzytkownik.Login = loginTb.Text;
-                uzytkownik.Id_uprawnienia = uprawnienie.Id_uprawnienia;
+                uzytkownik.Uprawnienia = uprawnienie;
+                //uzytkownik.Id_uprawnienia = uprawnienie.Id_uprawnienia;
                 String HP = hashPass(hasloTb.Text);
                 if (uzytkownik.Haslo != String.Empty && uzytkownik.Haslo != HP)
                 {

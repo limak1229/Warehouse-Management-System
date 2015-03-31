@@ -34,7 +34,7 @@
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.typComboBox = new MetroFramework.Controls.MetroComboBox();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.AnulujBtn = new MetroFramework.Controls.MetroButton();
             this.zapiszButton = new MetroFramework.Controls.MetroButton();
             this.imieTb = new MetroFramework.Controls.MetroTextBox();
             this.nazwiskoTb = new MetroFramework.Controls.MetroTextBox();
@@ -96,13 +96,14 @@
             this.typComboBox.Size = new System.Drawing.Size(121, 29);
             this.typComboBox.TabIndex = 22;
             // 
-            // metroButton1
+            // AnulujBtn
             // 
-            this.metroButton1.Location = new System.Drawing.Point(23, 241);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 23;
-            this.metroButton1.Text = "Anuluj";
+            this.AnulujBtn.Location = new System.Drawing.Point(23, 241);
+            this.AnulujBtn.Name = "AnulujBtn";
+            this.AnulujBtn.Size = new System.Drawing.Size(75, 23);
+            this.AnulujBtn.TabIndex = 23;
+            this.AnulujBtn.Text = "Anuluj";
+            this.AnulujBtn.Click += new System.EventHandler(this.AnulujBtn_Click);
             // 
             // zapiszButton
             // 
@@ -154,7 +155,7 @@
             this.Controls.Add(this.nazwiskoTb);
             this.Controls.Add(this.imieTb);
             this.Controls.Add(this.zapiszButton);
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.AnulujBtn);
             this.Controls.Add(this.typComboBox);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
@@ -180,7 +181,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroComboBox typComboBox;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton AnulujBtn;
         private MetroFramework.Controls.MetroButton zapiszButton;
         private MetroFramework.Controls.MetroTextBox imieTb;
         private MetroFramework.Controls.MetroTextBox nazwiskoTb;
