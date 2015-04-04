@@ -79,7 +79,7 @@
             this.zapiszBtn.Name = "zapiszBtn";
             this.zapiszBtn.Size = new System.Drawing.Size(59, 23);
             this.zapiszBtn.TabIndex = 5;
-            this.zapiszBtn.Text = "zapisz";
+            this.zapiszBtn.Text = "Zapisz";
             this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
             // 
             // ProductUserControl

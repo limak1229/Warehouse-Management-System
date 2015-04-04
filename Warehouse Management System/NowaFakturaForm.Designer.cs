@@ -318,6 +318,7 @@
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.dataGridNowaFaktura);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "NowaFakturaForm";
             this.Resizable = false;
             this.Text = "Nowa Faktura";

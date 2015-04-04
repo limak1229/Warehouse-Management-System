@@ -44,8 +44,8 @@ namespace Warehouse_Management_System
 
         private void DodajKlientaBtn_Click(object sender, EventArgs e)
         {
-            Nowy_KlientForm NowyKlientForm = new Nowy_KlientForm();
-            NowyKlientForm.ShowDialog();
+            Nowy_KlientForm NowyKlientForm = new Nowy_KlientForm(this);
+            NowyKlientForm.Show();
         }
 
         private void DodajUzytkownikaBtn_Click(object sender, EventArgs e)
@@ -83,6 +83,7 @@ namespace Warehouse_Management_System
             WczytajUzytkownikow();
             WczytajProdukty();
             WczytajDaneFirmy();
+            WczytajKlientow();
         }
 
         public void WczytajUzytkownikow()
@@ -121,19 +122,37 @@ namespace Warehouse_Management_System
             iloscProduktowLabel.Text = "Ilość produktów: " + i.ToString();
         }
 
+        public void WczytajKlientow()
+        {
+            var ListaElementow = this.KlienciTabPage.Controls.Find("KlienciMetroPanel", true).First().Controls.OfType<KlienciUserControl>().ToList();
+            foreach (var el in ListaElementow)
+            {
+                this.KlienciMetroPanel.Controls.Remove(el);
+            }
+            Int32 i = 0;
+            foreach (Klienci k in BazaDanych.Polaczenie.Kliencis)
+            {
+                KlienciUserControl KUC = new KlienciUserControl(this, k);
+                KUC.Location = new System.Drawing.Point(0, (i++) * (KUC.Height));
+                KUC.Name = "klient" + i.ToString();
+                this.KlienciMetroPanel.Controls.Add(KUC);
+            }
+            iloscKlientowLabel.Text = "Ilość klientów: " + i.ToString();
+        }
+
         private void WczytajDaneFirmy()
         {
             Int32 lastId = BazaDanych.Polaczenie.DaneFirmies.Max(d => d.Id_firmy);
             DaneFirmy DaneFirmy = BazaDanych.Polaczenie.DaneFirmies.SingleOrDefault(d => d.Id_firmy == lastId);
             if (DaneFirmy != null)
             {
-                nazwaFTb.Text = DaneFirmy.Nazwa;
-                nipFTb.Text = DaneFirmy.Nip;
-                ulicaFTb.Text = DaneFirmy.Ulica;
-                numerBFTb.Text = DaneFirmy.Nr_budynku;
-                numerMFTb.Text = DaneFirmy.Nr_mieszkania;
-                miastoFTb.Text = DaneFirmy.Miasto;
-                kodFTb.Text = DaneFirmy.Kod_pocztowy;
+                nazwaTb.Text = DaneFirmy.Nazwa;
+                nipTb.Text = DaneFirmy.Nip;
+                ulicaTb.Text = DaneFirmy.Ulica;
+                nrBudynkuTb.Text = DaneFirmy.Nr_budynku;
+                nrMieszkaniaTb.Text = DaneFirmy.Nr_mieszkania;
+                miastoTb.Text = DaneFirmy.Miasto;
+                kodTb.Text = DaneFirmy.Kod_pocztowy;
             }
         }
 
@@ -141,13 +160,13 @@ namespace Warehouse_Management_System
         {
             DaneFirmy noweDane = new DaneFirmy();
             BazaDanych.Polaczenie.DaneFirmies.InsertOnSubmit(noweDane);
-            noweDane.Nazwa = nazwaFTb.Text;
-            noweDane.Nip = nipFTb.Text;
-            noweDane.Ulica = ulicaFTb.Text;
-            noweDane.Nr_budynku = numerBFTb.Text;
-            noweDane.Nr_mieszkania = numerMFTb.Text;
-            noweDane.Miasto = miastoFTb.Text;
-            noweDane.Kod_pocztowy = kodFTb.Text;
+            noweDane.Nazwa = nazwaTb.Text;
+            noweDane.Nip = nipTb.Text;
+            noweDane.Ulica = ulicaTb.Text;
+            noweDane.Nr_budynku = nrBudynkuTb.Text;
+            noweDane.Nr_mieszkania = nrMieszkaniaTb.Text;
+            noweDane.Miasto = miastoTb.Text;
+            noweDane.Kod_pocztowy = kodTb.Text;
             BazaDanych.Polaczenie.SubmitChanges();
             MessageBox.Show("Nowe dane zostały wprowadzone.","Edycja danych", MessageBoxButtons.OK);
         }

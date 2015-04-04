@@ -65,7 +65,7 @@
             this.loginTextBox.Location = new System.Drawing.Point(73, 82);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(146, 23);
-            this.loginTextBox.TabIndex = 2;
+            this.loginTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
@@ -73,7 +73,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';
             this.passwordTextBox.Size = new System.Drawing.Size(146, 23);
-            this.passwordTextBox.TabIndex = 3;
+            this.passwordTextBox.TabIndex = 2;
             this.passwordTextBox.UseSystemPasswordChar = true;
             // 
             // ZalogujButton
@@ -81,7 +81,8 @@
             this.ZalogujButton.Location = new System.Drawing.Point(144, 140);
             this.ZalogujButton.Name = "ZalogujButton";
             this.ZalogujButton.Size = new System.Drawing.Size(75, 23);
-            this.ZalogujButton.TabIndex = 4;
+            this.ZalogujButton.TabIndex = 3;
+            this.ZalogujButton.TabStop = false;
             this.ZalogujButton.Text = "Zaloguj";
             this.ZalogujButton.Click += new System.EventHandler(this.ZalogujButton_Click);
             // 
@@ -114,6 +115,7 @@
             this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.Resizable = false;
             this.Text = "Logowanie";

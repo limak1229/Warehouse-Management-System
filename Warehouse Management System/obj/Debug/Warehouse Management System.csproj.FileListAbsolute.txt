@@ -33,3 +33,9 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProductUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.UzytkownicyUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.csprojResolveAssemblyReference.cache
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.KlienciUserControl.resources
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.pdfa.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xtra.dll
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xml

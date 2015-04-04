@@ -28,81 +28,441 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.FakturyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
-            this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
-            this.UstawieniaTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.zapiszBtn = new MetroFramework.Controls.MetroButton();
-            this.nipFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
-            this.kodFTb = new MetroFramework.Controls.MetroTextBox();
-            this.miastoFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.numerMFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.numerBFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.ulicaFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.nazwaFTb = new MetroFramework.Controls.MetroTextBox();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.UzytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.UzytkownicyMetroPanel = new MetroFramework.Controls.MetroPanel();
-            this.iloscUzytkownikowLabel = new MetroFramework.Controls.MetroLabel();
-            this.DodajUzytkownikaBtn = new MetroFramework.Controls.MetroButton();
-            this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.ProduktyMetroPanel = new MetroFramework.Controls.MetroPanel();
-            this.iloscProduktowLabel = new MetroFramework.Controls.MetroLabel();
-            this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
-            this.KlienciTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.DodajKlientaBtn = new MetroFramework.Controls.MetroButton();
-            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
-            this.metroStyleManager = new MetroFramework.Components.MetroStyleManager(this.components);
-            this.metroStyleExtender = new MetroFramework.Components.MetroStyleExtender(this.components);
             this.WylogujBtn = new MetroFramework.Controls.MetroButton();
             this.userInfolabel = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.UstawieniaTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.zapiszBtn = new MetroFramework.Controls.MetroButton();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.MetroTabControl.SuspendLayout();
-            this.FakturyTabPage.SuspendLayout();
+            this.ProduktyMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.iloscProduktowLabel = new MetroFramework.Controls.MetroLabel();
+            this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
+            this.KlienciTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel21 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
+            this.iloscKlientowLabel = new MetroFramework.Controls.MetroLabel();
+            this.KlienciMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.DodajKlientaBtn = new MetroFramework.Controls.MetroButton();
+            this.UzytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.UzytkownicyMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.iloscUzytkownikowLabel = new MetroFramework.Controls.MetroLabel();
+            this.DodajUzytkownikaBtn = new MetroFramework.Controls.MetroButton();
+            this.FakturyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
+            this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
+            this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
+            this.ulicaTb = new MetroFramework.Controls.MetroTextBox();
+            this.miastoTb = new MetroFramework.Controls.MetroTextBox();
+            this.nipTb = new MetroFramework.Controls.MetroTextBox();
+            this.kodTb = new MetroFramework.Controls.MetroTextBox();
+            this.nrMieszkaniaTb = new MetroFramework.Controls.MetroTextBox();
+            this.nrBudynkuTb = new MetroFramework.Controls.MetroTextBox();
             this.UstawieniaTabPage.SuspendLayout();
-            this.UzytkownicyTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
-            this.metroTabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).BeginInit();
+            this.UzytkownicyTabPage.SuspendLayout();
+            this.FakturyTabPage.SuspendLayout();
+            this.MetroTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
-            // MetroTabControl
+            // WylogujBtn
             // 
-            this.MetroTabControl.Controls.Add(this.FakturyTabPage);
-            this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
-            this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
-            this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
-            this.MetroTabControl.Controls.Add(this.KlienciTabPage);
-            this.MetroTabControl.Controls.Add(this.metroTabPage1);
-            this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
-            this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 3;
-            this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
-            this.MetroTabControl.TabIndex = 0;
+            this.WylogujBtn.Location = new System.Drawing.Point(517, 7);
+            this.WylogujBtn.Name = "WylogujBtn";
+            this.WylogujBtn.Size = new System.Drawing.Size(75, 23);
+            this.WylogujBtn.TabIndex = 1;
+            this.WylogujBtn.Text = "Wyloguj";
+            this.WylogujBtn.Click += new System.EventHandler(this.WylogujBtn_Click);
+            // 
+            // userInfolabel
+            // 
+            this.userInfolabel.AutoSize = true;
+            this.userInfolabel.Location = new System.Drawing.Point(23, 7);
+            this.userInfolabel.Name = "userInfolabel";
+            this.userInfolabel.Size = new System.Drawing.Size(83, 19);
+            this.userInfolabel.TabIndex = 2;
+            this.userInfolabel.Text = "userInfolabel";
+            // 
+            // UstawieniaTabPage
+            // 
+            this.UstawieniaTabPage.Controls.Add(this.nrBudynkuTb);
+            this.UstawieniaTabPage.Controls.Add(this.nrMieszkaniaTb);
+            this.UstawieniaTabPage.Controls.Add(this.kodTb);
+            this.UstawieniaTabPage.Controls.Add(this.nipTb);
+            this.UstawieniaTabPage.Controls.Add(this.miastoTb);
+            this.UstawieniaTabPage.Controls.Add(this.ulicaTb);
+            this.UstawieniaTabPage.Controls.Add(this.nazwaTb);
+            this.UstawieniaTabPage.Controls.Add(this.zapiszBtn);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel7);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel6);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel5);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel4);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel3);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel2);
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel1);
+            this.UstawieniaTabPage.HorizontalScrollbarBarColor = true;
+            this.UstawieniaTabPage.Location = new System.Drawing.Point(4, 35);
+            this.UstawieniaTabPage.Name = "UstawieniaTabPage";
+            this.UstawieniaTabPage.Size = new System.Drawing.Size(608, 308);
+            this.UstawieniaTabPage.TabIndex = 4;
+            this.UstawieniaTabPage.Text = "Dane firmy";
+            this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // zapiszBtn
+            // 
+            this.zapiszBtn.Location = new System.Drawing.Point(102, 96);
+            this.zapiszBtn.Name = "zapiszBtn";
+            this.zapiszBtn.Size = new System.Drawing.Size(75, 23);
+            this.zapiszBtn.TabIndex = 90;
+            this.zapiszBtn.Text = "Zapisz";
+            this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(249, 10);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(33, 19);
+            this.metroLabel7.TabIndex = 88;
+            this.metroLabel7.Text = "NIP:";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(249, 67);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(35, 19);
+            this.metroLabel6.TabIndex = 85;
+            this.metroLabel6.Text = "Kod:";
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.AutoSize = true;
+            this.metroLabel5.Location = new System.Drawing.Point(45, 68);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel5.TabIndex = 84;
+            this.metroLabel5.Text = "Miasto:";
+            // 
+            // metroLabel4
+            // 
+            this.metroLabel4.AutoSize = true;
+            this.metroLabel4.Location = new System.Drawing.Point(388, 40);
+            this.metroLabel4.Name = "metroLabel4";
+            this.metroLabel4.Size = new System.Drawing.Size(95, 19);
+            this.metroLabel4.TabIndex = 82;
+            this.metroLabel4.Text = "Nr. mieszkania:";
+            // 
+            // metroLabel3
+            // 
+            this.metroLabel3.AutoSize = true;
+            this.metroLabel3.Location = new System.Drawing.Point(249, 39);
+            this.metroLabel3.Name = "metroLabel3";
+            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel3.TabIndex = 80;
+            this.metroLabel3.Text = "Nr. budynku:";
+            // 
+            // metroLabel2
+            // 
+            this.metroLabel2.AutoSize = true;
+            this.metroLabel2.Location = new System.Drawing.Point(56, 40);
+            this.metroLabel2.Name = "metroLabel2";
+            this.metroLabel2.Size = new System.Drawing.Size(40, 19);
+            this.metroLabel2.TabIndex = 78;
+            this.metroLabel2.Text = "Ulica:";
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.Location = new System.Drawing.Point(45, 10);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(51, 19);
+            this.metroLabel1.TabIndex = 76;
+            this.metroLabel1.Text = "Nazwa:";
+            // 
+            // ProduktyTabPage
+            // 
+            this.ProduktyTabPage.Controls.Add(this.metroLabel15);
+            this.ProduktyTabPage.Controls.Add(this.metroLabel16);
+            this.ProduktyTabPage.Controls.Add(this.metroLabel17);
+            this.ProduktyTabPage.Controls.Add(this.metroLabel18);
+            this.ProduktyTabPage.Controls.Add(this.ProduktyMetroPanel);
+            this.ProduktyTabPage.Controls.Add(this.iloscProduktowLabel);
+            this.ProduktyTabPage.Controls.Add(this.DodajProduktBtn);
+            this.ProduktyTabPage.HorizontalScrollbar = true;
+            this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
+            this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.ProduktyTabPage.Name = "ProduktyTabPage";
+            this.ProduktyTabPage.Size = new System.Drawing.Size(608, 308);
+            this.ProduktyTabPage.TabIndex = 1;
+            this.ProduktyTabPage.Text = "Produkty";
+            this.ProduktyTabPage.VerticalScrollbar = true;
+            this.ProduktyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel15
+            // 
+            this.metroLabel15.AutoSize = true;
+            this.metroLabel15.Location = new System.Drawing.Point(402, 29);
+            this.metroLabel15.Name = "metroLabel15";
+            this.metroLabel15.Size = new System.Drawing.Size(64, 19);
+            this.metroLabel15.TabIndex = 13;
+            this.metroLabel15.Text = "Ilość (szt.)";
+            // 
+            // metroLabel16
+            // 
+            this.metroLabel16.AutoSize = true;
+            this.metroLabel16.Location = new System.Drawing.Point(333, 29);
+            this.metroLabel16.Name = "metroLabel16";
+            this.metroLabel16.Size = new System.Drawing.Size(60, 19);
+            this.metroLabel16.TabIndex = 12;
+            this.metroLabel16.Text = "Cena (zł)";
+            // 
+            // metroLabel17
+            // 
+            this.metroLabel17.AutoSize = true;
+            this.metroLabel17.Location = new System.Drawing.Point(236, 29);
+            this.metroLabel17.Name = "metroLabel17";
+            this.metroLabel17.Size = new System.Drawing.Size(89, 19);
+            this.metroLabel17.TabIndex = 11;
+            this.metroLabel17.Text = "Kod produktu";
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.Location = new System.Drawing.Point(70, 29);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(105, 19);
+            this.metroLabel18.TabIndex = 10;
+            this.metroLabel18.Text = "Nazwa produktu";
+            // 
+            // ProduktyMetroPanel
+            // 
+            this.ProduktyMetroPanel.AutoScroll = true;
+            this.ProduktyMetroPanel.HorizontalScrollbar = true;
+            this.ProduktyMetroPanel.HorizontalScrollbarBarColor = true;
+            this.ProduktyMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.ProduktyMetroPanel.HorizontalScrollbarSize = 10;
+            this.ProduktyMetroPanel.Location = new System.Drawing.Point(0, 51);
+            this.ProduktyMetroPanel.Name = "ProduktyMetroPanel";
+            this.ProduktyMetroPanel.Size = new System.Drawing.Size(608, 254);
+            this.ProduktyMetroPanel.TabIndex = 4;
+            this.ProduktyMetroPanel.VerticalScrollbar = true;
+            this.ProduktyMetroPanel.VerticalScrollbarBarColor = true;
+            this.ProduktyMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.ProduktyMetroPanel.VerticalScrollbarSize = 10;
+            // 
+            // iloscProduktowLabel
+            // 
+            this.iloscProduktowLabel.AutoSize = true;
+            this.iloscProduktowLabel.Location = new System.Drawing.Point(110, 5);
+            this.iloscProduktowLabel.Name = "iloscProduktowLabel";
+            this.iloscProduktowLabel.Size = new System.Drawing.Size(94, 19);
+            this.iloscProduktowLabel.TabIndex = 3;
+            this.iloscProduktowLabel.Text = "ilość rekordów";
+            // 
+            // DodajProduktBtn
+            // 
+            this.DodajProduktBtn.Location = new System.Drawing.Point(3, 3);
+            this.DodajProduktBtn.Name = "DodajProduktBtn";
+            this.DodajProduktBtn.Size = new System.Drawing.Size(101, 23);
+            this.DodajProduktBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajProduktBtn.TabIndex = 3;
+            this.DodajProduktBtn.Text = "Dodaj produkt";
+            this.DodajProduktBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajProduktBtn.Click += new System.EventHandler(this.DodajProduktBtn_Click);
+            // 
+            // KlienciTabPage
+            // 
+            this.KlienciTabPage.Controls.Add(this.metroLabel20);
+            this.KlienciTabPage.Controls.Add(this.metroLabel21);
+            this.KlienciTabPage.Controls.Add(this.metroLabel19);
+            this.KlienciTabPage.Controls.Add(this.iloscKlientowLabel);
+            this.KlienciTabPage.Controls.Add(this.KlienciMetroPanel);
+            this.KlienciTabPage.Controls.Add(this.DodajKlientaBtn);
+            this.KlienciTabPage.HorizontalScrollbarBarColor = true;
+            this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
+            this.KlienciTabPage.Name = "KlienciTabPage";
+            this.KlienciTabPage.Size = new System.Drawing.Size(608, 308);
+            this.KlienciTabPage.TabIndex = 2;
+            this.KlienciTabPage.Text = "Klienci";
+            this.KlienciTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.Location = new System.Drawing.Point(415, 29);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(30, 19);
+            this.metroLabel20.TabIndex = 12;
+            this.metroLabel20.Text = "NIP";
+            // 
+            // metroLabel21
+            // 
+            this.metroLabel21.AutoSize = true;
+            this.metroLabel21.Location = new System.Drawing.Point(301, 29);
+            this.metroLabel21.Name = "metroLabel21";
+            this.metroLabel21.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel21.TabIndex = 11;
+            this.metroLabel21.Text = "Miasto";
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.Location = new System.Drawing.Point(108, 29);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(48, 19);
+            this.metroLabel19.TabIndex = 11;
+            this.metroLabel19.Text = "Nazwa";
+            // 
+            // iloscKlientowLabel
+            // 
+            this.iloscKlientowLabel.AutoSize = true;
+            this.iloscKlientowLabel.Location = new System.Drawing.Point(110, 5);
+            this.iloscKlientowLabel.Name = "iloscKlientowLabel";
+            this.iloscKlientowLabel.Size = new System.Drawing.Size(113, 19);
+            this.iloscKlientowLabel.TabIndex = 10;
+            this.iloscKlientowLabel.Text = "iloscKlientowLabel";
+            // 
+            // KlienciMetroPanel
+            // 
+            this.KlienciMetroPanel.HorizontalScrollbarBarColor = true;
+            this.KlienciMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.KlienciMetroPanel.HorizontalScrollbarSize = 10;
+            this.KlienciMetroPanel.Location = new System.Drawing.Point(0, 51);
+            this.KlienciMetroPanel.Name = "KlienciMetroPanel";
+            this.KlienciMetroPanel.Size = new System.Drawing.Size(608, 254);
+            this.KlienciMetroPanel.TabIndex = 9;
+            this.KlienciMetroPanel.VerticalScrollbarBarColor = true;
+            this.KlienciMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.KlienciMetroPanel.VerticalScrollbarSize = 10;
+            // 
+            // DodajKlientaBtn
+            // 
+            this.DodajKlientaBtn.Location = new System.Drawing.Point(3, 3);
+            this.DodajKlientaBtn.Name = "DodajKlientaBtn";
+            this.DodajKlientaBtn.Size = new System.Drawing.Size(101, 23);
+            this.DodajKlientaBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajKlientaBtn.TabIndex = 7;
+            this.DodajKlientaBtn.Text = "Dodaj klienta";
+            this.DodajKlientaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajKlientaBtn.Click += new System.EventHandler(this.DodajKlientaBtn_Click);
+            // 
+            // UzytkownicyTabPage
+            // 
+            this.UzytkownicyTabPage.Controls.Add(this.metroLabel14);
+            this.UzytkownicyTabPage.Controls.Add(this.metroLabel8);
+            this.UzytkownicyTabPage.Controls.Add(this.metroLabel11);
+            this.UzytkownicyTabPage.Controls.Add(this.metroLabel12);
+            this.UzytkownicyTabPage.Controls.Add(this.metroLabel13);
+            this.UzytkownicyTabPage.Controls.Add(this.UzytkownicyMetroPanel);
+            this.UzytkownicyTabPage.Controls.Add(this.iloscUzytkownikowLabel);
+            this.UzytkownicyTabPage.Controls.Add(this.DodajUzytkownikaBtn);
+            this.UzytkownicyTabPage.HorizontalScrollbarBarColor = true;
+            this.UzytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
+            this.UzytkownicyTabPage.Name = "UzytkownicyTabPage";
+            this.UzytkownicyTabPage.Size = new System.Drawing.Size(608, 308);
+            this.UzytkownicyTabPage.TabIndex = 3;
+            this.UzytkownicyTabPage.Text = "Użytkownicy";
+            this.UzytkownicyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel14
+            // 
+            this.metroLabel14.AutoSize = true;
+            this.metroLabel14.Location = new System.Drawing.Point(380, 29);
+            this.metroLabel14.Name = "metroLabel14";
+            this.metroLabel14.Size = new System.Drawing.Size(81, 19);
+            this.metroLabel14.TabIndex = 19;
+            this.metroLabel14.Text = "Uprawnienia";
+            // 
+            // metroLabel8
+            // 
+            this.metroLabel8.AutoSize = true;
+            this.metroLabel8.Location = new System.Drawing.Point(294, 29);
+            this.metroLabel8.Name = "metroLabel8";
+            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel8.TabIndex = 18;
+            this.metroLabel8.Text = "Hasło";
+            // 
+            // metroLabel11
+            // 
+            this.metroLabel11.AutoSize = true;
+            this.metroLabel11.Location = new System.Drawing.Point(217, 29);
+            this.metroLabel11.Name = "metroLabel11";
+            this.metroLabel11.Size = new System.Drawing.Size(41, 19);
+            this.metroLabel11.TabIndex = 17;
+            this.metroLabel11.Text = "Login";
+            // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(129, 29);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(34, 19);
+            this.metroLabel12.TabIndex = 16;
+            this.metroLabel12.Text = "Imię";
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(18, 29);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(63, 19);
+            this.metroLabel13.TabIndex = 15;
+            this.metroLabel13.Text = "Nazwisko";
+            // 
+            // UzytkownicyMetroPanel
+            // 
+            this.UzytkownicyMetroPanel.AutoScroll = true;
+            this.UzytkownicyMetroPanel.HorizontalScrollbar = true;
+            this.UzytkownicyMetroPanel.HorizontalScrollbarBarColor = true;
+            this.UzytkownicyMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.UzytkownicyMetroPanel.HorizontalScrollbarSize = 10;
+            this.UzytkownicyMetroPanel.Location = new System.Drawing.Point(0, 51);
+            this.UzytkownicyMetroPanel.Name = "UzytkownicyMetroPanel";
+            this.UzytkownicyMetroPanel.Size = new System.Drawing.Size(608, 254);
+            this.UzytkownicyMetroPanel.TabIndex = 14;
+            this.UzytkownicyMetroPanel.VerticalScrollbar = true;
+            this.UzytkownicyMetroPanel.VerticalScrollbarBarColor = true;
+            this.UzytkownicyMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.UzytkownicyMetroPanel.VerticalScrollbarSize = 10;
+            // 
+            // iloscUzytkownikowLabel
+            // 
+            this.iloscUzytkownikowLabel.AutoSize = true;
+            this.iloscUzytkownikowLabel.Location = new System.Drawing.Point(132, 5);
+            this.iloscUzytkownikowLabel.Name = "iloscUzytkownikowLabel";
+            this.iloscUzytkownikowLabel.Size = new System.Drawing.Size(94, 19);
+            this.iloscUzytkownikowLabel.TabIndex = 13;
+            this.iloscUzytkownikowLabel.Text = "ilość rekordów";
+            // 
+            // DodajUzytkownikaBtn
+            // 
+            this.DodajUzytkownikaBtn.Location = new System.Drawing.Point(3, 3);
+            this.DodajUzytkownikaBtn.Name = "DodajUzytkownikaBtn";
+            this.DodajUzytkownikaBtn.Size = new System.Drawing.Size(123, 23);
+            this.DodajUzytkownikaBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.DodajUzytkownikaBtn.TabIndex = 10;
+            this.DodajUzytkownikaBtn.Text = "Dodaj użytkownika";
+            this.DodajUzytkownikaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.DodajUzytkownikaBtn.Click += new System.EventHandler(this.DodajUzytkownikaBtn_Click);
             // 
             // FakturyTabPage
             // 
@@ -145,450 +505,67 @@
             this.DodajFaktureBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.DodajFaktureBtn.Click += new System.EventHandler(this.DodajFaktureBtn_Click);
             // 
-            // UstawieniaTabPage
-            // 
-            this.UstawieniaTabPage.Controls.Add(this.zapiszBtn);
-            this.UstawieniaTabPage.Controls.Add(this.nipFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel7);
-            this.UstawieniaTabPage.Controls.Add(this.kodFTb);
-            this.UstawieniaTabPage.Controls.Add(this.miastoFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel6);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel5);
-            this.UstawieniaTabPage.Controls.Add(this.numerMFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel4);
-            this.UstawieniaTabPage.Controls.Add(this.numerBFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel3);
-            this.UstawieniaTabPage.Controls.Add(this.ulicaFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel2);
-            this.UstawieniaTabPage.Controls.Add(this.nazwaFTb);
-            this.UstawieniaTabPage.Controls.Add(this.metroLabel1);
-            this.UstawieniaTabPage.HorizontalScrollbarBarColor = true;
-            this.UstawieniaTabPage.Location = new System.Drawing.Point(4, 35);
-            this.UstawieniaTabPage.Name = "UstawieniaTabPage";
-            this.UstawieniaTabPage.Size = new System.Drawing.Size(608, 308);
-            this.UstawieniaTabPage.TabIndex = 4;
-            this.UstawieniaTabPage.Text = "Dane firmy";
-            this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // zapiszBtn
-            // 
-            this.zapiszBtn.Location = new System.Drawing.Point(363, 161);
-            this.zapiszBtn.Name = "zapiszBtn";
-            this.zapiszBtn.Size = new System.Drawing.Size(75, 23);
-            this.zapiszBtn.TabIndex = 90;
-            this.zapiszBtn.Text = "Zapisz";
-            this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
-            // 
-            // nipFTb
-            // 
-            this.nipFTb.Location = new System.Drawing.Point(210, 74);
-            this.nipFTb.Name = "nipFTb";
-            this.nipFTb.Size = new System.Drawing.Size(67, 23);
-            this.nipFTb.TabIndex = 89;
-            // 
-            // metroLabel7
-            // 
-            this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(171, 74);
-            this.metroLabel7.Name = "metroLabel7";
-            this.metroLabel7.Size = new System.Drawing.Size(33, 19);
-            this.metroLabel7.TabIndex = 88;
-            this.metroLabel7.Text = "NIP:";
-            // 
-            // kodFTb
-            // 
-            this.kodFTb.Location = new System.Drawing.Point(392, 132);
-            this.kodFTb.Name = "kodFTb";
-            this.kodFTb.Size = new System.Drawing.Size(65, 23);
-            this.kodFTb.TabIndex = 87;
-            // 
-            // miastoFTb
-            // 
-            this.miastoFTb.Location = new System.Drawing.Point(210, 132);
-            this.miastoFTb.Name = "miastoFTb";
-            this.miastoFTb.Size = new System.Drawing.Size(135, 23);
-            this.miastoFTb.TabIndex = 86;
-            // 
-            // metroLabel6
-            // 
-            this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(351, 132);
-            this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(35, 19);
-            this.metroLabel6.TabIndex = 85;
-            this.metroLabel6.Text = "Kod:";
-            // 
-            // metroLabel5
-            // 
-            this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(153, 132);
-            this.metroLabel5.Name = "metroLabel5";
-            this.metroLabel5.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel5.TabIndex = 84;
-            this.metroLabel5.Text = "Miasto:";
-            // 
-            // numerMFTb
-            // 
-            this.numerMFTb.Location = new System.Drawing.Point(392, 103);
-            this.numerMFTb.Name = "numerMFTb";
-            this.numerMFTb.Size = new System.Drawing.Size(65, 23);
-            this.numerMFTb.TabIndex = 83;
-            // 
-            // metroLabel4
-            // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(291, 103);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(95, 19);
-            this.metroLabel4.TabIndex = 82;
-            this.metroLabel4.Text = "Nr. mieszkania:";
-            // 
-            // numerBFTb
-            // 
-            this.numerBFTb.Location = new System.Drawing.Point(210, 103);
-            this.numerBFTb.Name = "numerBFTb";
-            this.numerBFTb.Size = new System.Drawing.Size(75, 23);
-            this.numerBFTb.TabIndex = 81;
-            // 
-            // metroLabel3
-            // 
-            this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(123, 103);
-            this.metroLabel3.Name = "metroLabel3";
-            this.metroLabel3.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel3.TabIndex = 80;
-            this.metroLabel3.Text = "Nr. budynku:";
-            // 
-            // ulicaFTb
-            // 
-            this.ulicaFTb.Location = new System.Drawing.Point(329, 73);
-            this.ulicaFTb.Name = "ulicaFTb";
-            this.ulicaFTb.Size = new System.Drawing.Size(128, 23);
-            this.ulicaFTb.TabIndex = 79;
-            // 
-            // metroLabel2
-            // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(283, 74);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(40, 19);
-            this.metroLabel2.TabIndex = 78;
-            this.metroLabel2.Text = "Ulica:";
-            // 
-            // nazwaFTb
-            // 
-            this.nazwaFTb.Location = new System.Drawing.Point(210, 45);
-            this.nazwaFTb.Name = "nazwaFTb";
-            this.nazwaFTb.Size = new System.Drawing.Size(247, 23);
-            this.nazwaFTb.TabIndex = 77;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(153, 45);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(51, 19);
-            this.metroLabel1.TabIndex = 76;
-            this.metroLabel1.Text = "Nazwa:";
-            // 
-            // UzytkownicyTabPage
-            // 
-            this.UzytkownicyTabPage.Controls.Add(this.metroLabel14);
-            this.UzytkownicyTabPage.Controls.Add(this.metroLabel8);
-            this.UzytkownicyTabPage.Controls.Add(this.metroLabel11);
-            this.UzytkownicyTabPage.Controls.Add(this.metroLabel12);
-            this.UzytkownicyTabPage.Controls.Add(this.metroLabel13);
-            this.UzytkownicyTabPage.Controls.Add(this.UzytkownicyMetroPanel);
-            this.UzytkownicyTabPage.Controls.Add(this.iloscUzytkownikowLabel);
-            this.UzytkownicyTabPage.Controls.Add(this.DodajUzytkownikaBtn);
-            this.UzytkownicyTabPage.HorizontalScrollbarBarColor = true;
-            this.UzytkownicyTabPage.Location = new System.Drawing.Point(4, 35);
-            this.UzytkownicyTabPage.Name = "UzytkownicyTabPage";
-            this.UzytkownicyTabPage.Size = new System.Drawing.Size(608, 308);
-            this.UzytkownicyTabPage.TabIndex = 3;
-            this.UzytkownicyTabPage.Text = "Użytkownicy";
-            this.UzytkownicyTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // UzytkownicyMetroPanel
-            // 
-            this.UzytkownicyMetroPanel.AutoScroll = true;
-            this.UzytkownicyMetroPanel.HorizontalScrollbar = true;
-            this.UzytkownicyMetroPanel.HorizontalScrollbarBarColor = true;
-            this.UzytkownicyMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.UzytkownicyMetroPanel.HorizontalScrollbarSize = 10;
-            this.UzytkownicyMetroPanel.Location = new System.Drawing.Point(0, 51);
-            this.UzytkownicyMetroPanel.Name = "UzytkownicyMetroPanel";
-            this.UzytkownicyMetroPanel.Size = new System.Drawing.Size(608, 254);
-            this.UzytkownicyMetroPanel.TabIndex = 14;
-            this.UzytkownicyMetroPanel.VerticalScrollbar = true;
-            this.UzytkownicyMetroPanel.VerticalScrollbarBarColor = true;
-            this.UzytkownicyMetroPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.UzytkownicyMetroPanel.VerticalScrollbarSize = 10;
-            // 
-            // iloscUzytkownikowLabel
-            // 
-            this.iloscUzytkownikowLabel.AutoSize = true;
-            this.iloscUzytkownikowLabel.Location = new System.Drawing.Point(132, 5);
-            this.iloscUzytkownikowLabel.Name = "iloscUzytkownikowLabel";
-            this.iloscUzytkownikowLabel.Size = new System.Drawing.Size(94, 19);
-            this.iloscUzytkownikowLabel.TabIndex = 13;
-            this.iloscUzytkownikowLabel.Text = "ilość rekordów";
-            // 
-            // DodajUzytkownikaBtn
-            // 
-            this.DodajUzytkownikaBtn.Location = new System.Drawing.Point(3, 3);
-            this.DodajUzytkownikaBtn.Name = "DodajUzytkownikaBtn";
-            this.DodajUzytkownikaBtn.Size = new System.Drawing.Size(123, 23);
-            this.DodajUzytkownikaBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.DodajUzytkownikaBtn.TabIndex = 10;
-            this.DodajUzytkownikaBtn.Text = "Dodaj użytkownika";
-            this.DodajUzytkownikaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DodajUzytkownikaBtn.Click += new System.EventHandler(this.DodajUzytkownikaBtn_Click);
-            // 
-            // ProduktyTabPage
-            // 
-            this.ProduktyTabPage.Controls.Add(this.metroLabel15);
-            this.ProduktyTabPage.Controls.Add(this.metroLabel16);
-            this.ProduktyTabPage.Controls.Add(this.metroLabel17);
-            this.ProduktyTabPage.Controls.Add(this.metroLabel18);
-            this.ProduktyTabPage.Controls.Add(this.ProduktyMetroPanel);
-            this.ProduktyTabPage.Controls.Add(this.iloscProduktowLabel);
-            this.ProduktyTabPage.Controls.Add(this.DodajProduktBtn);
-            this.ProduktyTabPage.HorizontalScrollbar = true;
-            this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
-            this.ProduktyTabPage.Location = new System.Drawing.Point(4, 35);
-            this.ProduktyTabPage.Name = "ProduktyTabPage";
-            this.ProduktyTabPage.Size = new System.Drawing.Size(608, 308);
-            this.ProduktyTabPage.TabIndex = 1;
-            this.ProduktyTabPage.Text = "Produkty";
-            this.ProduktyTabPage.VerticalScrollbar = true;
-            this.ProduktyTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // ProduktyMetroPanel
-            // 
-            this.ProduktyMetroPanel.AutoScroll = true;
-            this.ProduktyMetroPanel.HorizontalScrollbar = true;
-            this.ProduktyMetroPanel.HorizontalScrollbarBarColor = true;
-            this.ProduktyMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
-            this.ProduktyMetroPanel.HorizontalScrollbarSize = 10;
-            this.ProduktyMetroPanel.Location = new System.Drawing.Point(0, 51);
-            this.ProduktyMetroPanel.Name = "ProduktyMetroPanel";
-            this.ProduktyMetroPanel.Size = new System.Drawing.Size(608, 254);
-            this.ProduktyMetroPanel.TabIndex = 4;
-            this.ProduktyMetroPanel.VerticalScrollbar = true;
-            this.ProduktyMetroPanel.VerticalScrollbarBarColor = true;
-            this.ProduktyMetroPanel.VerticalScrollbarHighlightOnWheel = false;
-            this.ProduktyMetroPanel.VerticalScrollbarSize = 10;
-            // 
-            // iloscProduktowLabel
-            // 
-            this.iloscProduktowLabel.AutoSize = true;
-            this.iloscProduktowLabel.Location = new System.Drawing.Point(110, 5);
-            this.iloscProduktowLabel.Name = "iloscProduktowLabel";
-            this.iloscProduktowLabel.Size = new System.Drawing.Size(94, 19);
-            this.iloscProduktowLabel.TabIndex = 3;
-            this.iloscProduktowLabel.Text = "ilość rekordów";
-            // 
-            // DodajProduktBtn
-            // 
-            this.DodajProduktBtn.Location = new System.Drawing.Point(3, 3);
-            this.DodajProduktBtn.Name = "DodajProduktBtn";
-            this.DodajProduktBtn.Size = new System.Drawing.Size(101, 23);
-            this.DodajProduktBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.DodajProduktBtn.TabIndex = 3;
-            this.DodajProduktBtn.Text = "Dodaj produkt";
-            this.DodajProduktBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DodajProduktBtn.Click += new System.EventHandler(this.DodajProduktBtn_Click);
-            // 
-            // KlienciTabPage
-            // 
-            this.KlienciTabPage.Controls.Add(this.metroButton3);
-            this.KlienciTabPage.Controls.Add(this.DodajKlientaBtn);
-            this.KlienciTabPage.HorizontalScrollbarBarColor = true;
-            this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
-            this.KlienciTabPage.Name = "KlienciTabPage";
-            this.KlienciTabPage.Size = new System.Drawing.Size(608, 308);
-            this.KlienciTabPage.TabIndex = 2;
-            this.KlienciTabPage.Text = "Klienci";
-            this.KlienciTabPage.VerticalScrollbarBarColor = true;
-            // 
-            // metroButton3
-            // 
-            this.metroButton3.Location = new System.Drawing.Point(110, 3);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(89, 23);
-            this.metroButton3.TabIndex = 8;
-            this.metroButton3.Text = "Usuń klienta";
-            // 
-            // DodajKlientaBtn
-            // 
-            this.DodajKlientaBtn.Location = new System.Drawing.Point(3, 3);
-            this.DodajKlientaBtn.Name = "DodajKlientaBtn";
-            this.DodajKlientaBtn.Size = new System.Drawing.Size(101, 23);
-            this.DodajKlientaBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.DodajKlientaBtn.TabIndex = 7;
-            this.DodajKlientaBtn.Text = "Dodaj klienta";
-            this.DodajKlientaBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.DodajKlientaBtn.Click += new System.EventHandler(this.DodajKlientaBtn_Click);
-            // 
-            // metroTabPage1
-            // 
-            this.metroTabPage1.Controls.Add(this.dateTimePicker2);
-            this.metroTabPage1.Controls.Add(this.dateTimePicker1);
-            this.metroTabPage1.Controls.Add(this.metroButton4);
-            this.metroTabPage1.Controls.Add(this.metroLabel10);
-            this.metroTabPage1.Controls.Add(this.metroLabel9);
-            this.metroTabPage1.HorizontalScrollbarBarColor = true;
-            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
-            this.metroTabPage1.Name = "metroTabPage1";
-            this.metroTabPage1.Size = new System.Drawing.Size(608, 308);
-            this.metroTabPage1.TabIndex = 5;
-            this.metroTabPage1.Text = "Zestawienia";
-            this.metroTabPage1.VerticalScrollbarBarColor = true;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(267, 70);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker2.TabIndex = 73;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(267, 44);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 72;
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(247, 96);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(128, 23);
-            this.metroButton4.TabIndex = 6;
-            this.metroButton4.Text = "Zapisz zestawienie";
-            // 
-            // metroLabel10
-            // 
-            this.metroLabel10.AutoSize = true;
-            this.metroLabel10.Location = new System.Drawing.Point(166, 70);
-            this.metroLabel10.Name = "metroLabel10";
-            this.metroLabel10.Size = new System.Drawing.Size(95, 19);
-            this.metroLabel10.TabIndex = 3;
-            this.metroLabel10.Text = "Data Końcowa:";
-            // 
-            // metroLabel9
-            // 
-            this.metroLabel9.AutoSize = true;
-            this.metroLabel9.Location = new System.Drawing.Point(150, 44);
-            this.metroLabel9.Name = "metroLabel9";
-            this.metroLabel9.Size = new System.Drawing.Size(111, 19);
-            this.metroLabel9.TabIndex = 2;
-            this.metroLabel9.Text = "Data Początkowa:";
-            // 
-            // metroStyleManager
-            // 
-            this.metroStyleManager.Owner = this;
-            this.metroStyleManager.Theme = MetroFramework.MetroThemeStyle.Light;
-            // 
-            // WylogujBtn
-            // 
-            this.WylogujBtn.Location = new System.Drawing.Point(502, 7);
-            this.WylogujBtn.Name = "WylogujBtn";
-            this.WylogujBtn.Size = new System.Drawing.Size(75, 23);
-            this.WylogujBtn.TabIndex = 1;
-            this.WylogujBtn.Text = "Wyloguj";
-            this.WylogujBtn.Click += new System.EventHandler(this.WylogujBtn_Click);
-            // 
-            // userInfolabel
-            // 
-            this.userInfolabel.AutoSize = true;
-            this.userInfolabel.Location = new System.Drawing.Point(23, 7);
-            this.userInfolabel.Name = "userInfolabel";
-            this.userInfolabel.Size = new System.Drawing.Size(83, 19);
-            this.userInfolabel.TabIndex = 2;
-            this.userInfolabel.Text = "userInfolabel";
-            // 
-            // metroLabel8
-            // 
-            this.metroLabel8.AutoSize = true;
-            this.metroLabel8.Location = new System.Drawing.Point(294, 29);
-            this.metroLabel8.Name = "metroLabel8";
-            this.metroLabel8.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel8.TabIndex = 18;
-            this.metroLabel8.Text = "Hasło";
-            // 
-            // metroLabel11
-            // 
-            this.metroLabel11.AutoSize = true;
-            this.metroLabel11.Location = new System.Drawing.Point(217, 29);
-            this.metroLabel11.Name = "metroLabel11";
-            this.metroLabel11.Size = new System.Drawing.Size(41, 19);
-            this.metroLabel11.TabIndex = 17;
-            this.metroLabel11.Text = "Login";
-            // 
-            // metroLabel12
-            // 
-            this.metroLabel12.AutoSize = true;
-            this.metroLabel12.Location = new System.Drawing.Point(129, 29);
-            this.metroLabel12.Name = "metroLabel12";
-            this.metroLabel12.Size = new System.Drawing.Size(34, 19);
-            this.metroLabel12.TabIndex = 16;
-            this.metroLabel12.Text = "Imię";
-            // 
-            // metroLabel13
-            // 
-            this.metroLabel13.AutoSize = true;
-            this.metroLabel13.Location = new System.Drawing.Point(18, 29);
-            this.metroLabel13.Name = "metroLabel13";
-            this.metroLabel13.Size = new System.Drawing.Size(63, 19);
-            this.metroLabel13.TabIndex = 15;
-            this.metroLabel13.Text = "Nazwisko";
-            // 
-            // metroLabel14
-            // 
-            this.metroLabel14.AutoSize = true;
-            this.metroLabel14.Location = new System.Drawing.Point(380, 29);
-            this.metroLabel14.Name = "metroLabel14";
-            this.metroLabel14.Size = new System.Drawing.Size(81, 19);
-            this.metroLabel14.TabIndex = 19;
-            this.metroLabel14.Text = "Uprawnienia";
-            // 
-            // metroLabel15
-            // 
-            this.metroLabel15.AutoSize = true;
-            this.metroLabel15.Location = new System.Drawing.Point(402, 29);
-            this.metroLabel15.Name = "metroLabel15";
-            this.metroLabel15.Size = new System.Drawing.Size(64, 19);
-            this.metroLabel15.TabIndex = 13;
-            this.metroLabel15.Text = "Ilość (szt.)";
-            // 
-            // metroLabel16
-            // 
-            this.metroLabel16.AutoSize = true;
-            this.metroLabel16.Location = new System.Drawing.Point(333, 29);
-            this.metroLabel16.Name = "metroLabel16";
-            this.metroLabel16.Size = new System.Drawing.Size(60, 19);
-            this.metroLabel16.TabIndex = 12;
-            this.metroLabel16.Text = "Cena (zł)";
-            // 
-            // metroLabel17
-            // 
-            this.metroLabel17.AutoSize = true;
-            this.metroLabel17.Location = new System.Drawing.Point(236, 29);
-            this.metroLabel17.Name = "metroLabel17";
-            this.metroLabel17.Size = new System.Drawing.Size(89, 19);
-            this.metroLabel17.TabIndex = 11;
-            this.metroLabel17.Text = "Kod produktu";
-            // 
-            // metroLabel18
-            // 
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.Location = new System.Drawing.Point(70, 29);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(105, 19);
-            this.metroLabel18.TabIndex = 10;
-            this.metroLabel18.Text = "Nazwa produktu";
+            // MetroTabControl
+            // 
+            this.MetroTabControl.Controls.Add(this.FakturyTabPage);
+            this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
+            this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
+            this.MetroTabControl.Controls.Add(this.KlienciTabPage);
+            this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
+            this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
+            this.MetroTabControl.Name = "MetroTabControl";
+            this.MetroTabControl.SelectedIndex = 1;
+            this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
+            this.MetroTabControl.TabIndex = 0;
+            // 
+            // nazwaTb
+            // 
+            this.nazwaTb.Location = new System.Drawing.Point(102, 8);
+            this.nazwaTb.Name = "nazwaTb";
+            this.nazwaTb.Size = new System.Drawing.Size(141, 23);
+            this.nazwaTb.TabIndex = 91;
+            // 
+            // ulicaTb
+            // 
+            this.ulicaTb.Location = new System.Drawing.Point(102, 38);
+            this.ulicaTb.Name = "ulicaTb";
+            this.ulicaTb.Size = new System.Drawing.Size(141, 23);
+            this.ulicaTb.TabIndex = 92;
+            // 
+            // miastoTb
+            // 
+            this.miastoTb.Location = new System.Drawing.Point(102, 66);
+            this.miastoTb.Name = "miastoTb";
+            this.miastoTb.Size = new System.Drawing.Size(141, 23);
+            this.miastoTb.TabIndex = 93;
+            // 
+            // nipTb
+            // 
+            this.nipTb.Location = new System.Drawing.Point(288, 8);
+            this.nipTb.Name = "nipTb";
+            this.nipTb.Size = new System.Drawing.Size(94, 23);
+            this.nipTb.TabIndex = 94;
+            // 
+            // kodTb
+            // 
+            this.kodTb.Location = new System.Drawing.Point(290, 66);
+            this.kodTb.Name = "kodTb";
+            this.kodTb.Size = new System.Drawing.Size(92, 23);
+            this.kodTb.TabIndex = 95;
+            // 
+            // nrMieszkaniaTb
+            // 
+            this.nrMieszkaniaTb.Location = new System.Drawing.Point(489, 40);
+            this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
+            this.nrMieszkaniaTb.Size = new System.Drawing.Size(48, 23);
+            this.nrMieszkaniaTb.TabIndex = 96;
+            // 
+            // nrBudynkuTb
+            // 
+            this.nrBudynkuTb.Location = new System.Drawing.Point(336, 38);
+            this.nrBudynkuTb.Name = "nrBudynkuTb";
+            this.nrBudynkuTb.Size = new System.Drawing.Size(46, 23);
+            this.nrBudynkuTb.TabIndex = 97;
             // 
             // HomeForm
             // 
@@ -599,24 +576,23 @@
             this.Controls.Add(this.userInfolabel);
             this.Controls.Add(this.WylogujBtn);
             this.Controls.Add(this.MetroTabControl);
+            this.MaximizeBox = false;
             this.Name = "HomeForm";
             this.Resizable = false;
             this.Text = "Warehouse Management System";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomeForm_FormClosed);
             this.Load += new System.EventHandler(this.HomeForm_Load);
-            this.MetroTabControl.ResumeLayout(false);
-            this.FakturyTabPage.ResumeLayout(false);
             this.UstawieniaTabPage.ResumeLayout(false);
             this.UstawieniaTabPage.PerformLayout();
-            this.UzytkownicyTabPage.ResumeLayout(false);
-            this.UzytkownicyTabPage.PerformLayout();
             this.ProduktyTabPage.ResumeLayout(false);
             this.ProduktyTabPage.PerformLayout();
             this.KlienciTabPage.ResumeLayout(false);
-            this.metroTabPage1.ResumeLayout(false);
-            this.metroTabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.metroStyleManager)).EndInit();
+            this.KlienciTabPage.PerformLayout();
+            this.UzytkownicyTabPage.ResumeLayout(false);
+            this.UzytkownicyTabPage.PerformLayout();
+            this.FakturyTabPage.ResumeLayout(false);
+            this.MetroTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -624,57 +600,53 @@
 
         #endregion
 
+        private MetroFramework.Controls.MetroButton WylogujBtn;
+        private MetroFramework.Controls.MetroLabel userInfolabel;
         private MetroFramework.Controls.MetroTabControl MetroTabControl;
         private MetroFramework.Controls.MetroTabPage FakturyTabPage;
-        private MetroFramework.Controls.MetroTabPage ProduktyTabPage;
-        private MetroFramework.Controls.MetroTabPage KlienciTabPage;
-        private MetroFramework.Controls.MetroTabPage UzytkownicyTabPage;
-        private MetroFramework.Components.MetroStyleManager metroStyleManager;
-        private MetroFramework.Components.MetroStyleExtender metroStyleExtender;
-        private MetroFramework.Controls.MetroTabPage UstawieniaTabPage;
-        private MetroFramework.Controls.MetroButton DodajFaktureBtn;
+        private MetroFramework.Controls.MetroButton metroButton1;
         private MetroFramework.Controls.MetroButton UsunFaktureButton;
-        private MetroFramework.Controls.MetroButton DodajProduktBtn;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton DodajKlientaBtn;
-        private MetroFramework.Controls.MetroButton DodajUzytkownikaBtn;
+        private MetroFramework.Controls.MetroButton DodajFaktureBtn;
+        private MetroFramework.Controls.MetroTabPage UstawieniaTabPage;
         private MetroFramework.Controls.MetroButton zapiszBtn;
-        private MetroFramework.Controls.MetroTextBox nipFTb;
         private MetroFramework.Controls.MetroLabel metroLabel7;
-        private MetroFramework.Controls.MetroTextBox kodFTb;
-        private MetroFramework.Controls.MetroTextBox miastoFTb;
         private MetroFramework.Controls.MetroLabel metroLabel6;
         private MetroFramework.Controls.MetroLabel metroLabel5;
-        private MetroFramework.Controls.MetroTextBox numerMFTb;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroTextBox numerBFTb;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroTextBox ulicaFTb;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private MetroFramework.Controls.MetroTextBox nazwaFTb;
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroButton WylogujBtn;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroTabPage metroTabPage1;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroLabel metroLabel10;
-        private MetroFramework.Controls.MetroLabel metroLabel9;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MetroFramework.Controls.MetroLabel userInfolabel;
-        private MetroFramework.Controls.MetroLabel iloscProduktowLabel;
-        private MetroFramework.Controls.MetroLabel iloscUzytkownikowLabel;
-        public MetroFramework.Controls.MetroPanel ProduktyMetroPanel;
-        public MetroFramework.Controls.MetroPanel UzytkownicyMetroPanel;
-        private MetroFramework.Controls.MetroLabel metroLabel8;
-        private MetroFramework.Controls.MetroLabel metroLabel11;
-        private MetroFramework.Controls.MetroLabel metroLabel12;
-        private MetroFramework.Controls.MetroLabel metroLabel13;
-        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroTabPage ProduktyTabPage;
         private MetroFramework.Controls.MetroLabel metroLabel15;
         private MetroFramework.Controls.MetroLabel metroLabel16;
         private MetroFramework.Controls.MetroLabel metroLabel17;
         private MetroFramework.Controls.MetroLabel metroLabel18;
+        public MetroFramework.Controls.MetroPanel ProduktyMetroPanel;
+        private MetroFramework.Controls.MetroLabel iloscProduktowLabel;
+        private MetroFramework.Controls.MetroButton DodajProduktBtn;
+        private MetroFramework.Controls.MetroTabPage KlienciTabPage;
+        private MetroFramework.Controls.MetroLabel metroLabel20;
+        private MetroFramework.Controls.MetroLabel metroLabel21;
+        private MetroFramework.Controls.MetroLabel metroLabel19;
+        private MetroFramework.Controls.MetroLabel iloscKlientowLabel;
+        public MetroFramework.Controls.MetroPanel KlienciMetroPanel;
+        private MetroFramework.Controls.MetroButton DodajKlientaBtn;
+        private MetroFramework.Controls.MetroTabPage UzytkownicyTabPage;
+        private MetroFramework.Controls.MetroLabel metroLabel14;
+        private MetroFramework.Controls.MetroLabel metroLabel8;
+        private MetroFramework.Controls.MetroLabel metroLabel11;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        public MetroFramework.Controls.MetroPanel UzytkownicyMetroPanel;
+        private MetroFramework.Controls.MetroLabel iloscUzytkownikowLabel;
+        private MetroFramework.Controls.MetroButton DodajUzytkownikaBtn;
+        private MetroFramework.Controls.MetroTextBox nrBudynkuTb;
+        private MetroFramework.Controls.MetroTextBox nrMieszkaniaTb;
+        private MetroFramework.Controls.MetroTextBox kodTb;
+        private MetroFramework.Controls.MetroTextBox nipTb;
+        private MetroFramework.Controls.MetroTextBox miastoTb;
+        private MetroFramework.Controls.MetroTextBox ulicaTb;
+        private MetroFramework.Controls.MetroTextBox nazwaTb;
 
 
 

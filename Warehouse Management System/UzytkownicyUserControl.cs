@@ -45,8 +45,7 @@ namespace Warehouse_Management_System
                 uzytkownik.Nazwisko = nazwiskoTb.Text;
                 uzytkownik.Login = loginTb.Text;
                 uzytkownik.Uprawnienia = uprawnienie;
-                //uzytkownik.Id_uprawnienia = uprawnienie.Id_uprawnienia;
-                String HP = hashPass(hasloTb.Text);
+                String HP = Program.hashPass(hasloTb.Text);
                 if (uzytkownik.Haslo != String.Empty && uzytkownik.Haslo != HP)
                 {
                     uzytkownik.Haslo = HP;
@@ -67,14 +66,6 @@ namespace Warehouse_Management_System
                 homeForm.UzytkownicyMetroPanel.Controls.Remove(this);
                 homeForm.WczytajUzytkownikow();
             }
-        }
-
-        private String hashPass(String password)
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(password);
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] md5data = md5.ComputeHash(bytes);
-            return Convert.ToBase64String(md5data);
         }
     }
 }

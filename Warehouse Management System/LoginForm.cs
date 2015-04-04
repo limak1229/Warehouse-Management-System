@@ -46,10 +46,7 @@ namespace Warehouse_Management_System
 
         private Uzytkownicy Login(String login, String password)
         {
-            byte[] bytes = Encoding.Unicode.GetBytes(password);
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] md5data = md5.ComputeHash(bytes);
-            String passwordString = Convert.ToBase64String(md5data);
+            String passwordString = Program.hashPass(password);
             Uzytkownicy user = BazaDanych.Polaczenie.Uzytkownicies.SingleOrDefault(u => u.Login == login && u.Haslo == passwordString);
             return user;
         }

@@ -19,6 +19,7 @@ namespace Warehouse_Management_System
             InitializeComponent();
             typComboBox.DataSource = BazaDanych.Polaczenie.Uprawnienias;
             typComboBox.DisplayMember = "Nazwa";
+            this.AcceptButton = zapiszButton;
         }
 
         private void NowyUzytkownikForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -34,18 +35,10 @@ namespace Warehouse_Management_System
             nowyUzytkownik.Imie = imieTb.Text;
             nowyUzytkownik.Nazwisko = nazwiskoTb.Text;
             nowyUzytkownik.Login = loginTb.Text;
-            nowyUzytkownik.Haslo = hashPass(hasloTb.Text);
+            nowyUzytkownik.Haslo = Program.hashPass(hasloTb.Text);
             nowyUzytkownik.Id_uprawnienia = uprawnienia.Id_uprawnienia;
             BazaDanych.Polaczenie.SubmitChanges();
             this.Close();
-        }
-
-        private String hashPass(String password)
-        {
-            byte[] bytes = Encoding.Unicode.GetBytes(password);
-            MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider();
-            byte[] md5data = md5.ComputeHash(bytes);
-            return Convert.ToBase64String(md5data);
         }
 
         private void AnulujBtn_Click(object sender, EventArgs e)

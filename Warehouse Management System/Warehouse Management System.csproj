@@ -47,6 +47,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\iTextSharp.5.5.5\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.pdfa">
+      <HintPath>..\packages\itextsharp.pdfa.5.5.5\lib\itextsharp.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker">
+      <HintPath>..\packages\itextsharp.xmlworker.5.5.5\lib\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra">
+      <HintPath>..\packages\itextsharp.xtra.5.5.5\lib\itextsharp.xtra.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework">
       <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
     </Reference>
@@ -81,6 +93,12 @@
     </Compile>
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KlienciUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KlienciUserControl.Designer.cs">
+      <DependentUpon>KlienciUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaKlientówForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +156,9 @@
     <Compile Include="UzytkownicyUserControl.Designer.cs">
       <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="KlienciUserControl.resx">
+      <DependentUpon>KlienciUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UzytkownicyUserControl.resx">
       <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>
     </EmbeddedResource>

@@ -75,6 +75,7 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.dataGridListaKlienci);
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "ListaKlientówForm";
             this.Resizable = false;
             this.Text = "Lista Klientów";

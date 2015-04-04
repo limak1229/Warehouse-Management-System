@@ -16,6 +16,7 @@ namespace Warehouse_Management_System
         public NowyProduktForm()
         {
             InitializeComponent();
+            this.AcceptButton = ZapiszBtn;
         }
 
         private void NowyProduktForm_FormClosed(object sender, FormClosedEventArgs e)
