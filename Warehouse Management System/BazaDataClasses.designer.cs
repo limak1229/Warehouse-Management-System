@@ -1372,6 +1372,11 @@ namespace Warehouse_Management_System
 		{
 			OnCreated();
 		}
+
+        public Object Clone()
+        {
+            return this.MemberwiseClone();
+        }
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id_produktu

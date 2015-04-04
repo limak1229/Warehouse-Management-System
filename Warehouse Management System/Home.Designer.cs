@@ -31,6 +31,13 @@
             this.WylogujBtn = new MetroFramework.Controls.MetroButton();
             this.userInfolabel = new MetroFramework.Controls.MetroLabel();
             this.UstawieniaTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.nrBudynkuTb = new MetroFramework.Controls.MetroTextBox();
+            this.nrMieszkaniaTb = new MetroFramework.Controls.MetroTextBox();
+            this.kodTb = new MetroFramework.Controls.MetroTextBox();
+            this.nipTb = new MetroFramework.Controls.MetroTextBox();
+            this.miastoTb = new MetroFramework.Controls.MetroTextBox();
+            this.ulicaTb = new MetroFramework.Controls.MetroTextBox();
+            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
             this.zapiszBtn = new MetroFramework.Controls.MetroButton();
             this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
@@ -68,13 +75,6 @@
             this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
-            this.ulicaTb = new MetroFramework.Controls.MetroTextBox();
-            this.miastoTb = new MetroFramework.Controls.MetroTextBox();
-            this.nipTb = new MetroFramework.Controls.MetroTextBox();
-            this.kodTb = new MetroFramework.Controls.MetroTextBox();
-            this.nrMieszkaniaTb = new MetroFramework.Controls.MetroTextBox();
-            this.nrBudynkuTb = new MetroFramework.Controls.MetroTextBox();
             this.UstawieniaTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
@@ -125,6 +125,55 @@
             this.UstawieniaTabPage.TabIndex = 4;
             this.UstawieniaTabPage.Text = "Dane firmy";
             this.UstawieniaTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // nrBudynkuTb
+            // 
+            this.nrBudynkuTb.Location = new System.Drawing.Point(336, 38);
+            this.nrBudynkuTb.Name = "nrBudynkuTb";
+            this.nrBudynkuTb.Size = new System.Drawing.Size(46, 23);
+            this.nrBudynkuTb.TabIndex = 97;
+            // 
+            // nrMieszkaniaTb
+            // 
+            this.nrMieszkaniaTb.Location = new System.Drawing.Point(489, 40);
+            this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
+            this.nrMieszkaniaTb.Size = new System.Drawing.Size(48, 23);
+            this.nrMieszkaniaTb.TabIndex = 96;
+            // 
+            // kodTb
+            // 
+            this.kodTb.Location = new System.Drawing.Point(290, 66);
+            this.kodTb.Name = "kodTb";
+            this.kodTb.Size = new System.Drawing.Size(92, 23);
+            this.kodTb.TabIndex = 95;
+            // 
+            // nipTb
+            // 
+            this.nipTb.Location = new System.Drawing.Point(288, 8);
+            this.nipTb.Name = "nipTb";
+            this.nipTb.Size = new System.Drawing.Size(94, 23);
+            this.nipTb.TabIndex = 94;
+            // 
+            // miastoTb
+            // 
+            this.miastoTb.Location = new System.Drawing.Point(102, 66);
+            this.miastoTb.Name = "miastoTb";
+            this.miastoTb.Size = new System.Drawing.Size(141, 23);
+            this.miastoTb.TabIndex = 93;
+            // 
+            // ulicaTb
+            // 
+            this.ulicaTb.Location = new System.Drawing.Point(102, 38);
+            this.ulicaTb.Name = "ulicaTb";
+            this.ulicaTb.Size = new System.Drawing.Size(141, 23);
+            this.ulicaTb.TabIndex = 92;
+            // 
+            // nazwaTb
+            // 
+            this.nazwaTb.Location = new System.Drawing.Point(102, 8);
+            this.nazwaTb.Name = "nazwaTb";
+            this.nazwaTb.Size = new System.Drawing.Size(141, 23);
+            this.nazwaTb.TabIndex = 91;
             // 
             // zapiszBtn
             // 
@@ -508,64 +557,16 @@
             // MetroTabControl
             // 
             this.MetroTabControl.Controls.Add(this.FakturyTabPage);
-            this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
-            this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
             this.MetroTabControl.Controls.Add(this.KlienciTabPage);
+            this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
             this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
+            this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
+            
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 1;
+            this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
             this.MetroTabControl.TabIndex = 0;
-            // 
-            // nazwaTb
-            // 
-            this.nazwaTb.Location = new System.Drawing.Point(102, 8);
-            this.nazwaTb.Name = "nazwaTb";
-            this.nazwaTb.Size = new System.Drawing.Size(141, 23);
-            this.nazwaTb.TabIndex = 91;
-            // 
-            // ulicaTb
-            // 
-            this.ulicaTb.Location = new System.Drawing.Point(102, 38);
-            this.ulicaTb.Name = "ulicaTb";
-            this.ulicaTb.Size = new System.Drawing.Size(141, 23);
-            this.ulicaTb.TabIndex = 92;
-            // 
-            // miastoTb
-            // 
-            this.miastoTb.Location = new System.Drawing.Point(102, 66);
-            this.miastoTb.Name = "miastoTb";
-            this.miastoTb.Size = new System.Drawing.Size(141, 23);
-            this.miastoTb.TabIndex = 93;
-            // 
-            // nipTb
-            // 
-            this.nipTb.Location = new System.Drawing.Point(288, 8);
-            this.nipTb.Name = "nipTb";
-            this.nipTb.Size = new System.Drawing.Size(94, 23);
-            this.nipTb.TabIndex = 94;
-            // 
-            // kodTb
-            // 
-            this.kodTb.Location = new System.Drawing.Point(290, 66);
-            this.kodTb.Name = "kodTb";
-            this.kodTb.Size = new System.Drawing.Size(92, 23);
-            this.kodTb.TabIndex = 95;
-            // 
-            // nrMieszkaniaTb
-            // 
-            this.nrMieszkaniaTb.Location = new System.Drawing.Point(489, 40);
-            this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
-            this.nrMieszkaniaTb.Size = new System.Drawing.Size(48, 23);
-            this.nrMieszkaniaTb.TabIndex = 96;
-            // 
-            // nrBudynkuTb
-            // 
-            this.nrBudynkuTb.Location = new System.Drawing.Point(336, 38);
-            this.nrBudynkuTb.Name = "nrBudynkuTb";
-            this.nrBudynkuTb.Size = new System.Drawing.Size(46, 23);
-            this.nrBudynkuTb.TabIndex = 97;
             // 
             // HomeForm
             // 

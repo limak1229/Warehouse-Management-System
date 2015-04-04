@@ -94,6 +94,12 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="KlienciDoFakturyUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="KlienciDoFakturyUserControl.Designer.cs">
+      <DependentUpon>KlienciDoFakturyUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="KlienciUserControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +148,12 @@
     <Compile Include="NowyUzytkownikForm.Designer.cs">
       <DependentUpon>NowyUzytkownikForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProduktyDoWyboruUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProduktyDoWyboruUserControl.Designer.cs">
+      <DependentUpon>ProduktyDoWyboruUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProductUserControl.cs">
@@ -156,8 +168,14 @@
     <Compile Include="UzytkownicyUserControl.Designer.cs">
       <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="KlienciDoFakturyUserControl.resx">
+      <DependentUpon>KlienciDoFakturyUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KlienciUserControl.resx">
       <DependentUpon>KlienciUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProduktyDoWyboruUserControl.resx">
+      <DependentUpon>ProduktyDoWyboruUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UzytkownicyUserControl.resx">
       <DependentUpon>UzytkownicyUserControl.cs</DependentUpon>

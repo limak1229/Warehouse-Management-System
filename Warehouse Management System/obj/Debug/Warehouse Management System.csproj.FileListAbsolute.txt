@@ -39,3 +39,5 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xtra.dll
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin\Debug\itextsharp.xml
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.KlienciDoFakturyUserControl.resources
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProduktyDoWyboruUserControl.resources

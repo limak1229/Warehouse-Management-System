@@ -28,42 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridListaKlienci = new System.Windows.Forms.DataGridView();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaKlienci)).BeginInit();
+            this.ListaKlientowMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.SuspendLayout();
             // 
-            // dataGridListaKlienci
+            // ListaKlientowMetroPanel
             // 
-            this.dataGridListaKlienci.AllowUserToAddRows = false;
-            this.dataGridListaKlienci.AllowUserToDeleteRows = false;
-            this.dataGridListaKlienci.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridListaKlienci.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridListaKlienci.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridListaKlienci.Location = new System.Drawing.Point(23, 63);
-            this.dataGridListaKlienci.Name = "dataGridListaKlienci";
-            this.dataGridListaKlienci.ReadOnly = true;
-            this.dataGridListaKlienci.Size = new System.Drawing.Size(513, 186);
-            this.dataGridListaKlienci.TabIndex = 3;
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(461, 255);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Wybierz";
-            // 
-            // metroButton2
-            // 
-            this.metroButton2.Location = new System.Drawing.Point(23, 255);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 5;
-            this.metroButton2.Text = "Anuluj";
+            this.ListaKlientowMetroPanel.HorizontalScrollbarBarColor = true;
+            this.ListaKlientowMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.ListaKlientowMetroPanel.HorizontalScrollbarSize = 10;
+            this.ListaKlientowMetroPanel.Location = new System.Drawing.Point(23, 63);
+            this.ListaKlientowMetroPanel.Name = "ListaKlientowMetroPanel";
+            this.ListaKlientowMetroPanel.Size = new System.Drawing.Size(513, 215);
+            this.ListaKlientowMetroPanel.TabIndex = 5;
+            this.ListaKlientowMetroPanel.VerticalScrollbarBarColor = true;
+            this.ListaKlientowMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.ListaKlientowMetroPanel.VerticalScrollbarSize = 10;
             // 
             // ListaKlientówForm
             // 
@@ -71,26 +50,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(559, 301);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.dataGridListaKlienci);
+            this.Controls.Add(this.ListaKlientowMetroPanel);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ListaKlientówForm";
             this.Resizable = false;
             this.Text = "Lista Klientów";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ListaKlientówForm_FormClosed);
             this.Load += new System.EventHandler(this.ListaKlientówForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaKlienci)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridListaKlienci;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
+        private MetroFramework.Controls.MetroPanel ListaKlientowMetroPanel;
+
     }
 }
