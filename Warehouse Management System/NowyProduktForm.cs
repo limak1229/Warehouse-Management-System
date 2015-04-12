@@ -31,7 +31,7 @@ namespace Warehouse_Management_System
 
             BazaDanych.Polaczenie.Produkties.InsertOnSubmit(nowyProdukt);
             nowyProdukt.Nazwa = nazwaTb.Text;
-            nowyProdukt.Kod_produktu = kodTb.Text;
+            nowyProdukt.Kod_produktu = kodTb.Text.ToUpper();
             nowyProdukt.Cena_netto = decimal.Parse(cenaTb.Text);
             nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
             BazaDanych.Polaczenie.SubmitChanges();
@@ -41,6 +41,12 @@ namespace Warehouse_Management_System
         private void AnulujBtn_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void kodTb_KeyUp(object sender, KeyEventArgs e)
+        {
+            kodTb.Text = kodTb.Text.ToUpper();
+            kodTb.Select(kodTb.Text.Length, 0);
         }
     }
 }

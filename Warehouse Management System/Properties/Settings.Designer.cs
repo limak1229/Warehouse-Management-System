@@ -26,17 +26,6 @@ namespace Warehouse_Management_System.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=|DataDirectory|\\Database.mdf;Integra" +
-            "ted Security=True")]
-        public string DatabaseConnectionString {
-            get {
-                return ((string)(this["DatabaseConnectionString"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\pc1\\Desktop\\Warehouse-Manag" +
             "ement-System\\Warehouse Management System\\Database.mdf;Integrated Security=True;C" +
             "onnect Timeout=30")]

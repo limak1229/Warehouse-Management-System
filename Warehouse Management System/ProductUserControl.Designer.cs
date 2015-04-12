@@ -49,6 +49,7 @@
             this.kodTextBox.Name = "kodTextBox";
             this.kodTextBox.Size = new System.Drawing.Size(88, 23);
             this.kodTextBox.TabIndex = 1;
+            this.kodTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kodTextBox_KeyUp);
             // 
             // iloscTextBox
             // 

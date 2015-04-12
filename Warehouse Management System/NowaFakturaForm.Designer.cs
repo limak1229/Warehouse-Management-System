@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridNowaFaktura = new System.Windows.Forms.DataGridView();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
@@ -46,32 +45,16 @@
             this.metroLabel8 = new MetroFramework.Controls.MetroLabel();
             this.kodTb = new MetroFramework.Controls.MetroTextBox();
             this.wybierzKlientaBtn = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
+            this.dodajProduktBtn = new MetroFramework.Controls.MetroButton();
+            this.zapiszBtn = new MetroFramework.Controls.MetroButton();
             this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel11 = new MetroFramework.Controls.MetroLabel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridNowaFaktura)).BeginInit();
+            this.dataSprzedazyDtp = new System.Windows.Forms.DateTimePicker();
+            this.dataWystawieniaDtp = new System.Windows.Forms.DateTimePicker();
+            this.terminZaplatyDtp = new System.Windows.Forms.DateTimePicker();
+            this.produktyNaFakturzeMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.SuspendLayout();
-            // 
-            // dataGridNowaFaktura
-            // 
-            this.dataGridNowaFaktura.AllowUserToAddRows = false;
-            this.dataGridNowaFaktura.AllowUserToDeleteRows = false;
-            this.dataGridNowaFaktura.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridNowaFaktura.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridNowaFaktura.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridNowaFaktura.Location = new System.Drawing.Point(23, 207);
-            this.dataGridNowaFaktura.Name = "dataGridNowaFaktura";
-            this.dataGridNowaFaktura.ReadOnly = true;
-            this.dataGridNowaFaktura.Size = new System.Drawing.Size(608, 211);
-            this.dataGridNowaFaktura.TabIndex = 39;
             // 
             // metroLabel1
             // 
@@ -211,30 +194,23 @@
             this.wybierzKlientaBtn.Text = "Wybierz klienta";
             this.wybierzKlientaBtn.Click += new System.EventHandler(this.wybierzKlientaBtn_Click);
             // 
-            // metroButton2
+            // dodajProduktBtn
             // 
-            this.metroButton2.Location = new System.Drawing.Point(23, 424);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(75, 23);
-            this.metroButton2.TabIndex = 65;
-            this.metroButton2.Text = "Anuluj";
+            this.dodajProduktBtn.Location = new System.Drawing.Point(439, 424);
+            this.dodajProduktBtn.Name = "dodajProduktBtn";
+            this.dodajProduktBtn.Size = new System.Drawing.Size(111, 23);
+            this.dodajProduktBtn.TabIndex = 66;
+            this.dodajProduktBtn.Text = "Dodaj pozycje";
+            this.dodajProduktBtn.Click += new System.EventHandler(this.dodajProduktBtn_Click);
             // 
-            // metroButton3
+            // zapiszBtn
             // 
-            this.metroButton3.Location = new System.Drawing.Point(439, 424);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(111, 23);
-            this.metroButton3.TabIndex = 66;
-            this.metroButton3.Text = "Dodaj pozycje";
-            this.metroButton3.Click += new System.EventHandler(this.metroButton3_Click);
-            // 
-            // metroButton4
-            // 
-            this.metroButton4.Location = new System.Drawing.Point(556, 424);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(75, 23);
-            this.metroButton4.TabIndex = 67;
-            this.metroButton4.Text = "Zapisz";
+            this.zapiszBtn.Location = new System.Drawing.Point(556, 424);
+            this.zapiszBtn.Name = "zapiszBtn";
+            this.zapiszBtn.Size = new System.Drawing.Size(75, 23);
+            this.zapiszBtn.TabIndex = 67;
+            this.zapiszBtn.Text = "Zapisz";
+            this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
             // 
             // metroLabel9
             // 
@@ -263,26 +239,42 @@
             this.metroLabel11.TabIndex = 70;
             this.metroLabel11.Text = "Termin zapłaty:";
             // 
-            // dateTimePicker1
+            // dataSprzedazyDtp
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(478, 127);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker1.TabIndex = 71;
+            this.dataSprzedazyDtp.Location = new System.Drawing.Point(478, 127);
+            this.dataSprzedazyDtp.Name = "dataSprzedazyDtp";
+            this.dataSprzedazyDtp.Size = new System.Drawing.Size(153, 20);
+            this.dataSprzedazyDtp.TabIndex = 71;
+            this.dataSprzedazyDtp.ValueChanged += new System.EventHandler(this.dataSprzedazyDtp_ValueChanged);
             // 
-            // dateTimePicker2
+            // dataWystawieniaDtp
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(478, 155);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker2.TabIndex = 72;
+            this.dataWystawieniaDtp.Location = new System.Drawing.Point(478, 155);
+            this.dataWystawieniaDtp.Name = "dataWystawieniaDtp";
+            this.dataWystawieniaDtp.Size = new System.Drawing.Size(153, 20);
+            this.dataWystawieniaDtp.TabIndex = 72;
+            this.dataWystawieniaDtp.ValueChanged += new System.EventHandler(this.dataWystawieniaDtp_ValueChanged);
             // 
-            // dateTimePicker3
+            // terminZaplatyDtp
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(478, 181);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(153, 20);
-            this.dateTimePicker3.TabIndex = 73;
+            this.terminZaplatyDtp.Location = new System.Drawing.Point(478, 181);
+            this.terminZaplatyDtp.Name = "terminZaplatyDtp";
+            this.terminZaplatyDtp.Size = new System.Drawing.Size(153, 20);
+            this.terminZaplatyDtp.TabIndex = 73;
+            this.terminZaplatyDtp.ValueChanged += new System.EventHandler(this.terminZaplatyDtp_ValueChanged);
+            // 
+            // produktyNaFakturzeMetroPanel
+            // 
+            this.produktyNaFakturzeMetroPanel.HorizontalScrollbarBarColor = true;
+            this.produktyNaFakturzeMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.produktyNaFakturzeMetroPanel.HorizontalScrollbarSize = 10;
+            this.produktyNaFakturzeMetroPanel.Location = new System.Drawing.Point(23, 207);
+            this.produktyNaFakturzeMetroPanel.Name = "produktyNaFakturzeMetroPanel";
+            this.produktyNaFakturzeMetroPanel.Size = new System.Drawing.Size(608, 211);
+            this.produktyNaFakturzeMetroPanel.TabIndex = 74;
+            this.produktyNaFakturzeMetroPanel.VerticalScrollbarBarColor = true;
+            this.produktyNaFakturzeMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.produktyNaFakturzeMetroPanel.VerticalScrollbarSize = 10;
             // 
             // NowaFakturaForm
             // 
@@ -290,15 +282,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(654, 470);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.produktyNaFakturzeMetroPanel);
+            this.Controls.Add(this.terminZaplatyDtp);
+            this.Controls.Add(this.dataWystawieniaDtp);
+            this.Controls.Add(this.dataSprzedazyDtp);
             this.Controls.Add(this.metroLabel11);
             this.Controls.Add(this.metroLabel10);
             this.Controls.Add(this.metroLabel9);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
+            this.Controls.Add(this.zapiszBtn);
+            this.Controls.Add(this.dodajProduktBtn);
             this.Controls.Add(this.wybierzKlientaBtn);
             this.Controls.Add(this.kodTb);
             this.Controls.Add(this.metroLabel8);
@@ -316,14 +308,13 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroTextBox1);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.dataGridNowaFaktura);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "NowaFakturaForm";
             this.Resizable = false;
             this.Text = "Nowa Faktura";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridNowaFaktura)).EndInit();
+            this.Load += new System.EventHandler(this.NowaFakturaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -331,7 +322,6 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridNowaFaktura;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroLabel metroLabel2;
@@ -349,14 +339,14 @@
         private MetroFramework.Controls.MetroLabel metroLabel8;
         private MetroFramework.Controls.MetroTextBox kodTb;
         private MetroFramework.Controls.MetroButton wybierzKlientaBtn;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
+        private MetroFramework.Controls.MetroButton dodajProduktBtn;
+        private MetroFramework.Controls.MetroButton zapiszBtn;
         private MetroFramework.Controls.MetroLabel metroLabel9;
         private MetroFramework.Controls.MetroLabel metroLabel10;
         private MetroFramework.Controls.MetroLabel metroLabel11;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dataSprzedazyDtp;
+        private System.Windows.Forms.DateTimePicker dataWystawieniaDtp;
+        private System.Windows.Forms.DateTimePicker terminZaplatyDtp;
+        private MetroFramework.Controls.MetroPanel produktyNaFakturzeMetroPanel;
     }
 }

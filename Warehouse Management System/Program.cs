@@ -28,5 +28,11 @@ namespace Warehouse_Management_System
             byte[] md5data = md5.ComputeHash(bytes);
             return Convert.ToBase64String(md5data);
         }
+
+        static public DaneFirmy pobierzDaneFirmy()
+        {
+            Int32 lastId = BazaDanych.Polaczenie.DaneFirmies.Max(d => d.Id_firmy);
+            return BazaDanych.Polaczenie.DaneFirmies.SingleOrDefault(d => d.Id_firmy == lastId);
+        }
     }
 }

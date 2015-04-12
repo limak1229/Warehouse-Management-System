@@ -28,19 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
             this.kodTb = new MetroFramework.Controls.MetroTextBox();
             this.cenaTb = new MetroFramework.Controls.MetroTextBox();
             this.iloscTb = new MetroFramework.Controls.MetroTextBox();
+            this.nazwaTb = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
-            // 
-            // nazwaTb
-            // 
-            this.nazwaTb.Enabled = false;
-            this.nazwaTb.Location = new System.Drawing.Point(3, 3);
-            this.nazwaTb.Name = "nazwaTb";
-            this.nazwaTb.Size = new System.Drawing.Size(126, 23);
-            this.nazwaTb.TabIndex = 0;
             // 
             // kodTb
             // 
@@ -66,6 +58,14 @@
             this.iloscTb.Size = new System.Drawing.Size(60, 23);
             this.iloscTb.TabIndex = 0;
             // 
+            // nazwaTb
+            // 
+            this.nazwaTb.Enabled = false;
+            this.nazwaTb.Location = new System.Drawing.Point(3, 3);
+            this.nazwaTb.Name = "nazwaTb";
+            this.nazwaTb.Size = new System.Drawing.Size(126, 23);
+            this.nazwaTb.TabIndex = 0;
+            // 
             // ProduktyDoWyboruUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -85,9 +85,9 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroTextBox nazwaTb;
         private MetroFramework.Controls.MetroTextBox kodTb;
         private MetroFramework.Controls.MetroTextBox cenaTb;
         private MetroFramework.Controls.MetroTextBox iloscTb;
+        private MetroFramework.Controls.MetroTextBox nazwaTb;
     }
 }

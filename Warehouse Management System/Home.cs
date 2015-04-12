@@ -26,7 +26,7 @@ namespace Warehouse_Management_System
         }
         private void DodajFaktureBtn_Click(object sender, EventArgs e)
         {
-            NowaFakturaForm NowaFakturaForm = new NowaFakturaForm();
+            NowaFakturaForm NowaFakturaForm = new NowaFakturaForm(zalogowanyUzytkownik);
             NowaFakturaForm.ShowDialog();
         }
 
@@ -142,8 +142,7 @@ namespace Warehouse_Management_System
 
         private void WczytajDaneFirmy()
         {
-            Int32 lastId = BazaDanych.Polaczenie.DaneFirmies.Max(d => d.Id_firmy);
-            DaneFirmy DaneFirmy = BazaDanych.Polaczenie.DaneFirmies.SingleOrDefault(d => d.Id_firmy == lastId);
+            DaneFirmy DaneFirmy = Program.pobierzDaneFirmy();
             if (DaneFirmy != null)
             {
                 nazwaTb.Text = DaneFirmy.Nazwa;

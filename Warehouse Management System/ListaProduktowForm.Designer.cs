@@ -36,6 +36,7 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // dodajBtn
@@ -50,7 +51,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(165, 378);
+            this.metroLabel1.Location = new System.Drawing.Point(205, 378);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(37, 19);
             this.metroLabel1.TabIndex = 8;
@@ -58,10 +59,12 @@
             // 
             // iloscTb
             // 
-            this.iloscTb.Location = new System.Drawing.Point(208, 376);
+            this.iloscTb.Location = new System.Drawing.Point(248, 376);
             this.iloscTb.Name = "iloscTb";
-            this.iloscTb.Size = new System.Drawing.Size(75, 23);
+            this.iloscTb.Size = new System.Drawing.Size(35, 23);
             this.iloscTb.TabIndex = 9;
+            this.iloscTb.Text = "1";
+            this.iloscTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ProduktyFakturaMetroPanel
             // 
@@ -70,9 +73,9 @@
             this.ProduktyFakturaMetroPanel.HorizontalScrollbarBarColor = true;
             this.ProduktyFakturaMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.ProduktyFakturaMetroPanel.HorizontalScrollbarSize = 10;
-            this.ProduktyFakturaMetroPanel.Location = new System.Drawing.Point(23, 82);
+            this.ProduktyFakturaMetroPanel.Location = new System.Drawing.Point(23, 101);
             this.ProduktyFakturaMetroPanel.Name = "ProduktyFakturaMetroPanel";
-            this.ProduktyFakturaMetroPanel.Size = new System.Drawing.Size(360, 288);
+            this.ProduktyFakturaMetroPanel.Size = new System.Drawing.Size(360, 269);
             this.ProduktyFakturaMetroPanel.TabIndex = 10;
             this.ProduktyFakturaMetroPanel.VerticalScrollbar = true;
             this.ProduktyFakturaMetroPanel.VerticalScrollbarBarColor = true;
@@ -82,7 +85,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(66, 60);
+            this.metroLabel2.Location = new System.Drawing.Point(66, 79);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(48, 19);
             this.metroLabel2.TabIndex = 11;
@@ -91,7 +94,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(180, 60);
+            this.metroLabel3.Location = new System.Drawing.Point(180, 79);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(32, 19);
             this.metroLabel3.TabIndex = 11;
@@ -100,7 +103,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(248, 60);
+            this.metroLabel4.Location = new System.Drawing.Point(248, 79);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(39, 19);
             this.metroLabel4.TabIndex = 11;
@@ -109,11 +112,20 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(311, 60);
+            this.metroLabel5.Location = new System.Drawing.Point(311, 79);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(34, 19);
             this.metroLabel5.TabIndex = 11;
             this.metroLabel5.Text = "Stan";
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.AutoSize = true;
+            this.metroLabel6.Location = new System.Drawing.Point(23, 60);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(316, 19);
+            this.metroLabel6.TabIndex = 12;
+            this.metroLabel6.Text = "Wybierz produkt a następnie wprowadź ilość poniżej";
             // 
             // ListaProduktowForm
             // 
@@ -121,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(408, 422);
+            this.Controls.Add(this.metroLabel6);
             this.Controls.Add(this.metroLabel5);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
@@ -151,5 +164,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel5;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
     }
 }

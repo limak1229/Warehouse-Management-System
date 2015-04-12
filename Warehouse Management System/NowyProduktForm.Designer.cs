@@ -72,6 +72,7 @@
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(73, 23);
             this.kodTb.TabIndex = 2;
+            this.kodTb.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kodTb_KeyUp);
             // 
             // metroLabel3
             // 

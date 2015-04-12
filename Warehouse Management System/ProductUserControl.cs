@@ -39,7 +39,7 @@ namespace Warehouse_Management_System
             if(result == DialogResult.Yes)
             {
                 produkt.Nazwa = nazwaTextBox.Text;
-                produkt.Kod_produktu = kodTextBox.Text;
+                produkt.Kod_produktu = kodTextBox.Text.ToUpper();
                 produkt.Cena_netto = decimal.Parse(cenaTextBox.Text);
                 produkt.Ilosc = int.Parse(iloscTextBox.Text);
                 BazaDanych.Polaczenie.SubmitChanges();
@@ -57,6 +57,12 @@ namespace Warehouse_Management_System
                 homeForm.ProduktyMetroPanel.Controls.Remove(this);
                 homeForm.WczytajProdukty();
             }
+        }
+
+        private void kodTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            kodTextBox.Text = kodTextBox.Text.ToUpper();
+            kodTextBox.Select(kodTextBox.Text.Length, 0);
         }
     }
 }

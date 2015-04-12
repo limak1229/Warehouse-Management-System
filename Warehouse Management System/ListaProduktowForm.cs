@@ -14,6 +14,7 @@ namespace Warehouse_Management_System
     public partial class ListaProduktowForm : MetroForm
     {
         public Produkty produktWybrany;
+        public Int32 iloscProduktu;
         private ProduktyDoWyboruUserControl pdwuc;
         public ListaProduktowForm()
         {
@@ -44,7 +45,7 @@ namespace Warehouse_Management_System
 
             pdwuc = (ProduktyDoWyboruUserControl)sender;
             pdwuc.checkedField = true;
-            produktWybrany = (Produkty)pdwuc.produkt.Clone();
+            produktWybrany = (Produkty)pdwuc.produkt;
             pdwuc.BackColor = System.Drawing.SystemColors.WindowFrame;
         }
 
@@ -55,7 +56,7 @@ namespace Warehouse_Management_System
             {
                 if (ilosc != 0 && ilosc <= produktWybrany.Ilosc)
                 {
-                    produktWybrany.Ilosc = ilosc;
+                    iloscProduktu = ilosc;
                     DialogResult = DialogResult.OK;
                     Close();
                     return;
