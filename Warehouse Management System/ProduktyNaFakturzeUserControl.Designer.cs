@@ -40,6 +40,7 @@
             // 
             // nazwaTb
             // 
+            this.nazwaTb.Enabled = false;
             this.nazwaTb.Location = new System.Drawing.Point(3, 3);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(191, 23);
@@ -47,6 +48,7 @@
             // 
             // kodTb
             // 
+            this.kodTb.Enabled = false;
             this.kodTb.Location = new System.Drawing.Point(200, 3);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(75, 23);
@@ -54,6 +56,7 @@
             // 
             // cenaNettoTb
             // 
+            this.cenaNettoTb.Enabled = false;
             this.cenaNettoTb.Location = new System.Drawing.Point(354, 3);
             this.cenaNettoTb.Name = "cenaNettoTb";
             this.cenaNettoTb.Size = new System.Drawing.Size(67, 23);
@@ -61,6 +64,7 @@
             // 
             // sumaCenaNettoTb
             // 
+            this.sumaCenaNettoTb.Enabled = false;
             this.sumaCenaNettoTb.Location = new System.Drawing.Point(281, 3);
             this.sumaCenaNettoTb.Name = "sumaCenaNettoTb";
             this.sumaCenaNettoTb.Size = new System.Drawing.Size(67, 23);
@@ -68,10 +72,12 @@
             // 
             // iloscTb
             // 
+            this.iloscTb.Enabled = false;
             this.iloscTb.Location = new System.Drawing.Point(427, 3);
             this.iloscTb.Name = "iloscTb";
             this.iloscTb.Size = new System.Drawing.Size(55, 23);
             this.iloscTb.TabIndex = 0;
+            this.iloscTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // usunBtn
             // 
@@ -80,6 +86,7 @@
             this.usunBtn.Size = new System.Drawing.Size(58, 23);
             this.usunBtn.TabIndex = 1;
             this.usunBtn.Text = "Usuń";
+            this.usunBtn.Click += new System.EventHandler(this.usunBtn_Click);
             // 
             // vatTb
             // 
@@ -89,6 +96,7 @@
             this.vatTb.TabIndex = 2;
             this.vatTb.Text = "23";
             this.vatTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vatTb.TextChanged += new System.EventHandler(this.vatTb_TextChanged);
             // 
             // metroLabel1
             // 

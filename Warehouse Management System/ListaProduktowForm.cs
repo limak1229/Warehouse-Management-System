@@ -51,18 +51,26 @@ namespace Warehouse_Management_System
 
         private void dodajBtn_Click(object sender, EventArgs e)
         {
-            Int32 ilosc;
-            if(Int32.TryParse(iloscTb.Text, out ilosc))
+            if (produktWybrany == null)
             {
-                if (ilosc != 0 && ilosc <= produktWybrany.Ilosc)
-                {
-                    iloscProduktu = ilosc;
-                    DialogResult = DialogResult.OK;
-                    Close();
-                    return;
-                }
+                MessageBox.Show("Wybierz produkt.", "Błąd", MessageBoxButtons.OK);
             }
-            MessageBox.Show("Wprowadź prawidłową ilość produktu", "Błąd", MessageBoxButtons.OK);
+            else
+            {
+                Int32 ilosc;
+                if (Int32.TryParse(iloscTb.Text, out ilosc))
+                {
+                    if (ilosc != 0 && ilosc <= produktWybrany.Ilosc)
+                    {
+                        iloscProduktu = ilosc;
+                        DialogResult = DialogResult.OK;
+                        Close();
+                        return;
+                    }
+                }
+                MessageBox.Show("Wprowadź prawidłową ilość.", "Błąd", MessageBoxButtons.OK);
+            }
+            
         }
     }
 }

@@ -54,6 +54,12 @@
             this.dataWystawieniaDtp = new System.Windows.Forms.DateTimePicker();
             this.terminZaplatyDtp = new System.Windows.Forms.DateTimePicker();
             this.produktyNaFakturzeMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.l1 = new MetroFramework.Controls.MetroLabel();
+            this.l2 = new MetroFramework.Controls.MetroLabel();
+            this.l3 = new MetroFramework.Controls.MetroLabel();
+            this.l4 = new MetroFramework.Controls.MetroLabel();
+            this.l5 = new MetroFramework.Controls.MetroLabel();
+            this.l6 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -265,16 +271,79 @@
             // 
             // produktyNaFakturzeMetroPanel
             // 
+            this.produktyNaFakturzeMetroPanel.AutoScroll = true;
+            this.produktyNaFakturzeMetroPanel.HorizontalScrollbar = true;
             this.produktyNaFakturzeMetroPanel.HorizontalScrollbarBarColor = true;
             this.produktyNaFakturzeMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
             this.produktyNaFakturzeMetroPanel.HorizontalScrollbarSize = 10;
-            this.produktyNaFakturzeMetroPanel.Location = new System.Drawing.Point(23, 207);
+            this.produktyNaFakturzeMetroPanel.Location = new System.Drawing.Point(23, 226);
             this.produktyNaFakturzeMetroPanel.Name = "produktyNaFakturzeMetroPanel";
-            this.produktyNaFakturzeMetroPanel.Size = new System.Drawing.Size(608, 211);
+            this.produktyNaFakturzeMetroPanel.Size = new System.Drawing.Size(621, 192);
             this.produktyNaFakturzeMetroPanel.TabIndex = 74;
+            this.produktyNaFakturzeMetroPanel.VerticalScrollbar = true;
             this.produktyNaFakturzeMetroPanel.VerticalScrollbarBarColor = true;
             this.produktyNaFakturzeMetroPanel.VerticalScrollbarHighlightOnWheel = false;
             this.produktyNaFakturzeMetroPanel.VerticalScrollbarSize = 10;
+            // 
+            // l1
+            // 
+            this.l1.AutoSize = true;
+            this.l1.Location = new System.Drawing.Point(69, 204);
+            this.l1.Name = "l1";
+            this.l1.Size = new System.Drawing.Size(105, 19);
+            this.l1.TabIndex = 75;
+            this.l1.Text = "Nazwa produktu";
+            this.l1.Visible = false;
+            // 
+            // l2
+            // 
+            this.l2.AutoSize = true;
+            this.l2.Location = new System.Drawing.Point(215, 204);
+            this.l2.Name = "l2";
+            this.l2.Size = new System.Drawing.Size(89, 19);
+            this.l2.TabIndex = 75;
+            this.l2.Text = "Kod produktu";
+            this.l2.Visible = false;
+            // 
+            // l3
+            // 
+            this.l3.AutoSize = true;
+            this.l3.Location = new System.Drawing.Point(300, 204);
+            this.l3.Name = "l3";
+            this.l3.Size = new System.Drawing.Size(76, 19);
+            this.l3.TabIndex = 75;
+            this.l3.Text = "Suma netto";
+            this.l3.Visible = false;
+            // 
+            // l4
+            // 
+            this.l4.AutoSize = true;
+            this.l4.Location = new System.Drawing.Point(374, 204);
+            this.l4.Name = "l4";
+            this.l4.Size = new System.Drawing.Size(73, 19);
+            this.l4.TabIndex = 75;
+            this.l4.Text = "Cena netto";
+            this.l4.Visible = false;
+            // 
+            // l5
+            // 
+            this.l5.AutoSize = true;
+            this.l5.Location = new System.Drawing.Point(461, 204);
+            this.l5.Name = "l5";
+            this.l5.Size = new System.Drawing.Size(34, 19);
+            this.l5.TabIndex = 75;
+            this.l5.Text = "Ilość";
+            this.l5.Visible = false;
+            // 
+            // l6
+            // 
+            this.l6.AutoSize = true;
+            this.l6.Location = new System.Drawing.Point(510, 204);
+            this.l6.Name = "l6";
+            this.l6.Size = new System.Drawing.Size(30, 19);
+            this.l6.TabIndex = 75;
+            this.l6.Text = "VAT";
+            this.l6.Visible = false;
             // 
             // NowaFakturaForm
             // 
@@ -282,6 +351,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(654, 470);
+            this.Controls.Add(this.l6);
+            this.Controls.Add(this.l5);
+            this.Controls.Add(this.l4);
+            this.Controls.Add(this.l3);
+            this.Controls.Add(this.l2);
+            this.Controls.Add(this.l1);
             this.Controls.Add(this.produktyNaFakturzeMetroPanel);
             this.Controls.Add(this.terminZaplatyDtp);
             this.Controls.Add(this.dataWystawieniaDtp);
@@ -348,5 +423,11 @@
         private System.Windows.Forms.DateTimePicker dataWystawieniaDtp;
         private System.Windows.Forms.DateTimePicker terminZaplatyDtp;
         private MetroFramework.Controls.MetroPanel produktyNaFakturzeMetroPanel;
+        private MetroFramework.Controls.MetroLabel l1;
+        private MetroFramework.Controls.MetroLabel l2;
+        private MetroFramework.Controls.MetroLabel l3;
+        private MetroFramework.Controls.MetroLabel l4;
+        private MetroFramework.Controls.MetroLabel l5;
+        private MetroFramework.Controls.MetroLabel l6;
     }
 }

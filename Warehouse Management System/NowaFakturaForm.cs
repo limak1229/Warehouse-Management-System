@@ -13,7 +13,7 @@ namespace Warehouse_Management_System
 {
     public partial class NowaFakturaForm : MetroForm
     {
-        List<Produkty_sprzedane> listaWybranychProduktow = new List<Produkty_sprzedane>();
+        public List<Produkty_sprzedane> listaWybranychProduktow = new List<Produkty_sprzedane>();
         Faktury faktura = new Faktury();
         private Uzytkownicy zalogowanyUzytkownik;
 
@@ -76,6 +76,7 @@ namespace Warehouse_Management_System
                 produktNaFakturze.vat = 23;
                 produktNaFakturze.Faktury = faktura;
                 listaWybranychProduktow.Add(produktNaFakturze);
+                WczytajProdukty();
             }
         }
 
@@ -123,6 +124,32 @@ namespace Warehouse_Management_System
             Int32 rok = data.Year;
             Int32 numer = BazaDanych.Polaczenie.Fakturies.Where(f => f.Data_wystawienia.Month == miesiac && f.Data_wystawienia.Year == rok).Count();
             return (numer+1).ToString() + '/' + miesiac.ToString() + '/' + rok.ToString();
+        }
+
+        public void WczytajProdukty()
+        {
+            var ListaElementow = this.Controls.Find("produktyNaFakturzeMetroPanel", true).First().Controls.OfType<ProduktyNaFakturzeUserControl>().ToList();
+            foreach (var el in ListaElementow)
+            {
+                produktyNaFakturzeMetroPanel.Controls.Remove(el);
+            }
+            Int32 i = 0;
+            foreach (Produkty_sprzedane p in listaWybranychProduktow)
+            {
+                ProduktyNaFakturzeUserControl PNFUC = new ProduktyNaFakturzeUserControl(this, p);
+                PNFUC.Location = new System.Drawing.Point(0, (i++) * (PNFUC.Height));
+                PNFUC.Name = "produktSprzedany" + i.ToString();
+                produktyNaFakturzeMetroPanel.Controls.Add(PNFUC);
+            }
+            if (listaWybranychProduktow.Count() > 0)
+            {
+                l1.Visible = l2.Visible = l3.Visible = l4.Visible = l5.Visible = l6.Visible = true;
+            }
+            else
+            {
+                l1.Visible = l2.Visible = l3.Visible = l4.Visible = l5.Visible = l6.Visible = false;
+            }
+
         }
     }
 }
