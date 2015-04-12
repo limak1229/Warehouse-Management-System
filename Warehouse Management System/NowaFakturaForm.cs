@@ -28,6 +28,7 @@ namespace Warehouse_Management_System
             DaneFirmy DaneFirmy = Program.pobierzDaneFirmy();
             if (DaneFirmy != null)
             {
+                numerFakturyTb.Text = faktura.Nr_faktury = pobierzNumerFaktury().ToUpper();
                 BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
                 faktura.DaneFirmy = DaneFirmy;
                 faktura.Uzytkownicy = zalogowanyUzytkownik;
@@ -69,13 +70,12 @@ namespace Warehouse_Management_System
                 BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(produktNaFakturze);
                 produktNaFakturze.Kod_produktu = ListaProduktowForm.produktWybrany.Kod_produktu;
                 produktNaFakturze.Ilosc = ListaProduktowForm.iloscProduktu;
+                ListaProduktowForm.produktWybrany.Ilosc -= produktNaFakturze.Ilosc;
                 produktNaFakturze.Nazwa_produktu = ListaProduktowForm.produktWybrany.Nazwa;
                 produktNaFakturze.Cena_jednostkowa_netto = ListaProduktowForm.produktWybrany.Cena_netto;
                 produktNaFakturze.vat = 23;
                 produktNaFakturze.Faktury = faktura;
                 listaWybranychProduktow.Add(produktNaFakturze);
-
-
             }
         }
 
@@ -96,11 +96,33 @@ namespace Warehouse_Management_System
 
         private void zapiszBtn_Click(object sender, EventArgs e)
         {
-            //TODO
-            //zapis faktury oraz produktów do bazy z jednoczesnym walidowaniem stanu magazynowego
-            //odejmowanie produktów z magazynu
-            //generowanie numeru faktury
+            if (faktura.Klienci != null)
+            {
+                if (faktura.Produkty_sprzedanes.Count > 0)
+                {
+                    BazaDanych.Polaczenie.SubmitChanges();
+                    DialogResult = DialogResult.OK;
+                    Close();
+                }
+                else
+                {
+                    MessageBox.Show("Proszę wybrać produkty.", "Błąd", MessageBoxButtons.OK);
+                }
+                
+            } 
+            else
+            {
+                MessageBox.Show("Proszę wybrać klienta.", "Błąd", MessageBoxButtons.OK);
+            }  
         }
 
+        private string pobierzNumerFaktury()
+        {
+            DateTime data = DateTime.Now;
+            Int32 miesiac = data.Month;
+            Int32 rok = data.Year;
+            Int32 numer = BazaDanych.Polaczenie.Fakturies.Where(f => f.Data_wystawienia.Month == miesiac && f.Data_wystawienia.Year == rok).Count();
+            return (numer+1).ToString() + '/' + miesiac.ToString() + '/' + rok.ToString();
+        }
     }
 }

@@ -27,7 +27,11 @@ namespace Warehouse_Management_System
         private void DodajFaktureBtn_Click(object sender, EventArgs e)
         {
             NowaFakturaForm NowaFakturaForm = new NowaFakturaForm(zalogowanyUzytkownik);
-            NowaFakturaForm.ShowDialog();
+            DialogResult result = NowaFakturaForm.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                WczytajProdukty();
+            }
         }
 
         private void DodajProduktBtn_Click(object sender, EventArgs e)

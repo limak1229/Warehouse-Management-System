@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.numerFakturyTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.nipTb = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
@@ -65,12 +65,12 @@
             this.metroLabel1.TabIndex = 48;
             this.metroLabel1.Text = "Numer faktury:";
             // 
-            // metroTextBox1
+            // numerFakturyTb
             // 
-            this.metroTextBox1.Location = new System.Drawing.Point(126, 60);
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.Size = new System.Drawing.Size(110, 23);
-            this.metroTextBox1.TabIndex = 49;
+            this.numerFakturyTb.Location = new System.Drawing.Point(126, 60);
+            this.numerFakturyTb.Name = "numerFakturyTb";
+            this.numerFakturyTb.Size = new System.Drawing.Size(110, 23);
+            this.numerFakturyTb.TabIndex = 49;
             // 
             // metroLabel2
             // 
@@ -306,7 +306,7 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.nipTb);
             this.Controls.Add(this.metroLabel2);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.numerFakturyTb);
             this.Controls.Add(this.metroLabel1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
@@ -323,7 +323,7 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox numerFakturyTb;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroTextBox nipTb;
         private MetroFramework.Controls.MetroLabel metroLabel3;
