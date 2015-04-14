@@ -78,6 +78,7 @@
             this.iloscTb.Size = new System.Drawing.Size(55, 23);
             this.iloscTb.TabIndex = 0;
             this.iloscTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.iloscTb.TextChanged += new System.EventHandler(this.iloscTb_TextChanged);
             // 
             // usunBtn
             // 

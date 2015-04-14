@@ -106,6 +106,12 @@
     <Compile Include="KlienciUserControl.Designer.cs">
       <DependentUpon>KlienciUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaFakturUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListaFakturUserControl.Designer.cs">
+      <DependentUpon>ListaFakturUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaKlientówForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KlienciUserControl.resx">
       <DependentUpon>KlienciUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaFakturUserControl.resx">
+      <DependentUpon>ListaFakturUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProduktyDoWyboruUserControl.resx">
       <DependentUpon>ProduktyDoWyboruUserControl.cs</DependentUpon>

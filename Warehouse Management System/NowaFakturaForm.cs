@@ -14,16 +14,59 @@ namespace Warehouse_Management_System
     public partial class NowaFakturaForm : MetroForm
     {
         public List<Produkty_sprzedane> listaWybranychProduktow = new List<Produkty_sprzedane>();
-        Faktury faktura = new Faktury();
+        public Faktury faktura = new Faktury();
         private Uzytkownicy zalogowanyUzytkownik;
+        private HomeForm homeForm;
+        bool error = false;
+        public bool edit = false;
+
+        private void NowaFakturaForm_Load(object sender, EventArgs e)
+        {
+            if (error)
+            {
+                Close();
+            }
+        }
 
         public NowaFakturaForm(Uzytkownicy zalogowanyUzytkownik)
         {
             InitializeComponent();
             this.zalogowanyUzytkownik = zalogowanyUzytkownik;
+            NowaFaktura();
         }
 
-        private void NowaFakturaForm_Load(object sender, EventArgs e)
+        public NowaFakturaForm(HomeForm homeForm, Faktury f)
+        {
+            InitializeComponent();
+            this.homeForm = homeForm;
+            this.faktura = f;
+            podgladFaktury();
+        }
+
+        private void podgladFaktury()
+        {
+            edit = true;
+            wybierzKlientaBtn.Visible = false;
+            listaWybranychProduktow = faktura.Produkty_sprzedanes.ToList();
+            Text = "Edycja faktury";
+
+            numerFakturyTb.Text = faktura.Nr_faktury;
+            nazwaTb.Text = faktura.Klienci.Nazwa;
+            nipTb.Text = faktura.Klienci.Nip;
+            ulicaTb.Text = faktura.Klienci.Ulica;
+            nrBudynkuTb.Text = faktura.Klienci.Nr_budynku;
+            nrMieszkaniaTb.Text = faktura.Klienci.Nr_mieszkania;
+            miastoTb.Text = faktura.Klienci.Miasto;
+            kodTb.Text = faktura.Klienci.Kod_pocztowy;
+
+            dataSprzedazyDtp.Value = faktura.Data_sprzedazy;
+            terminZaplatyDtp.Value = faktura.Termin_zaplaty;
+
+            WczytajProdukty();
+
+        }
+
+        private void NowaFaktura()
         {
             DaneFirmy DaneFirmy = Program.pobierzDaneFirmy();
             if (DaneFirmy != null)
@@ -39,7 +82,7 @@ namespace Warehouse_Management_System
             else
             {
                 MessageBox.Show("Nieprawidłowe dane firmy!", "Błąd", MessageBoxButtons.OK);
-                this.Close();
+                error = true;
             }
         }
 
@@ -67,7 +110,6 @@ namespace Warehouse_Management_System
             if (result == DialogResult.OK)
             {
                 Produkty_sprzedane produktNaFakturze = new Produkty_sprzedane();
-                BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(produktNaFakturze);
                 produktNaFakturze.Kod_produktu = ListaProduktowForm.produktWybrany.Kod_produktu;
                 produktNaFakturze.Ilosc = ListaProduktowForm.iloscProduktu;
                 ListaProduktowForm.produktWybrany.Ilosc -= produktNaFakturze.Ilosc;
@@ -76,6 +118,7 @@ namespace Warehouse_Management_System
                 produktNaFakturze.vat = 23;
                 produktNaFakturze.Faktury = faktura;
                 listaWybranychProduktow.Add(produktNaFakturze);
+               
                 WczytajProdukty();
             }
         }
@@ -101,6 +144,10 @@ namespace Warehouse_Management_System
             {
                 if (faktura.Produkty_sprzedanes.Count > 0)
                 {
+                    foreach (var p in listaWybranychProduktow.Where(p => p.Id_produktu_sprzedanego == 0))
+                    {
+                        BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
+                    }
                     BazaDanych.Polaczenie.SubmitChanges();
                     DialogResult = DialogResult.OK;
                     Close();
@@ -149,7 +196,14 @@ namespace Warehouse_Management_System
             {
                 l1.Visible = l2.Visible = l3.Visible = l4.Visible = l5.Visible = l6.Visible = false;
             }
-
         }
+
+        private void NowaFakturaForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (edit)
+            {
+                homeForm.Activate();
+            }
+        }      
     }
 }

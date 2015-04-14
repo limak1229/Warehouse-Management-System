@@ -73,6 +73,7 @@
             // 
             // numerFakturyTb
             // 
+            this.numerFakturyTb.Enabled = false;
             this.numerFakturyTb.Location = new System.Drawing.Point(126, 60);
             this.numerFakturyTb.Name = "numerFakturyTb";
             this.numerFakturyTb.Size = new System.Drawing.Size(110, 23);
@@ -89,6 +90,7 @@
             // 
             // nipTb
             // 
+            this.nipTb.Enabled = false;
             this.nipTb.Location = new System.Drawing.Point(281, 60);
             this.nipTb.Name = "nipTb";
             this.nipTb.Size = new System.Drawing.Size(75, 23);
@@ -105,6 +107,7 @@
             // 
             // nazwaTb
             // 
+            this.nazwaTb.Enabled = false;
             this.nazwaTb.Location = new System.Drawing.Point(126, 89);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(230, 23);
@@ -121,6 +124,7 @@
             // 
             // ulicaTb
             // 
+            this.ulicaTb.Enabled = false;
             this.ulicaTb.Location = new System.Drawing.Point(126, 118);
             this.ulicaTb.Name = "ulicaTb";
             this.ulicaTb.Size = new System.Drawing.Size(230, 23);
@@ -137,6 +141,7 @@
             // 
             // nrBudynkuTb
             // 
+            this.nrBudynkuTb.Enabled = false;
             this.nrBudynkuTb.Location = new System.Drawing.Point(126, 147);
             this.nrBudynkuTb.Name = "nrBudynkuTb";
             this.nrBudynkuTb.Size = new System.Drawing.Size(75, 23);
@@ -153,6 +158,7 @@
             // 
             // nrMieszkaniaTb
             // 
+            this.nrMieszkaniaTb.Enabled = false;
             this.nrMieszkaniaTb.Location = new System.Drawing.Point(300, 147);
             this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
             this.nrMieszkaniaTb.Size = new System.Drawing.Size(56, 23);
@@ -169,6 +175,7 @@
             // 
             // miastoTb
             // 
+            this.miastoTb.Enabled = false;
             this.miastoTb.Location = new System.Drawing.Point(126, 178);
             this.miastoTb.Name = "miastoTb";
             this.miastoTb.Size = new System.Drawing.Size(110, 23);
@@ -185,6 +192,7 @@
             // 
             // kodTb
             // 
+            this.kodTb.Enabled = false;
             this.kodTb.Location = new System.Drawing.Point(283, 178);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(73, 23);
@@ -255,6 +263,7 @@
             // 
             // dataWystawieniaDtp
             // 
+            this.dataWystawieniaDtp.Enabled = false;
             this.dataWystawieniaDtp.Location = new System.Drawing.Point(478, 155);
             this.dataWystawieniaDtp.Name = "dataWystawieniaDtp";
             this.dataWystawieniaDtp.Size = new System.Drawing.Size(153, 20);
@@ -389,6 +398,7 @@
             this.Resizable = false;
             this.Text = "Nowa Faktura";
             this.TextAlign = System.Windows.Forms.VisualStyles.HorizontalAlign.Center;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NowaFakturaForm_FormClosed);
             this.Load += new System.EventHandler(this.NowaFakturaForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

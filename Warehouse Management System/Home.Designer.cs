@@ -71,10 +71,15 @@
             this.iloscUzytkownikowLabel = new MetroFramework.Controls.MetroLabel();
             this.DodajUzytkownikaBtn = new MetroFramework.Controls.MetroButton();
             this.FakturyTabPage = new MetroFramework.Controls.MetroTabPage();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.UsunFaktureButton = new MetroFramework.Controls.MetroButton();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.FakturyMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.metroLabel9 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel10 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel22 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel23 = new MetroFramework.Controls.MetroLabel();
+            this.iloscFakturLabel = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel24 = new MetroFramework.Controls.MetroLabel();
             this.UstawieniaTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
@@ -103,6 +108,7 @@
             // 
             // UstawieniaTabPage
             // 
+            this.UstawieniaTabPage.Controls.Add(this.metroLabel24);
             this.UstawieniaTabPage.Controls.Add(this.nrBudynkuTb);
             this.UstawieniaTabPage.Controls.Add(this.nrMieszkaniaTb);
             this.UstawieniaTabPage.Controls.Add(this.kodTb);
@@ -128,56 +134,56 @@
             // 
             // nrBudynkuTb
             // 
-            this.nrBudynkuTb.Location = new System.Drawing.Point(336, 38);
+            this.nrBudynkuTb.Location = new System.Drawing.Point(300, 56);
             this.nrBudynkuTb.Name = "nrBudynkuTb";
             this.nrBudynkuTb.Size = new System.Drawing.Size(46, 23);
             this.nrBudynkuTb.TabIndex = 97;
             // 
             // nrMieszkaniaTb
             // 
-            this.nrMieszkaniaTb.Location = new System.Drawing.Point(489, 40);
+            this.nrMieszkaniaTb.Location = new System.Drawing.Point(453, 58);
             this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
             this.nrMieszkaniaTb.Size = new System.Drawing.Size(48, 23);
             this.nrMieszkaniaTb.TabIndex = 96;
             // 
             // kodTb
             // 
-            this.kodTb.Location = new System.Drawing.Point(290, 66);
+            this.kodTb.Location = new System.Drawing.Point(254, 84);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(92, 23);
             this.kodTb.TabIndex = 95;
             // 
             // nipTb
             // 
-            this.nipTb.Location = new System.Drawing.Point(288, 8);
+            this.nipTb.Location = new System.Drawing.Point(252, 26);
             this.nipTb.Name = "nipTb";
             this.nipTb.Size = new System.Drawing.Size(94, 23);
             this.nipTb.TabIndex = 94;
             // 
             // miastoTb
             // 
-            this.miastoTb.Location = new System.Drawing.Point(102, 66);
+            this.miastoTb.Location = new System.Drawing.Point(66, 84);
             this.miastoTb.Name = "miastoTb";
             this.miastoTb.Size = new System.Drawing.Size(141, 23);
             this.miastoTb.TabIndex = 93;
             // 
             // ulicaTb
             // 
-            this.ulicaTb.Location = new System.Drawing.Point(102, 38);
+            this.ulicaTb.Location = new System.Drawing.Point(66, 56);
             this.ulicaTb.Name = "ulicaTb";
             this.ulicaTb.Size = new System.Drawing.Size(141, 23);
             this.ulicaTb.TabIndex = 92;
             // 
             // nazwaTb
             // 
-            this.nazwaTb.Location = new System.Drawing.Point(102, 8);
+            this.nazwaTb.Location = new System.Drawing.Point(66, 26);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(141, 23);
             this.nazwaTb.TabIndex = 91;
             // 
             // zapiszBtn
             // 
-            this.zapiszBtn.Location = new System.Drawing.Point(102, 96);
+            this.zapiszBtn.Location = new System.Drawing.Point(66, 114);
             this.zapiszBtn.Name = "zapiszBtn";
             this.zapiszBtn.Size = new System.Drawing.Size(75, 23);
             this.zapiszBtn.TabIndex = 90;
@@ -187,7 +193,7 @@
             // metroLabel7
             // 
             this.metroLabel7.AutoSize = true;
-            this.metroLabel7.Location = new System.Drawing.Point(249, 10);
+            this.metroLabel7.Location = new System.Drawing.Point(213, 28);
             this.metroLabel7.Name = "metroLabel7";
             this.metroLabel7.Size = new System.Drawing.Size(33, 19);
             this.metroLabel7.TabIndex = 88;
@@ -196,7 +202,7 @@
             // metroLabel6
             // 
             this.metroLabel6.AutoSize = true;
-            this.metroLabel6.Location = new System.Drawing.Point(249, 67);
+            this.metroLabel6.Location = new System.Drawing.Point(213, 85);
             this.metroLabel6.Name = "metroLabel6";
             this.metroLabel6.Size = new System.Drawing.Size(35, 19);
             this.metroLabel6.TabIndex = 85;
@@ -205,7 +211,7 @@
             // metroLabel5
             // 
             this.metroLabel5.AutoSize = true;
-            this.metroLabel5.Location = new System.Drawing.Point(45, 68);
+            this.metroLabel5.Location = new System.Drawing.Point(9, 86);
             this.metroLabel5.Name = "metroLabel5";
             this.metroLabel5.Size = new System.Drawing.Size(51, 19);
             this.metroLabel5.TabIndex = 84;
@@ -214,7 +220,7 @@
             // metroLabel4
             // 
             this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(388, 40);
+            this.metroLabel4.Location = new System.Drawing.Point(352, 58);
             this.metroLabel4.Name = "metroLabel4";
             this.metroLabel4.Size = new System.Drawing.Size(95, 19);
             this.metroLabel4.TabIndex = 82;
@@ -223,7 +229,7 @@
             // metroLabel3
             // 
             this.metroLabel3.AutoSize = true;
-            this.metroLabel3.Location = new System.Drawing.Point(249, 39);
+            this.metroLabel3.Location = new System.Drawing.Point(213, 57);
             this.metroLabel3.Name = "metroLabel3";
             this.metroLabel3.Size = new System.Drawing.Size(81, 19);
             this.metroLabel3.TabIndex = 80;
@@ -232,7 +238,7 @@
             // metroLabel2
             // 
             this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(56, 40);
+            this.metroLabel2.Location = new System.Drawing.Point(20, 58);
             this.metroLabel2.Name = "metroLabel2";
             this.metroLabel2.Size = new System.Drawing.Size(40, 19);
             this.metroLabel2.TabIndex = 78;
@@ -241,7 +247,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(45, 10);
+            this.metroLabel1.Location = new System.Drawing.Point(9, 28);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(51, 19);
             this.metroLabel1.TabIndex = 76;
@@ -515,8 +521,12 @@
             // 
             // FakturyTabPage
             // 
-            this.FakturyTabPage.Controls.Add(this.metroButton1);
-            this.FakturyTabPage.Controls.Add(this.UsunFaktureButton);
+            this.FakturyTabPage.Controls.Add(this.iloscFakturLabel);
+            this.FakturyTabPage.Controls.Add(this.metroLabel23);
+            this.FakturyTabPage.Controls.Add(this.metroLabel22);
+            this.FakturyTabPage.Controls.Add(this.metroLabel10);
+            this.FakturyTabPage.Controls.Add(this.metroLabel9);
+            this.FakturyTabPage.Controls.Add(this.FakturyMetroPanel);
             this.FakturyTabPage.Controls.Add(this.DodajFaktureBtn);
             this.FakturyTabPage.HorizontalScrollbarBarColor = true;
             this.FakturyTabPage.Location = new System.Drawing.Point(4, 35);
@@ -527,25 +537,9 @@
             this.FakturyTabPage.Theme = MetroFramework.MetroThemeStyle.Light;
             this.FakturyTabPage.VerticalScrollbarBarColor = true;
             // 
-            // metroButton1
-            // 
-            this.metroButton1.Location = new System.Drawing.Point(111, 3);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(95, 23);
-            this.metroButton1.TabIndex = 4;
-            this.metroButton1.Text = "Zapisz fakture";
-            // 
-            // UsunFaktureButton
-            // 
-            this.UsunFaktureButton.Location = new System.Drawing.Point(212, 3);
-            this.UsunFaktureButton.Name = "UsunFaktureButton";
-            this.UsunFaktureButton.Size = new System.Drawing.Size(89, 23);
-            this.UsunFaktureButton.TabIndex = 0;
-            this.UsunFaktureButton.Text = "Usuń fakture";
-            // 
             // DodajFaktureBtn
             // 
-            this.DodajFaktureBtn.Location = new System.Drawing.Point(4, 3);
+            this.DodajFaktureBtn.Location = new System.Drawing.Point(3, 3);
             this.DodajFaktureBtn.Name = "DodajFaktureBtn";
             this.DodajFaktureBtn.Size = new System.Drawing.Size(101, 23);
             this.DodajFaktureBtn.Style = MetroFramework.MetroColorStyle.Teal;
@@ -561,12 +555,81 @@
             this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
             this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
             this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
-            
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
             this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
             this.MetroTabControl.TabIndex = 0;
+            // 
+            // FakturyMetroPanel
+            // 
+            this.FakturyMetroPanel.AutoScroll = true;
+            this.FakturyMetroPanel.HorizontalScrollbar = true;
+            this.FakturyMetroPanel.HorizontalScrollbarBarColor = true;
+            this.FakturyMetroPanel.HorizontalScrollbarHighlightOnWheel = false;
+            this.FakturyMetroPanel.HorizontalScrollbarSize = 10;
+            this.FakturyMetroPanel.Location = new System.Drawing.Point(0, 51);
+            this.FakturyMetroPanel.Name = "FakturyMetroPanel";
+            this.FakturyMetroPanel.Size = new System.Drawing.Size(608, 254);
+            this.FakturyMetroPanel.TabIndex = 5;
+            this.FakturyMetroPanel.VerticalScrollbar = true;
+            this.FakturyMetroPanel.VerticalScrollbarBarColor = true;
+            this.FakturyMetroPanel.VerticalScrollbarHighlightOnWheel = false;
+            this.FakturyMetroPanel.VerticalScrollbarSize = 10;
+            // 
+            // metroLabel9
+            // 
+            this.metroLabel9.AutoSize = true;
+            this.metroLabel9.Location = new System.Drawing.Point(133, 32);
+            this.metroLabel9.Name = "metroLabel9";
+            this.metroLabel9.Size = new System.Drawing.Size(82, 19);
+            this.metroLabel9.TabIndex = 2;
+            this.metroLabel9.Text = "Nazwa firmy";
+            // 
+            // metroLabel10
+            // 
+            this.metroLabel10.AutoSize = true;
+            this.metroLabel10.Location = new System.Drawing.Point(292, 29);
+            this.metroLabel10.Name = "metroLabel10";
+            this.metroLabel10.Size = new System.Drawing.Size(30, 19);
+            this.metroLabel10.TabIndex = 2;
+            this.metroLabel10.Text = "NIP";
+            // 
+            // metroLabel22
+            // 
+            this.metroLabel22.AutoSize = true;
+            this.metroLabel22.Location = new System.Drawing.Point(359, 29);
+            this.metroLabel22.Name = "metroLabel22";
+            this.metroLabel22.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel22.TabIndex = 2;
+            this.metroLabel22.Text = "Data wystawienia";
+            // 
+            // metroLabel23
+            // 
+            this.metroLabel23.AutoSize = true;
+            this.metroLabel23.Location = new System.Drawing.Point(1, 29);
+            this.metroLabel23.Name = "metroLabel23";
+            this.metroLabel23.Size = new System.Drawing.Size(94, 19);
+            this.metroLabel23.TabIndex = 6;
+            this.metroLabel23.Text = "Numer faktury";
+            // 
+            // iloscFakturLabel
+            // 
+            this.iloscFakturLabel.AutoSize = true;
+            this.iloscFakturLabel.Location = new System.Drawing.Point(110, 5);
+            this.iloscFakturLabel.Name = "iloscFakturLabel";
+            this.iloscFakturLabel.Size = new System.Drawing.Size(100, 19);
+            this.iloscFakturLabel.TabIndex = 7;
+            this.iloscFakturLabel.Text = "iloscFakturLabel";
+            // 
+            // metroLabel24
+            // 
+            this.metroLabel24.AutoSize = true;
+            this.metroLabel24.Location = new System.Drawing.Point(0, 4);
+            this.metroLabel24.Name = "metroLabel24";
+            this.metroLabel24.Size = new System.Drawing.Size(355, 19);
+            this.metroLabel24.TabIndex = 98;
+            this.metroLabel24.Text = "Wprowadź nowe dane a następnie zapisz w celu ich zmiany";
             // 
             // HomeForm
             // 
@@ -593,6 +656,7 @@
             this.UzytkownicyTabPage.ResumeLayout(false);
             this.UzytkownicyTabPage.PerformLayout();
             this.FakturyTabPage.ResumeLayout(false);
+            this.FakturyTabPage.PerformLayout();
             this.MetroTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -605,8 +669,6 @@
         private MetroFramework.Controls.MetroLabel userInfolabel;
         private MetroFramework.Controls.MetroTabControl MetroTabControl;
         private MetroFramework.Controls.MetroTabPage FakturyTabPage;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton UsunFaktureButton;
         private MetroFramework.Controls.MetroButton DodajFaktureBtn;
         private MetroFramework.Controls.MetroTabPage UstawieniaTabPage;
         private MetroFramework.Controls.MetroButton zapiszBtn;
@@ -648,6 +710,13 @@
         private MetroFramework.Controls.MetroTextBox miastoTb;
         private MetroFramework.Controls.MetroTextBox ulicaTb;
         private MetroFramework.Controls.MetroTextBox nazwaTb;
+        private MetroFramework.Controls.MetroLabel metroLabel23;
+        private MetroFramework.Controls.MetroLabel metroLabel22;
+        private MetroFramework.Controls.MetroLabel metroLabel10;
+        private MetroFramework.Controls.MetroLabel metroLabel9;
+        private MetroFramework.Controls.MetroPanel FakturyMetroPanel;
+        private MetroFramework.Controls.MetroLabel iloscFakturLabel;
+        private MetroFramework.Controls.MetroLabel metroLabel24;
 
 
 

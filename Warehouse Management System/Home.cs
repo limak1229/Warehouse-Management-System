@@ -31,6 +31,7 @@ namespace Warehouse_Management_System
             if (result == DialogResult.OK)
             {
                 WczytajProdukty();
+                WczytajFaktury();
             }
         }
 
@@ -88,6 +89,7 @@ namespace Warehouse_Management_System
             WczytajProdukty();
             WczytajDaneFirmy();
             WczytajKlientow();
+            WczytajFaktury();
         }
 
         public void WczytajUzytkownikow()
@@ -142,6 +144,24 @@ namespace Warehouse_Management_System
                 this.KlienciMetroPanel.Controls.Add(KUC);
             }
             iloscKlientowLabel.Text = "Ilość klientów: " + i.ToString();
+        }
+
+        public void WczytajFaktury()
+        {
+            var ListaElementow = this.FakturyTabPage.Controls.Find("FakturyMetroPanel", true).First().Controls.OfType<ListaFakturUserControl>().ToList();
+            foreach (var el in ListaElementow)
+            {
+                this.FakturyMetroPanel.Controls.Remove(el);
+            }
+            Int32 i = 0;
+            foreach (Faktury f in BazaDanych.Polaczenie.Fakturies.OrderByDescending(f => f.Id_faktury))
+            {
+                ListaFakturUserControl LFUC = new ListaFakturUserControl(this, f);
+                LFUC.Location = new System.Drawing.Point(0, (i++) * (LFUC.Height));
+                LFUC.Name = "faktura" + i.ToString();
+                this.FakturyMetroPanel.Controls.Add(LFUC);
+            }
+            iloscFakturLabel.Text = "Ilość faktur: " + i.ToString();
         }
 
         private void WczytajDaneFirmy()

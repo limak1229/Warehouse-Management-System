@@ -42,3 +42,4 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\bin
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.KlienciDoFakturyUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProduktyDoWyboruUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProduktyNaFakturzeUserControl.resources
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ListaFakturUserControl.resources

@@ -27,12 +27,27 @@ namespace Warehouse_Management_System
             cenaNettoTb.Text = p.Cena_jednostkowa_netto.ToString();
             vatTb.Text = p.vat.ToString();
             iloscTb.Text = p.Ilosc.ToString();
+
+            if (nowaFakturaForm.edit)
+            {
+                iloscTb.Enabled = true;
+            }
         }
 
         private void usunBtn_Click(object sender, EventArgs e)
         {
-            nowaFakturaForm.listaWybranychProduktow.Remove(p);
-            nowaFakturaForm.WczytajProdukty();
+            DialogResult result = MessageBox.Show("Czy napewno chcesz usunąć?", "Potwierdź", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                nowaFakturaForm.listaWybranychProduktow.Remove(p);
+                if (p.Id_produktu_sprzedanego != 0)
+                {
+                    BazaDanych.Polaczenie.Produkty_sprzedanes.DeleteOnSubmit(p);
+                }
+                nowaFakturaForm.faktura.Produkty_sprzedanes.Remove(p);
+                nowaFakturaForm.WczytajProdukty();
+            }
         }
 
         private void vatTb_TextChanged(object sender, EventArgs e)
@@ -48,6 +63,23 @@ namespace Warehouse_Management_System
             else
             {
                 MessageBox.Show("Wprowadź prawidłową stawkę VAT.", "Błąd", MessageBoxButtons.OK);
+            }
+        }
+
+        private void iloscTb_TextChanged(object sender, EventArgs e)
+        {
+            Int32 ilosc;
+            if (Int32.TryParse(iloscTb.Text, out ilosc))
+            {
+                if (ilosc >= 0)
+                {
+                    p.Ilosc = ilosc;
+                    sumaCenaNettoTb.Text = (p.Cena_jednostkowa_netto * ilosc).ToString();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź prawidłową ilość.", "Błąd", MessageBoxButtons.OK);
             }
         }
     }
