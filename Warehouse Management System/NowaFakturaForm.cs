@@ -170,7 +170,7 @@ namespace Warehouse_Management_System
             Int32 miesiac = data.Month;
             Int32 rok = data.Year;
             Int32 numer = BazaDanych.Polaczenie.Fakturies.Where(f => f.Data_wystawienia.Month == miesiac && f.Data_wystawienia.Year == rok).Count();
-            return (numer+1).ToString() + '/' + miesiac.ToString() + '/' + rok.ToString();
+            return (numer+1).ToString() + '-' + miesiac.ToString() + '-' + rok.ToString();
         }
 
         public void WczytajProdukty()

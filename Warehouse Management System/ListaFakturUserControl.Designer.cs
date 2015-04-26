@@ -33,6 +33,7 @@
             this.nipTb = new MetroFramework.Controls.MetroTextBox();
             this.edytujFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.dataWystawienia = new System.Windows.Forms.DateTimePicker();
+            this.HtmlBtn = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // numerFakturyTb
@@ -65,7 +66,7 @@
             // 
             this.edytujFaktureBtn.Location = new System.Drawing.Point(482, 3);
             this.edytujFaktureBtn.Name = "edytujFaktureBtn";
-            this.edytujFaktureBtn.Size = new System.Drawing.Size(110, 23);
+            this.edytujFaktureBtn.Size = new System.Drawing.Size(62, 23);
             this.edytujFaktureBtn.TabIndex = 2;
             this.edytujFaktureBtn.Text = "Korekta";
             this.edytujFaktureBtn.Click += new System.EventHandler(this.edytujFaktureBtn_Click);
@@ -78,11 +79,21 @@
             this.dataWystawienia.Size = new System.Drawing.Size(127, 20);
             this.dataWystawienia.TabIndex = 3;
             // 
+            // HtmlBtn
+            // 
+            this.HtmlBtn.Location = new System.Drawing.Point(550, 3);
+            this.HtmlBtn.Name = "HtmlBtn";
+            this.HtmlBtn.Size = new System.Drawing.Size(42, 23);
+            this.HtmlBtn.TabIndex = 4;
+            this.HtmlBtn.Text = "HTML";
+            this.HtmlBtn.Click += new System.EventHandler(this.HtmlBtn_Click);
+            // 
             // ListaFakturUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.HtmlBtn);
             this.Controls.Add(this.dataWystawienia);
             this.Controls.Add(this.edytujFaktureBtn);
             this.Controls.Add(this.nipTb);
@@ -101,5 +112,6 @@
         private MetroFramework.Controls.MetroTextBox nipTb;
         private MetroFramework.Controls.MetroButton edytujFaktureBtn;
         private System.Windows.Forms.DateTimePicker dataWystawienia;
+        private MetroFramework.Controls.MetroButton HtmlBtn;
     }
 }

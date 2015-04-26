@@ -40,7 +40,7 @@ namespace Warehouse_Management_System
 
             if (result == DialogResult.Yes)
             {
-                if (imieTb.Text != string.Empty && nazwiskoTb.Text != string.Empty && loginTb.Text != string.Empty && hasloTb.Text != string.Empty)
+                if (imieTb.Text != string.Empty && nazwiskoTb.Text != string.Empty && loginTb.Text != string.Empty)
                 {
                     Uprawnienia uprawnienie = (uprawnieniaCb.SelectedItem as Uprawnienia);
                     uzytkownik.Imie = imieTb.Text;
