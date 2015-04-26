@@ -34,20 +34,21 @@
             this.cenaTextBox = new MetroFramework.Controls.MetroTextBox();
             this.usunBtn = new MetroFramework.Controls.MetroButton();
             this.zapiszBtn = new MetroFramework.Controls.MetroButton();
+            this.vatTb = new MetroFramework.Controls.MetroTextBox();
             this.SuspendLayout();
             // 
             // nazwaTextBox
             // 
             this.nazwaTextBox.Location = new System.Drawing.Point(3, 3);
             this.nazwaTextBox.Name = "nazwaTextBox";
-            this.nazwaTextBox.Size = new System.Drawing.Size(228, 23);
+            this.nazwaTextBox.Size = new System.Drawing.Size(194, 23);
             this.nazwaTextBox.TabIndex = 0;
             // 
             // kodTextBox
             // 
-            this.kodTextBox.Location = new System.Drawing.Point(237, 3);
+            this.kodTextBox.Location = new System.Drawing.Point(248, 3);
             this.kodTextBox.Name = "kodTextBox";
-            this.kodTextBox.Size = new System.Drawing.Size(88, 23);
+            this.kodTextBox.Size = new System.Drawing.Size(77, 23);
             this.kodTextBox.TabIndex = 1;
             this.kodTextBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kodTextBox_KeyUp);
             // 
@@ -83,6 +84,15 @@
             this.zapiszBtn.Text = "Zapisz";
             this.zapiszBtn.Click += new System.EventHandler(this.zapiszBtn_Click);
             // 
+            // vatTb
+            // 
+            this.vatTb.Location = new System.Drawing.Point(203, 3);
+            this.vatTb.Name = "vatTb";
+            this.vatTb.Size = new System.Drawing.Size(39, 23);
+            this.vatTb.TabIndex = 1;
+            this.vatTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.vatTb.KeyUp += new System.Windows.Forms.KeyEventHandler(this.kodTextBox_KeyUp);
+            // 
             // ProductUserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -92,6 +102,7 @@
             this.Controls.Add(this.usunBtn);
             this.Controls.Add(this.cenaTextBox);
             this.Controls.Add(this.iloscTextBox);
+            this.Controls.Add(this.vatTb);
             this.Controls.Add(this.kodTextBox);
             this.Controls.Add(this.nazwaTextBox);
             this.Name = "ProductUserControl";
@@ -108,5 +119,6 @@
         private MetroFramework.Controls.MetroTextBox cenaTextBox;
         private MetroFramework.Controls.MetroButton usunBtn;
         private MetroFramework.Controls.MetroButton zapiszBtn;
+        private MetroFramework.Controls.MetroTextBox vatTb;
     }
 }

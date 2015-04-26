@@ -56,15 +56,6 @@
       <Association Name="Klienci_Faktury" Member="Fakturies" ThisKey="Id_klienta" OtherKey="Id_klienta" Type="Faktury" />
     </Type>
   </Table>
-  <Table Name="dbo.Produkty" Member="Produkties">
-    <Type Name="Produkty">
-      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Cena_netto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
-      <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Kod_produktu" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
-    </Type>
-  </Table>
   <Table Name="dbo.Produkty_sprzedane" Member="Produkty_sprzedanes">
     <Type Name="Produkty_sprzedane">
       <Column Name="Id_produktu_sprzedanego" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -82,6 +73,16 @@
       <Column Name="Id_uprawnienia" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Uprawnienia_Uzytkownicy" Member="Uzytkownicies" ThisKey="Id_uprawnienia" OtherKey="Id_uprawnienia" Type="Uzytkownicy" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Produkty" Member="Produkties">
+    <Type Name="Produkty">
+      <Column Name="Id_produktu" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Nazwa" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Cena_netto" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Ilosc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Vat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Kod_produktu" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
 </Database>

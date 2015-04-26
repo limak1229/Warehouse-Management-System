@@ -182,16 +182,23 @@ namespace Warehouse_Management_System
         private void zapiszBtn_Click(object sender, EventArgs e)
         {
             DaneFirmy noweDane = new DaneFirmy();
-            BazaDanych.Polaczenie.DaneFirmies.InsertOnSubmit(noweDane);
-            noweDane.Nazwa = nazwaTb.Text;
-            noweDane.Nip = nipTb.Text;
-            noweDane.Ulica = ulicaTb.Text;
-            noweDane.Nr_budynku = nrBudynkuTb.Text;
-            noweDane.Nr_mieszkania = nrMieszkaniaTb.Text;
-            noweDane.Miasto = miastoTb.Text;
-            noweDane.Kod_pocztowy = kodTb.Text;
-            BazaDanych.Polaczenie.SubmitChanges();
-            MessageBox.Show("Nowe dane zostały wprowadzone.","Edycja danych", MessageBoxButtons.OK);
+            if (nazwaTb.Text != string.Empty && nipTb.Text != string.Empty && ulicaTb.Text != string.Empty && nrBudynkuTb.Text != string.Empty && miastoTb.Text != string.Empty && kodTb.Text != string.Empty)
+            {
+                BazaDanych.Polaczenie.DaneFirmies.InsertOnSubmit(noweDane);
+                noweDane.Nazwa = nazwaTb.Text;
+                noweDane.Nip = nipTb.Text;
+                noweDane.Ulica = ulicaTb.Text;
+                noweDane.Nr_budynku = nrBudynkuTb.Text;
+                noweDane.Nr_mieszkania = nrMieszkaniaTb.Text;
+                noweDane.Miasto = miastoTb.Text;
+                noweDane.Kod_pocztowy = kodTb.Text;
+                BazaDanych.Polaczenie.SubmitChanges();
+                MessageBox.Show("Nowe dane zostały wprowadzone.", "Edycja danych", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+            }
         }
     }
 }

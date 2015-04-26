@@ -30,15 +30,22 @@ namespace Warehouse_Management_System
         private void zapiszButton_Click(object sender, EventArgs e)
         {
             Uzytkownicy nowyUzytkownik = new Uzytkownicy();
-            BazaDanych.Polaczenie.Uzytkownicies.InsertOnSubmit(nowyUzytkownik);
             Uprawnienia uprawnienia = (typComboBox.SelectedItem as Uprawnienia);
-            nowyUzytkownik.Imie = imieTb.Text;
-            nowyUzytkownik.Nazwisko = nazwiskoTb.Text;
-            nowyUzytkownik.Login = loginTb.Text;
-            nowyUzytkownik.Haslo = Program.hashPass(hasloTb.Text);
-            nowyUzytkownik.Id_uprawnienia = uprawnienia.Id_uprawnienia;
-            BazaDanych.Polaczenie.SubmitChanges();
-            this.Close();
+            if (imieTb.Text != string.Empty && nazwiskoTb.Text != string.Empty && loginTb.Text != string.Empty && hasloTb.Text != string.Empty)
+            {
+                nowyUzytkownik.Imie = imieTb.Text;
+                nowyUzytkownik.Nazwisko = nazwiskoTb.Text;
+                nowyUzytkownik.Login = loginTb.Text;
+                nowyUzytkownik.Haslo = Program.hashPass(hasloTb.Text);
+                nowyUzytkownik.Id_uprawnienia = uprawnienia.Id_uprawnienia;
+                BazaDanych.Polaczenie.Uzytkownicies.InsertOnSubmit(nowyUzytkownik);
+                BazaDanych.Polaczenie.SubmitChanges();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+            } 
         }
 
         private void AnulujBtn_Click(object sender, EventArgs e)

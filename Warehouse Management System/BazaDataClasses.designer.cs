@@ -42,19 +42,19 @@ namespace Warehouse_Management_System
     partial void InsertKlienci(Klienci instance);
     partial void UpdateKlienci(Klienci instance);
     partial void DeleteKlienci(Klienci instance);
-    partial void InsertProdukty(Produkty instance);
-    partial void UpdateProdukty(Produkty instance);
-    partial void DeleteProdukty(Produkty instance);
     partial void InsertProdukty_sprzedane(Produkty_sprzedane instance);
     partial void UpdateProdukty_sprzedane(Produkty_sprzedane instance);
     partial void DeleteProdukty_sprzedane(Produkty_sprzedane instance);
     partial void InsertUprawnienia(Uprawnienia instance);
     partial void UpdateUprawnienia(Uprawnienia instance);
     partial void DeleteUprawnienia(Uprawnienia instance);
+    partial void InsertProdukty(Produkty instance);
+    partial void UpdateProdukty(Produkty instance);
+    partial void DeleteProdukty(Produkty instance);
     #endregion
 		
 		public BazaDataClassesDataContext() : 
-				base(global::Warehouse_Management_System.Properties.Settings.Default.DatabaseConnectionString1, mappingSource)
+				base(global::Warehouse_Management_System.Properties.Settings.Default.DatabaseConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -115,14 +115,6 @@ namespace Warehouse_Management_System
 			}
 		}
 		
-		public System.Data.Linq.Table<Produkty> Produkties
-		{
-			get
-			{
-				return this.GetTable<Produkty>();
-			}
-		}
-		
 		public System.Data.Linq.Table<Produkty_sprzedane> Produkty_sprzedanes
 		{
 			get
@@ -136,6 +128,14 @@ namespace Warehouse_Management_System
 			get
 			{
 				return this.GetTable<Uprawnienia>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Produkty> Produkties
+		{
+			get
+			{
+				return this.GetTable<Produkty>();
 			}
 		}
 	}
@@ -1336,164 +1336,6 @@ namespace Warehouse_Management_System
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Produkty")]
-	public partial class Produkty : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private int _Id_produktu;
-		
-		private string _Nazwa;
-		
-		private decimal _Cena_netto;
-		
-		private int _Ilosc;
-		
-		private string _Kod_produktu;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnId_produktuChanging(int value);
-    partial void OnId_produktuChanged();
-    partial void OnNazwaChanging(string value);
-    partial void OnNazwaChanged();
-    partial void OnCena_nettoChanging(decimal value);
-    partial void OnCena_nettoChanged();
-    partial void OnIloscChanging(int value);
-    partial void OnIloscChanged();
-    partial void OnKod_produktuChanging(string value);
-    partial void OnKod_produktuChanged();
-    #endregion
-		
-		public Produkty()
-		{
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-		public int Id_produktu
-		{
-			get
-			{
-				return this._Id_produktu;
-			}
-			set
-			{
-				if ((this._Id_produktu != value))
-				{
-					this.OnId_produktuChanging(value);
-					this.SendPropertyChanging();
-					this._Id_produktu = value;
-					this.SendPropertyChanged("Id_produktu");
-					this.OnId_produktuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Nazwa
-		{
-			get
-			{
-				return this._Nazwa;
-			}
-			set
-			{
-				if ((this._Nazwa != value))
-				{
-					this.OnNazwaChanging(value);
-					this.SendPropertyChanging();
-					this._Nazwa = value;
-					this.SendPropertyChanged("Nazwa");
-					this.OnNazwaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cena_netto", DbType="Decimal(10,2) NOT NULL")]
-		public decimal Cena_netto
-		{
-			get
-			{
-				return this._Cena_netto;
-			}
-			set
-			{
-				if ((this._Cena_netto != value))
-				{
-					this.OnCena_nettoChanging(value);
-					this.SendPropertyChanging();
-					this._Cena_netto = value;
-					this.SendPropertyChanged("Cena_netto");
-					this.OnCena_nettoChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ilosc", DbType="Int NOT NULL")]
-		public int Ilosc
-		{
-			get
-			{
-				return this._Ilosc;
-			}
-			set
-			{
-				if ((this._Ilosc != value))
-				{
-					this.OnIloscChanging(value);
-					this.SendPropertyChanging();
-					this._Ilosc = value;
-					this.SendPropertyChanged("Ilosc");
-					this.OnIloscChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kod_produktu", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
-		public string Kod_produktu
-		{
-			get
-			{
-				return this._Kod_produktu;
-			}
-			set
-			{
-				if ((this._Kod_produktu != value))
-				{
-					this.OnKod_produktuChanging(value);
-					this.SendPropertyChanging();
-					this._Kod_produktu = value;
-					this.SendPropertyChanged("Kod_produktu");
-					this.OnKod_produktuChanged();
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Produkty_sprzedane")]
 	public partial class Produkty_sprzedane : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1852,6 +1694,188 @@ namespace Warehouse_Management_System
 		{
 			this.SendPropertyChanging();
 			entity.Uprawnienia = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Produkty")]
+	public partial class Produkty : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Id_produktu;
+		
+		private string _Nazwa;
+		
+		private decimal _Cena_netto;
+		
+		private int _Ilosc;
+		
+		private int _Vat;
+		
+		private string _Kod_produktu;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnId_produktuChanging(int value);
+    partial void OnId_produktuChanged();
+    partial void OnNazwaChanging(string value);
+    partial void OnNazwaChanged();
+    partial void OnCena_nettoChanging(decimal value);
+    partial void OnCena_nettoChanged();
+    partial void OnIloscChanging(int value);
+    partial void OnIloscChanged();
+    partial void OnVatChanging(int value);
+    partial void OnVatChanged();
+    partial void OnKod_produktuChanging(string value);
+    partial void OnKod_produktuChanged();
+    #endregion
+		
+		public Produkty()
+		{
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id_produktu", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Id_produktu
+		{
+			get
+			{
+				return this._Id_produktu;
+			}
+			set
+			{
+				if ((this._Id_produktu != value))
+				{
+					this.OnId_produktuChanging(value);
+					this.SendPropertyChanging();
+					this._Id_produktu = value;
+					this.SendPropertyChanged("Id_produktu");
+					this.OnId_produktuChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nazwa", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string Nazwa
+		{
+			get
+			{
+				return this._Nazwa;
+			}
+			set
+			{
+				if ((this._Nazwa != value))
+				{
+					this.OnNazwaChanging(value);
+					this.SendPropertyChanging();
+					this._Nazwa = value;
+					this.SendPropertyChanged("Nazwa");
+					this.OnNazwaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Cena_netto", DbType="Decimal(10,2) NOT NULL")]
+		public decimal Cena_netto
+		{
+			get
+			{
+				return this._Cena_netto;
+			}
+			set
+			{
+				if ((this._Cena_netto != value))
+				{
+					this.OnCena_nettoChanging(value);
+					this.SendPropertyChanging();
+					this._Cena_netto = value;
+					this.SendPropertyChanged("Cena_netto");
+					this.OnCena_nettoChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Ilosc", DbType="Int NOT NULL")]
+		public int Ilosc
+		{
+			get
+			{
+				return this._Ilosc;
+			}
+			set
+			{
+				if ((this._Ilosc != value))
+				{
+					this.OnIloscChanging(value);
+					this.SendPropertyChanging();
+					this._Ilosc = value;
+					this.SendPropertyChanged("Ilosc");
+					this.OnIloscChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vat", DbType="Int NOT NULL")]
+		public int Vat
+		{
+			get
+			{
+				return this._Vat;
+			}
+			set
+			{
+				if ((this._Vat != value))
+				{
+					this.OnVatChanging(value);
+					this.SendPropertyChanging();
+					this._Vat = value;
+					this.SendPropertyChanged("Vat");
+					this.OnVatChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Kod_produktu", DbType="VarChar(10) NOT NULL", CanBeNull=false)]
+		public string Kod_produktu
+		{
+			get
+			{
+				return this._Kod_produktu;
+			}
+			set
+			{
+				if ((this._Kod_produktu != value))
+				{
+					this.OnKod_produktuChanging(value);
+					this.SendPropertyChanging();
+					this._Kod_produktu = value;
+					this.SendPropertyChanged("Kod_produktu");
+					this.OnKod_produktuChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
 		}
 	}
 }

@@ -2,7 +2,7 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Warehouse_Management_System.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="DatabaseConnectionString1" Type="(Connection string)" Scope="Application">
+    <Setting Name="DatabaseConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
   &lt;ConnectionString&gt;Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\Database.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;

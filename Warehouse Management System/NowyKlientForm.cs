@@ -66,31 +66,48 @@ namespace Warehouse_Management_System
 
             if (result == DialogResult.Yes)
             {
-                klient.Nazwa = nazwaTb.Text;
-                klient.Nip = nipTb.Text;
-                klient.Ulica = ulicaTb.Text;
-                klient.Nr_budynku = nrBudynkuTb.Text;
                 klient.Nr_mieszkania = nrMieszkaniaTb.Text;
-                klient.Miasto = miastoTb.Text;
-                klient.Kod_pocztowy = kodTb.Text;
-                BazaDanych.Polaczenie.SubmitChanges();
-                this.Close();
+                if (nazwaTb.Text != string.Empty && nipTb.Text != string.Empty && ulicaTb.Text != string.Empty && nrBudynkuTb.Text != string.Empty && miastoTb.Text != string.Empty && kodTb.Text != string.Empty)
+                {
+                    klient.Nazwa = nazwaTb.Text;
+                    klient.Nip = nipTb.Text;
+                    klient.Ulica = ulicaTb.Text;
+                    klient.Nr_budynku = nrBudynkuTb.Text;
+                    klient.Miasto = miastoTb.Text;
+                    klient.Kod_pocztowy = kodTb.Text;
+
+                    BazaDanych.Polaczenie.SubmitChanges();
+                    this.Close();
+                } 
+                else
+                {
+                    MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+                } 
             }
         }
 
         private void dodajBtn_Click(object sender, EventArgs e)
         {
             Klienci k = new Klienci();
-            BazaDanych.Polaczenie.Kliencis.InsertOnSubmit(k);
-            k.Nazwa = nazwaTb.Text;
-            k.Nip = nipTb.Text;
-            k.Ulica = ulicaTb.Text;
-            k.Nr_budynku = nrBudynkuTb.Text;
             k.Nr_mieszkania = nrMieszkaniaTb.Text;
-            k.Miasto = miastoTb.Text;
-            k.Kod_pocztowy = kodTb.Text;
-            BazaDanych.Polaczenie.SubmitChanges();
-            this.Close();
+
+            if (nazwaTb.Text != string.Empty && nipTb.Text != string.Empty && ulicaTb.Text != string.Empty && nrBudynkuTb.Text != string.Empty && miastoTb.Text != string.Empty && kodTb.Text != string.Empty)
+            {
+                k.Nazwa = nazwaTb.Text;
+                k.Nip = nipTb.Text;
+                k.Ulica = ulicaTb.Text;
+                k.Nr_budynku = nrBudynkuTb.Text;
+                k.Miasto = miastoTb.Text;
+                k.Kod_pocztowy = kodTb.Text;
+
+                BazaDanych.Polaczenie.Kliencis.InsertOnSubmit(k);
+                BazaDanych.Polaczenie.SubmitChanges();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+            } 
         }
     }
 }

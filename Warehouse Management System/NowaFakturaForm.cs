@@ -48,7 +48,7 @@ namespace Warehouse_Management_System
             edit = true;
             wybierzKlientaBtn.Visible = false;
             listaWybranychProduktow = faktura.Produkty_sprzedanes.ToList();
-            Text = "Edycja faktury";
+            Text = "Korekta faktury";
 
             numerFakturyTb.Text = faktura.Nr_faktury;
             nazwaTb.Text = faktura.Klienci.Nazwa;
@@ -71,7 +71,7 @@ namespace Warehouse_Management_System
             DaneFirmy DaneFirmy = Program.pobierzDaneFirmy();
             if (DaneFirmy != null)
             {
-                numerFakturyTb.Text = faktura.Nr_faktury = pobierzNumerFaktury().ToUpper();
+                numerFakturyTb.Text = faktura.Nr_faktury = pobierzNumerFaktury(DateTime.Now).ToUpper();
                 BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
                 faktura.DaneFirmy = DaneFirmy;
                 faktura.Uzytkownicy = zalogowanyUzytkownik;
@@ -115,7 +115,7 @@ namespace Warehouse_Management_System
                 ListaProduktowForm.produktWybrany.Ilosc -= produktNaFakturze.Ilosc;
                 produktNaFakturze.Nazwa_produktu = ListaProduktowForm.produktWybrany.Nazwa;
                 produktNaFakturze.Cena_jednostkowa_netto = ListaProduktowForm.produktWybrany.Cena_netto;
-                produktNaFakturze.vat = 23;
+                produktNaFakturze.vat = ListaProduktowForm.produktWybrany.Vat;
                 produktNaFakturze.Faktury = faktura;
                 listaWybranychProduktow.Add(produktNaFakturze);
                
@@ -131,6 +131,7 @@ namespace Warehouse_Management_System
         private void dataWystawieniaDtp_ValueChanged(object sender, EventArgs e)
         {
             faktura.Data_wystawienia = dataWystawieniaDtp.Value;
+            pobierzNumerFaktury(faktura.Data_sprzedazy);
         }
 
         private void terminZaplatyDtp_ValueChanged(object sender, EventArgs e)
@@ -164,9 +165,8 @@ namespace Warehouse_Management_System
             }  
         }
 
-        private string pobierzNumerFaktury()
+        private string pobierzNumerFaktury(DateTime data)
         {
-            DateTime data = DateTime.Now;
             Int32 miesiac = data.Month;
             Int32 rok = data.Year;
             Int32 numer = BazaDanych.Polaczenie.Fakturies.Where(f => f.Data_wystawienia.Month == miesiac && f.Data_wystawienia.Year == rok).Count();
@@ -204,6 +204,19 @@ namespace Warehouse_Management_System
             {
                 homeForm.Activate();
             }
-        }      
+        }     
+ 
+        public void SetTotalPriceLabel()
+        {
+            decimal totalNetto = 0;
+            decimal totalBrutto = 0;
+            foreach (var lwp in listaWybranychProduktow)
+            {
+                totalNetto += lwp.Cena_jednostkowa_netto * lwp.Ilosc;
+                totalBrutto += (lwp.Cena_jednostkowa_netto + (lwp.Cena_jednostkowa_netto * lwp.vat / 100)) * lwp.Ilosc;
+            }
+            sumaNettoLbl.Text = totalNetto.ToString() + " zł.";
+            sumaBruttoLbl.Text = totalBrutto.ToString() + " zł.";
+        }
     }
 }

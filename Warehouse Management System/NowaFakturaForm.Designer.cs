@@ -60,6 +60,10 @@
             this.l4 = new MetroFramework.Controls.MetroLabel();
             this.l5 = new MetroFramework.Controls.MetroLabel();
             this.l6 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel12 = new MetroFramework.Controls.MetroLabel();
+            this.metroLabel13 = new MetroFramework.Controls.MetroLabel();
+            this.sumaNettoLbl = new MetroFramework.Controls.MetroLabel();
+            this.sumaBruttoLbl = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // metroLabel1
@@ -354,12 +358,52 @@
             this.l6.Text = "VAT";
             this.l6.Visible = false;
             // 
+            // metroLabel12
+            // 
+            this.metroLabel12.AutoSize = true;
+            this.metroLabel12.Location = new System.Drawing.Point(195, 421);
+            this.metroLabel12.Name = "metroLabel12";
+            this.metroLabel12.Size = new System.Drawing.Size(79, 19);
+            this.metroLabel12.TabIndex = 76;
+            this.metroLabel12.Text = "Suma netto:";
+            // 
+            // metroLabel13
+            // 
+            this.metroLabel13.AutoSize = true;
+            this.metroLabel13.Location = new System.Drawing.Point(189, 440);
+            this.metroLabel13.Name = "metroLabel13";
+            this.metroLabel13.Size = new System.Drawing.Size(85, 19);
+            this.metroLabel13.TabIndex = 77;
+            this.metroLabel13.Text = "Suma brutto:";
+            // 
+            // sumaNettoLbl
+            // 
+            this.sumaNettoLbl.AutoSize = true;
+            this.sumaNettoLbl.Location = new System.Drawing.Point(280, 421);
+            this.sumaNettoLbl.Name = "sumaNettoLbl";
+            this.sumaNettoLbl.Size = new System.Drawing.Size(16, 19);
+            this.sumaNettoLbl.TabIndex = 78;
+            this.sumaNettoLbl.Text = "0";
+            // 
+            // sumaBruttoLbl
+            // 
+            this.sumaBruttoLbl.AutoSize = true;
+            this.sumaBruttoLbl.Location = new System.Drawing.Point(280, 440);
+            this.sumaBruttoLbl.Name = "sumaBruttoLbl";
+            this.sumaBruttoLbl.Size = new System.Drawing.Size(16, 19);
+            this.sumaBruttoLbl.TabIndex = 79;
+            this.sumaBruttoLbl.Text = "0";
+            // 
             // NowaFakturaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = MetroFramework.Drawing.MetroBorderStyle.FixedSingle;
             this.ClientSize = new System.Drawing.Size(654, 470);
+            this.Controls.Add(this.sumaBruttoLbl);
+            this.Controls.Add(this.sumaNettoLbl);
+            this.Controls.Add(this.metroLabel13);
+            this.Controls.Add(this.metroLabel12);
             this.Controls.Add(this.l6);
             this.Controls.Add(this.l5);
             this.Controls.Add(this.l4);
@@ -439,5 +483,9 @@
         private MetroFramework.Controls.MetroLabel l4;
         private MetroFramework.Controls.MetroLabel l5;
         private MetroFramework.Controls.MetroLabel l6;
+        private MetroFramework.Controls.MetroLabel metroLabel12;
+        private MetroFramework.Controls.MetroLabel metroLabel13;
+        private MetroFramework.Controls.MetroLabel sumaNettoLbl;
+        private MetroFramework.Controls.MetroLabel sumaBruttoLbl;
     }
 }

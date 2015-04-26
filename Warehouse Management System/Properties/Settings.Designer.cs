@@ -29,9 +29,9 @@ namespace Warehouse_Management_System.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\v11.0;AttachDbFilename=C:\\Users\\pc1\\Desktop\\Warehouse-Manag" +
             "ement-System\\Warehouse Management System\\Database.mdf;Integrated Security=True;C" +
             "onnect Timeout=30")]
-        public string DatabaseConnectionString1 {
+        public string DatabaseConnectionString {
             get {
-                return ((string)(this["DatabaseConnectionString1"]));
+                return ((string)(this["DatabaseConnectionString"]));
             }
         }
     }

@@ -40,18 +40,24 @@ namespace Warehouse_Management_System
 
             if (result == DialogResult.Yes)
             {
-                Uprawnienia uprawnienie = (uprawnieniaCb.SelectedItem as Uprawnienia);
-                uzytkownik.Imie = imieTb.Text;
-                uzytkownik.Nazwisko = nazwiskoTb.Text;
-                uzytkownik.Login = loginTb.Text;
-                uzytkownik.Uprawnienia = uprawnienie;
-                String HP = Program.hashPass(hasloTb.Text);
-                if (uzytkownik.Haslo != String.Empty && uzytkownik.Haslo != HP)
+                if (imieTb.Text != string.Empty && nazwiskoTb.Text != string.Empty && loginTb.Text != string.Empty && hasloTb.Text != string.Empty)
                 {
-                    uzytkownik.Haslo = HP;
+                    Uprawnienia uprawnienie = (uprawnieniaCb.SelectedItem as Uprawnienia);
+                    uzytkownik.Imie = imieTb.Text;
+                    uzytkownik.Nazwisko = nazwiskoTb.Text;
+                    uzytkownik.Login = loginTb.Text;
+                    uzytkownik.Uprawnienia = uprawnienie;
+                    String HP = Program.hashPass(hasloTb.Text);
+                    if (uzytkownik.Haslo != String.Empty && uzytkownik.Haslo != HP)
+                    {
+                        uzytkownik.Haslo = HP;
+                    }
+                    BazaDanych.Polaczenie.SubmitChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
                 } 
-
-                BazaDanych.Polaczenie.SubmitChanges();
             }
         }
 

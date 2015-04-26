@@ -72,7 +72,6 @@
             // 
             // iloscTb
             // 
-            this.iloscTb.Enabled = false;
             this.iloscTb.Location = new System.Drawing.Point(427, 3);
             this.iloscTb.Name = "iloscTb";
             this.iloscTb.Size = new System.Drawing.Size(55, 23);
@@ -91,13 +90,12 @@
             // 
             // vatTb
             // 
+            this.vatTb.Enabled = false;
             this.vatTb.Location = new System.Drawing.Point(488, 3);
             this.vatTb.Name = "vatTb";
             this.vatTb.Size = new System.Drawing.Size(27, 23);
             this.vatTb.TabIndex = 2;
-            this.vatTb.Text = "23";
             this.vatTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.vatTb.TextChanged += new System.EventHandler(this.vatTb_TextChanged);
             // 
             // metroLabel1
             // 

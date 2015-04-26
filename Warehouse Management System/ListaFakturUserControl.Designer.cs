@@ -31,7 +31,6 @@
             this.numerFakturyTb = new MetroFramework.Controls.MetroTextBox();
             this.nazwaFirmyTb = new MetroFramework.Controls.MetroTextBox();
             this.nipTb = new MetroFramework.Controls.MetroTextBox();
-            this.usunFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.edytujFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.dataWystawienia = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -62,22 +61,13 @@
             this.nipTb.TabIndex = 0;
             this.nipTb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // usunFaktureBtn
-            // 
-            this.usunFaktureBtn.Location = new System.Drawing.Point(542, 3);
-            this.usunFaktureBtn.Name = "usunFaktureBtn";
-            this.usunFaktureBtn.Size = new System.Drawing.Size(50, 23);
-            this.usunFaktureBtn.TabIndex = 1;
-            this.usunFaktureBtn.Text = "Usuń";
-            this.usunFaktureBtn.Click += new System.EventHandler(this.usunFaktureBtn_Click);
-            // 
             // edytujFaktureBtn
             // 
             this.edytujFaktureBtn.Location = new System.Drawing.Point(482, 3);
             this.edytujFaktureBtn.Name = "edytujFaktureBtn";
-            this.edytujFaktureBtn.Size = new System.Drawing.Size(54, 23);
+            this.edytujFaktureBtn.Size = new System.Drawing.Size(110, 23);
             this.edytujFaktureBtn.TabIndex = 2;
-            this.edytujFaktureBtn.Text = "Edytuj";
+            this.edytujFaktureBtn.Text = "Korekta";
             this.edytujFaktureBtn.Click += new System.EventHandler(this.edytujFaktureBtn_Click);
             // 
             // dataWystawienia
@@ -95,7 +85,6 @@
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.dataWystawienia);
             this.Controls.Add(this.edytujFaktureBtn);
-            this.Controls.Add(this.usunFaktureBtn);
             this.Controls.Add(this.nipTb);
             this.Controls.Add(this.nazwaFirmyTb);
             this.Controls.Add(this.numerFakturyTb);
@@ -110,7 +99,6 @@
         private MetroFramework.Controls.MetroTextBox numerFakturyTb;
         private MetroFramework.Controls.MetroTextBox nazwaFirmyTb;
         private MetroFramework.Controls.MetroTextBox nipTb;
-        private MetroFramework.Controls.MetroButton usunFaktureBtn;
         private MetroFramework.Controls.MetroButton edytujFaktureBtn;
         private System.Windows.Forms.DateTimePicker dataWystawienia;
     }

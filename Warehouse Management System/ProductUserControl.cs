@@ -30,6 +30,7 @@ namespace Warehouse_Management_System
             kodTextBox.Text = produkt.Kod_produktu;
             cenaTextBox.Text = produkt.Cena_netto.ToString();
             iloscTextBox.Text = produkt.Ilosc.ToString();
+            vatTb.Text = produkt.Vat.ToString();
         }
 
         private void zapiszBtn_Click(object sender, EventArgs e)
@@ -38,11 +39,65 @@ namespace Warehouse_Management_System
 
             if(result == DialogResult.Yes)
             {
-                produkt.Nazwa = nazwaTextBox.Text;
-                produkt.Kod_produktu = kodTextBox.Text.ToUpper();
-                produkt.Cena_netto = decimal.Parse(cenaTextBox.Text);
-                produkt.Ilosc = int.Parse(iloscTextBox.Text);
-                BazaDanych.Polaczenie.SubmitChanges();
+                Boolean error = false;
+
+                if (nazwaTextBox.Text != string.Empty)
+                {
+                    produkt.Nazwa = nazwaTextBox.Text;
+                }
+                else
+                {
+                    error = true;
+                }
+
+                if (kodTextBox.Text != string.Empty)
+                {
+                    produkt.Kod_produktu = kodTextBox.Text.ToUpper();
+                }
+                else
+                {
+                    error = true;
+                }
+
+                decimal cena_netto;
+                if (decimal.TryParse(cenaTextBox.Text, out cena_netto) && cena_netto > 0)
+                {
+                    produkt.Cena_netto = cena_netto;
+                }
+                else
+                {
+                    error = true;
+                }
+
+                Int32 ilosc;
+                if (Int32.TryParse(iloscTextBox.Text, out ilosc) && ilosc > 0)
+                {
+                    produkt.Ilosc = ilosc;
+                }
+                else
+                {
+                    error = true;
+                }
+
+                Int32 vat;
+                if (Int32.TryParse(vatTb.Text, out vat))
+                {
+                    produkt.Vat = vat;
+                }
+                else
+                {
+                    error = true;
+                }
+
+                if (!error)
+                {
+                    BazaDanych.Polaczenie.SubmitChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+                }
+
             }
         }
 

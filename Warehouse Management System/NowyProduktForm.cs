@@ -26,21 +26,69 @@ namespace Warehouse_Management_System
 
         private void ZapiszBtn_Click(object sender, EventArgs e)
         {
+            Boolean error = false;
             Uzytkownicy nowyUzytkownik = new Uzytkownicy();
             Produkty nowyProdukt = new Produkty();
 
-            BazaDanych.Polaczenie.Produkties.InsertOnSubmit(nowyProdukt);
-            nowyProdukt.Nazwa = nazwaTb.Text;
-            nowyProdukt.Kod_produktu = kodTb.Text.ToUpper();
-            nowyProdukt.Cena_netto = decimal.Parse(cenaTb.Text);
-            nowyProdukt.Ilosc = int.Parse(iloscTb.Text);
-            BazaDanych.Polaczenie.SubmitChanges();
-            this.Close();
-        }
+            if (nazwaTb.Text != string.Empty)
+            {
+                nowyProdukt.Nazwa = nazwaTb.Text;
+            }
+            else
+            {
+                error = true;
+            }
 
-        private void AnulujBtn_Click(object sender, EventArgs e)
-        {
-            this.Close();
+            if (kodTb.Text != string.Empty)
+            {
+                nowyProdukt.Kod_produktu = kodTb.Text.ToUpper();
+            }
+            else
+            {
+                error = true;
+            }
+
+            decimal cena_netto;
+            if (decimal.TryParse(cenaTb.Text, out cena_netto) && cena_netto > 0)
+            {
+                nowyProdukt.Cena_netto = cena_netto;
+            }
+            else
+            {
+                error = true;
+            }
+
+            Int32 ilosc;
+            if (Int32.TryParse(iloscTb.Text, out ilosc) && ilosc > 0)
+            {
+                nowyProdukt.Ilosc = ilosc;
+            }
+            else
+            {
+                error = true;
+            }
+
+            Int32 vat;
+            if (Int32.TryParse(vatTb.Text, out vat))
+            {
+                nowyProdukt.Vat = vat;
+            }
+            else
+            {
+                error = true;
+            }
+
+            if (!error)
+            {
+                BazaDanych.Polaczenie.Produkties.InsertOnSubmit(nowyProdukt);
+                BazaDanych.Polaczenie.SubmitChanges();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+            }
+            
         }
 
         private void kodTb_KeyUp(object sender, KeyEventArgs e)
