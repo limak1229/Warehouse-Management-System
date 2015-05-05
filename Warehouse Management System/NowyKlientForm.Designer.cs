@@ -58,6 +58,7 @@
             // 
             // nazwaTb
             // 
+            this.nazwaTb.CustomBackground = true;
             this.nazwaTb.Location = new System.Drawing.Point(110, 63);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(247, 23);
@@ -74,6 +75,7 @@
             // 
             // ulicaTb
             // 
+            this.ulicaTb.CustomBackground = true;
             this.ulicaTb.Location = new System.Drawing.Point(229, 91);
             this.ulicaTb.Name = "ulicaTb";
             this.ulicaTb.Size = new System.Drawing.Size(128, 23);
@@ -90,6 +92,7 @@
             // 
             // nrBudynkuTb
             // 
+            this.nrBudynkuTb.CustomBackground = true;
             this.nrBudynkuTb.Location = new System.Drawing.Point(110, 121);
             this.nrBudynkuTb.Name = "nrBudynkuTb";
             this.nrBudynkuTb.Size = new System.Drawing.Size(75, 23);
@@ -106,6 +109,7 @@
             // 
             // nrMieszkaniaTb
             // 
+            this.nrMieszkaniaTb.CustomBackground = true;
             this.nrMieszkaniaTb.Location = new System.Drawing.Point(292, 121);
             this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
             this.nrMieszkaniaTb.Size = new System.Drawing.Size(65, 23);
@@ -140,6 +144,7 @@
             // 
             // miastoTb
             // 
+            this.miastoTb.CustomBackground = true;
             this.miastoTb.Location = new System.Drawing.Point(110, 150);
             this.miastoTb.Name = "miastoTb";
             this.miastoTb.Size = new System.Drawing.Size(135, 23);
@@ -147,6 +152,7 @@
             // 
             // kodTb
             // 
+            this.kodTb.CustomBackground = true;
             this.kodTb.Location = new System.Drawing.Point(292, 150);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(65, 23);
@@ -163,6 +169,7 @@
             // 
             // nipTb
             // 
+            this.nipTb.CustomBackground = true;
             this.nipTb.Location = new System.Drawing.Point(110, 92);
             this.nipTb.Name = "nipTb";
             this.nipTb.Size = new System.Drawing.Size(67, 23);

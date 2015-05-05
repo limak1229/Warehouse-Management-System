@@ -59,6 +59,7 @@
             // 
             // iloscTb
             // 
+            this.iloscTb.CustomBackground = true;
             this.iloscTb.Location = new System.Drawing.Point(248, 376);
             this.iloscTb.Name = "iloscTb";
             this.iloscTb.Size = new System.Drawing.Size(35, 23);

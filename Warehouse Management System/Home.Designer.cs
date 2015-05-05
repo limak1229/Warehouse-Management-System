@@ -48,6 +48,7 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.ProduktyTabPage = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel15 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel16 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel17 = new MetroFramework.Controls.MetroLabel();
@@ -80,7 +81,6 @@
             this.FakturyMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.metroLabel25 = new MetroFramework.Controls.MetroLabel();
             this.UstawieniaTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
@@ -144,6 +144,8 @@
             // 
             // nrBudynkuTb
             // 
+            this.nrBudynkuTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nrBudynkuTb.CustomBackground = true;
             this.nrBudynkuTb.Location = new System.Drawing.Point(300, 56);
             this.nrBudynkuTb.Name = "nrBudynkuTb";
             this.nrBudynkuTb.Size = new System.Drawing.Size(46, 23);
@@ -151,6 +153,8 @@
             // 
             // nrMieszkaniaTb
             // 
+            this.nrMieszkaniaTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nrMieszkaniaTb.CustomBackground = true;
             this.nrMieszkaniaTb.Location = new System.Drawing.Point(453, 58);
             this.nrMieszkaniaTb.Name = "nrMieszkaniaTb";
             this.nrMieszkaniaTb.Size = new System.Drawing.Size(48, 23);
@@ -158,6 +162,8 @@
             // 
             // kodTb
             // 
+            this.kodTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.kodTb.CustomBackground = true;
             this.kodTb.Location = new System.Drawing.Point(254, 84);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(92, 23);
@@ -165,6 +171,8 @@
             // 
             // nipTb
             // 
+            this.nipTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nipTb.CustomBackground = true;
             this.nipTb.Location = new System.Drawing.Point(252, 26);
             this.nipTb.Name = "nipTb";
             this.nipTb.Size = new System.Drawing.Size(94, 23);
@@ -172,6 +180,8 @@
             // 
             // miastoTb
             // 
+            this.miastoTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.miastoTb.CustomBackground = true;
             this.miastoTb.Location = new System.Drawing.Point(66, 84);
             this.miastoTb.Name = "miastoTb";
             this.miastoTb.Size = new System.Drawing.Size(141, 23);
@@ -179,6 +189,8 @@
             // 
             // ulicaTb
             // 
+            this.ulicaTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ulicaTb.CustomBackground = true;
             this.ulicaTb.Location = new System.Drawing.Point(66, 56);
             this.ulicaTb.Name = "ulicaTb";
             this.ulicaTb.Size = new System.Drawing.Size(141, 23);
@@ -186,6 +198,8 @@
             // 
             // nazwaTb
             // 
+            this.nazwaTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.nazwaTb.CustomBackground = true;
             this.nazwaTb.Location = new System.Drawing.Point(66, 26);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(141, 23);
@@ -282,6 +296,15 @@
             this.ProduktyTabPage.Text = "Produkty";
             this.ProduktyTabPage.VerticalScrollbar = true;
             this.ProduktyTabPage.VerticalScrollbarBarColor = true;
+            // 
+            // metroLabel25
+            // 
+            this.metroLabel25.AutoSize = true;
+            this.metroLabel25.Location = new System.Drawing.Point(195, 29);
+            this.metroLabel25.Name = "metroLabel25";
+            this.metroLabel25.Size = new System.Drawing.Size(53, 19);
+            this.metroLabel25.TabIndex = 14;
+            this.metroLabel25.Text = "VAT (%)";
             // 
             // metroLabel15
             // 
@@ -616,7 +639,7 @@
             this.DodajFaktureBtn.Size = new System.Drawing.Size(101, 23);
             this.DodajFaktureBtn.Style = MetroFramework.MetroColorStyle.Teal;
             this.DodajFaktureBtn.TabIndex = 2;
-            this.DodajFaktureBtn.Text = "Dodaj fakture";
+            this.DodajFaktureBtn.Text = "Dodaj fakturę";
             this.DodajFaktureBtn.Theme = MetroFramework.MetroThemeStyle.Light;
             this.DodajFaktureBtn.Click += new System.EventHandler(this.DodajFaktureBtn_Click);
             // 
@@ -632,15 +655,6 @@
             this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
             this.MetroTabControl.TabIndex = 0;
-            // 
-            // metroLabel25
-            // 
-            this.metroLabel25.AutoSize = true;
-            this.metroLabel25.Location = new System.Drawing.Point(195, 29);
-            this.metroLabel25.Name = "metroLabel25";
-            this.metroLabel25.Size = new System.Drawing.Size(53, 19);
-            this.metroLabel25.TabIndex = 14;
-            this.metroLabel25.Text = "VAT (%)";
             // 
             // HomeForm
             // 

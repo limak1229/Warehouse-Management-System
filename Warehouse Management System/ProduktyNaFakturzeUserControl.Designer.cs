@@ -72,6 +72,8 @@
             // 
             // iloscTb
             // 
+            this.iloscTb.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.iloscTb.CustomBackground = true;
             this.iloscTb.Location = new System.Drawing.Point(427, 3);
             this.iloscTb.Name = "iloscTb";
             this.iloscTb.Size = new System.Drawing.Size(55, 23);

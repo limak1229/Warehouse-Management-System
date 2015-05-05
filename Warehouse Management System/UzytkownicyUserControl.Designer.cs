@@ -39,6 +39,7 @@
             // 
             // nazwiskoTb
             // 
+            this.nazwiskoTb.CustomBackground = true;
             this.nazwiskoTb.Location = new System.Drawing.Point(3, 6);
             this.nazwiskoTb.Name = "nazwiskoTb";
             this.nazwiskoTb.Size = new System.Drawing.Size(94, 23);
@@ -46,6 +47,7 @@
             // 
             // imieTb
             // 
+            this.imieTb.CustomBackground = true;
             this.imieTb.Location = new System.Drawing.Point(103, 6);
             this.imieTb.Name = "imieTb";
             this.imieTb.Size = new System.Drawing.Size(92, 23);
@@ -53,6 +55,7 @@
             // 
             // loginTb
             // 
+            this.loginTb.CustomBackground = true;
             this.loginTb.Location = new System.Drawing.Point(201, 6);
             this.loginTb.Name = "loginTb";
             this.loginTb.Size = new System.Drawing.Size(75, 23);
@@ -87,6 +90,7 @@
             // 
             // hasloTb
             // 
+            this.hasloTb.CustomBackground = true;
             this.hasloTb.Location = new System.Drawing.Point(282, 6);
             this.hasloTb.Name = "hasloTb";
             this.hasloTb.PasswordChar = '●';

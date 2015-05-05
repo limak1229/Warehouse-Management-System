@@ -39,6 +39,7 @@
             // 
             // nazwaTextBox
             // 
+            this.nazwaTextBox.CustomBackground = true;
             this.nazwaTextBox.Location = new System.Drawing.Point(3, 3);
             this.nazwaTextBox.Name = "nazwaTextBox";
             this.nazwaTextBox.Size = new System.Drawing.Size(194, 23);
@@ -46,6 +47,7 @@
             // 
             // kodTextBox
             // 
+            this.kodTextBox.CustomBackground = true;
             this.kodTextBox.Location = new System.Drawing.Point(248, 3);
             this.kodTextBox.Name = "kodTextBox";
             this.kodTextBox.Size = new System.Drawing.Size(77, 23);
@@ -54,6 +56,7 @@
             // 
             // iloscTextBox
             // 
+            this.iloscTextBox.CustomBackground = true;
             this.iloscTextBox.Location = new System.Drawing.Point(400, 3);
             this.iloscTextBox.Name = "iloscTextBox";
             this.iloscTextBox.Size = new System.Drawing.Size(67, 23);
@@ -61,6 +64,7 @@
             // 
             // cenaTextBox
             // 
+            this.cenaTextBox.CustomBackground = true;
             this.cenaTextBox.Location = new System.Drawing.Point(331, 3);
             this.cenaTextBox.Name = "cenaTextBox";
             this.cenaTextBox.Size = new System.Drawing.Size(63, 23);
@@ -86,6 +90,7 @@
             // 
             // vatTb
             // 
+            this.vatTb.CustomBackground = true;
             this.vatTb.Location = new System.Drawing.Point(203, 3);
             this.vatTb.Name = "vatTb";
             this.vatTb.Size = new System.Drawing.Size(39, 23);

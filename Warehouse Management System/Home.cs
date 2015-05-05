@@ -107,7 +107,7 @@ namespace Warehouse_Management_System
                 UUC.Name = "uzytkownik" + i.ToString();
                 this.UzytkownicyMetroPanel.Controls.Add(UUC);
             }
-            iloscUzytkownikowLabel.Text = "Ilość użytkowników: " + i.ToString();
+            iloscUzytkownikowLabel.Text = "Liczba użytkowników: " + i.ToString();
         }
 
         public void WczytajProdukty()
@@ -125,7 +125,7 @@ namespace Warehouse_Management_System
                 PUC.Name = "produkt" + i.ToString();
                 this.ProduktyMetroPanel.Controls.Add(PUC);
             }
-            iloscProduktowLabel.Text = "Ilość produktów: " + i.ToString();
+            iloscProduktowLabel.Text = "Liczba produktów: " + i.ToString();
         }
 
         public void WczytajKlientow()
@@ -143,7 +143,7 @@ namespace Warehouse_Management_System
                 KUC.Name = "klient" + i.ToString();
                 this.KlienciMetroPanel.Controls.Add(KUC);
             }
-            iloscKlientowLabel.Text = "Ilość klientów: " + i.ToString();
+            iloscKlientowLabel.Text = "Liczba klientów: " + i.ToString();
         }
 
         public void WczytajFaktury()
@@ -161,7 +161,7 @@ namespace Warehouse_Management_System
                 LFUC.Name = "faktura" + i.ToString();
                 this.FakturyMetroPanel.Controls.Add(LFUC);
             }
-            iloscFakturLabel.Text = "Ilość faktur: " + i.ToString();
+            iloscFakturLabel.Text = "Liczba faktur: " + i.ToString();
         }
 
         private void WczytajDaneFirmy()

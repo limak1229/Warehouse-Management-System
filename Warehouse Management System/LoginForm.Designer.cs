@@ -61,6 +61,7 @@
             // loginTextBox
             // 
             this.loginTextBox.BackColor = System.Drawing.Color.White;
+            this.loginTextBox.CustomBackground = true;
             this.loginTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.loginTextBox.Location = new System.Drawing.Point(73, 82);
             this.loginTextBox.Name = "loginTextBox";
@@ -69,6 +70,7 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.CustomBackground = true;
             this.passwordTextBox.Location = new System.Drawing.Point(73, 111);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '●';

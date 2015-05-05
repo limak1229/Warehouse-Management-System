@@ -88,6 +88,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BazaDataClasses.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Browser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Browser.Designer.cs">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     <None Include="BazaDataClasses.dbml.layout">
       <DependentUpon>BazaDataClasses.dbml</DependentUpon>
     </None>
+    <EmbeddedResource Include="Browser.resx">
+      <DependentUpon>Browser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="KlienciDoFakturyUserControl.resx">
       <DependentUpon>KlienciDoFakturyUserControl.cs</DependentUpon>
     </EmbeddedResource>

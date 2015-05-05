@@ -46,8 +46,16 @@ namespace Warehouse_Management_System
 
         private void HtmlBtn_Click(object sender, EventArgs e)
         {
-            string fileName = "C:\\Users\\pc1\\Desktop\\faktura numer " + f.Nr_faktury+ ".html";
-            StreamWriter sw = new StreamWriter(fileName);
+            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\faktura numer " + f.Nr_faktury+ ".html";
+            StreamWriter sw = new StreamWriter(filePath);
+
+            List<ProductSummary> Podsumowanie = f.Produkty_sprzedanes
+                .GroupBy(f1 => f1.vat)
+                .Select(f2 => new ProductSummary
+                {
+                    vat = f2.First().vat,
+                    Price = f2.Sum(p => (p.Cena_jednostkowa_netto*p.vat/100) * p.Ilosc),
+                }).ToList();
 
             sw.WriteLine("<html>");
                 sw.WriteLine("<head>");
@@ -89,7 +97,7 @@ namespace Warehouse_Management_System
                                 sw.WriteLine("<th style=\"width: 90px; color: #EBF3EC; padding: 2px;\">Wartość netto</th>");
                                 sw.WriteLine("<th style=\"width: 50px; color: #EBF3EC; padding: 2px;\">VAT</th>");
                                 sw.WriteLine("<th style=\"width: 80px; color: #EBF3EC; padding: 2px;\">Kwota VAT</th>");
-                                sw.WriteLine("<th style=\"width: 90px; color: #EBF3EC; padding: 2px;\">Cena brutto</th>");
+                                sw.WriteLine("<th style=\"width: 92px; color: #EBF3EC; padding: 2px;\">Wartość brutto</th>");
                             sw.WriteLine("</tr>");
                         sw.WriteLine("</thead>");
                         sw.WriteLine("<tbody>");
@@ -107,11 +115,11 @@ namespace Warehouse_Management_System
                                     sw.WriteLine("<td style=\"border-top: 1px solid #999\">"+ i++ +"</td>");
                                     sw.WriteLine("<td style=\"padding-left: 5px; text-align: left; border-top: 1px solid #999\">" + Produkt.Nazwa_produktu + "</td>");
                                     sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Produkt.Ilosc + "</td>");
-                                    sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Math.Round(Produkt.Cena_jednostkowa_netto, 2) + " zł</td>");
-                                    sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Math.Round(Produkt.Cena_jednostkowa_netto * Produkt.Ilosc, 2) + " zł</td>");
+                                    sw.WriteLine("<td style=\"border-top: 1px solid #999; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",Math.Round(Produkt.Cena_jednostkowa_netto, 2)) + " zł</td>");
+                                    sw.WriteLine("<td style=\"border-top: 1px solid #999; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",Math.Round(Produkt.Cena_jednostkowa_netto * Produkt.Ilosc, 2)) + " zł</td>");
                                     sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Produkt.vat + "%</td>");
-                                    sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Math.Round((Produkt.vat * Produkt.Cena_jednostkowa_netto / 100) * Produkt.Ilosc, 2) + " zł</td>");
-                                    sw.WriteLine("<td style=\"border-top: 1px solid #999\">" + Math.Round(((Produkt.vat * Produkt.Cena_jednostkowa_netto / 100) + Produkt.Cena_jednostkowa_netto) * Produkt.Ilosc, 2) + " zł</td>");
+                                    sw.WriteLine("<td style=\"border-top: 1px solid #999; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",Math.Round((Produkt.vat * Produkt.Cena_jednostkowa_netto / 100) * Produkt.Ilosc, 2)) + " zł</td>");
+                                    sw.WriteLine("<td style=\"border-top: 1px solid #999; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",Math.Round(((Produkt.vat * Produkt.Cena_jednostkowa_netto / 100) + Produkt.Cena_jednostkowa_netto) * Produkt.Ilosc, 2)) + " zł</td>");
                                 sw.WriteLine("</tr>");
                             }
 
@@ -122,10 +130,10 @@ namespace Warehouse_Management_System
 
                                 sw.WriteLine("<td style=\"background-color: #858585;\"><b>RAZEM:</b></td>");
 
-                                sw.WriteLine("<td style=\"background-color: #858585;\">" + war_netto + " zł</td>");
+                                sw.WriteLine("<td style=\"background-color: #858585; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",war_netto) + " zł</td>");
                                 sw.WriteLine("<td style=\"background-color: #858585;\"></td>");
-                                sw.WriteLine("<td style=\"background-color: #858585;\">" + kwota_vat + " zł</td>");
-                                sw.WriteLine("<td style=\"background-color: #858585;\">" + war_brutto + " zł</td>");
+                                sw.WriteLine("<td style=\"background-color: #858585; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",kwota_vat) + " zł</td>");
+                                sw.WriteLine("<td style=\"background-color: #858585; text-align: right; padding-right: 10px;\">" + string.Format("{0:n}",war_brutto) + " zł</td>");
 
                             sw.WriteLine("</tr>");
 
@@ -133,13 +141,20 @@ namespace Warehouse_Management_System
                     sw.WriteLine("</table>");
                     sw.WriteLine("<br>");
                     sw.WriteLine("<br>");
-                    sw.WriteLine("<h3 style=\"margin-left:20px;\">Razem do zapłaty: " + war_brutto + " zł</h3>");
+
+                    sw.WriteLine("<p style=\"margin-left:20px;\">");
+                    sw.WriteLine("Razem do zapłaty: " + string.Format("{0:n}", war_brutto) + " zł w tym:</br>");  
+                    foreach (ProductSummary p in Podsumowanie)
+                    {
+                        sw.WriteLine("VAT " +p.vat + "%: " + string.Format("{0:n}",p.Price) + " zł</br>");
+                    }
+                    sw.WriteLine("</p>");
                 sw.WriteLine("</body>");
             sw.WriteLine("</html>");
-            Process.Start(fileName);
-
-
             sw.Close();
+
+            Browser b = new Browser(f.Nr_faktury, filePath);
+            b.Show();
         }
     }
 }

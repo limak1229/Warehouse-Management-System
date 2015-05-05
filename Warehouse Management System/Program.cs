@@ -35,4 +35,13 @@ namespace Warehouse_Management_System
             return BazaDanych.Polaczenie.DaneFirmies.SingleOrDefault(d => d.Id_firmy == lastId);
         }
     }
+
+    public class ProductSummary
+    {
+
+        public ProductSummary() { }
+
+        public decimal Price { get; set; }
+        public Int32 vat { get; set; }
+    }
 }

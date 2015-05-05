@@ -43,3 +43,4 @@ C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProduktyDoWyboruUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ProduktyNaFakturzeUserControl.resources
 C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.ListaFakturUserControl.resources
+C:\Users\pc1\Desktop\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse_Management_System.Browser.resources

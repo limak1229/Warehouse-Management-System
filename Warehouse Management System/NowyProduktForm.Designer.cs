@@ -55,6 +55,7 @@
             // 
             // nazwaTb
             // 
+            this.nazwaTb.CustomBackground = true;
             this.nazwaTb.Location = new System.Drawing.Point(105, 63);
             this.nazwaTb.Name = "nazwaTb";
             this.nazwaTb.Size = new System.Drawing.Size(106, 23);
@@ -71,6 +72,7 @@
             // 
             // kodTb
             // 
+            this.kodTb.CustomBackground = true;
             this.kodTb.Location = new System.Drawing.Point(105, 121);
             this.kodTb.Name = "kodTb";
             this.kodTb.Size = new System.Drawing.Size(73, 23);
@@ -88,6 +90,7 @@
             // 
             // cenaTb
             // 
+            this.cenaTb.CustomBackground = true;
             this.cenaTb.Location = new System.Drawing.Point(105, 150);
             this.cenaTb.Name = "cenaTb";
             this.cenaTb.Size = new System.Drawing.Size(73, 23);
@@ -104,6 +107,7 @@
             // 
             // iloscTb
             // 
+            this.iloscTb.CustomBackground = true;
             this.iloscTb.Location = new System.Drawing.Point(105, 179);
             this.iloscTb.Name = "iloscTb";
             this.iloscTb.Size = new System.Drawing.Size(73, 23);
@@ -148,6 +152,7 @@
             // 
             // vatTb
             // 
+            this.vatTb.CustomBackground = true;
             this.vatTb.Location = new System.Drawing.Point(105, 92);
             this.vatTb.Name = "vatTb";
             this.vatTb.Size = new System.Drawing.Size(30, 23);
