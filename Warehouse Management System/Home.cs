@@ -85,11 +85,31 @@ namespace Warehouse_Management_System
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            WczytajUzytkownikow();
-            WczytajProdukty();
-            WczytajDaneFirmy();
-            WczytajKlientow();
-            WczytajFaktury();
+            if (zalogowanyUzytkownik.Uprawnienia.Nazwa == "Administrator")
+            {
+                WczytajProdukty();
+                WczytajDaneFirmy();
+                WczytajKlientow();
+                WczytajFaktury();
+                WczytajUzytkownikow();
+            } 
+            else if (zalogowanyUzytkownik.Uprawnienia.Nazwa == "Magazynier")
+            {
+                this.MetroTabControl.Controls.Remove(this.FakturyTabPage);
+                this.MetroTabControl.Controls.Remove(this.KlienciTabPage);
+                this.MetroTabControl.Controls.Remove(this.UzytkownicyTabPage);
+                this.MetroTabControl.Controls.Remove(this.UstawieniaTabPage);
+                WczytajProdukty();
+            }
+            else if (zalogowanyUzytkownik.Uprawnienia.Nazwa == "Kierownik")
+            {
+                this.MetroTabControl.Controls.Remove(this.ProduktyTabPage);
+                this.MetroTabControl.Controls.Remove(this.UzytkownicyTabPage);
+                this.MetroTabControl.Controls.Remove(this.UstawieniaTabPage);
+                WczytajKlientow();
+                WczytajFaktury();
+            }
+            
         }
 
         public void WczytajUzytkownikow()

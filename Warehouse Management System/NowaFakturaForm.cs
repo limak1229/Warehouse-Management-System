@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,11 @@ namespace Warehouse_Management_System
     public partial class NowaFakturaForm : MetroForm
     {
         public List<Produkty_sprzedane> listaWybranychProduktow = new List<Produkty_sprzedane>();
-        public Faktury faktura = new Faktury();
+        public Faktury faktura;
+        public Faktury kfaktura;
         private Uzytkownicy zalogowanyUzytkownik;
         private HomeForm homeForm;
+        private DaneFirmy DaneFirmy;
         bool error = false;
         public bool edit = false;
 
@@ -68,16 +71,11 @@ namespace Warehouse_Management_System
 
         private void NowaFaktura()
         {
-            DaneFirmy DaneFirmy = Program.pobierzDaneFirmy();
+            DaneFirmy = Program.pobierzDaneFirmy();
             if (DaneFirmy != null)
             {
+                faktura = new Faktury();
                 numerFakturyTb.Text = faktura.Nr_faktury = pobierzNumerFaktury(DateTime.Now).ToUpper();
-                BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
-                faktura.DaneFirmy = DaneFirmy;
-                faktura.Uzytkownicy = zalogowanyUzytkownik;
-                faktura.Data_sprzedazy = dataSprzedazyDtp.Value;
-                faktura.Data_wystawienia = dataWystawieniaDtp.Value;
-                faktura.Termin_zaplaty = terminZaplatyDtp.Value;
             }
             else
             {
@@ -144,11 +142,22 @@ namespace Warehouse_Management_System
             if (faktura.Klienci != null)
             {
                 if (faktura.Produkty_sprzedanes.Count > 0)
-                {
+                {                
+                    faktura.Data_sprzedazy = dataSprzedazyDtp.Value;
+                    faktura.Termin_zaplaty = terminZaplatyDtp.Value;
+                    if (!edit)
+                    {
+                        faktura.DaneFirmy = DaneFirmy;
+                        faktura.Uzytkownicy = zalogowanyUzytkownik;
+                        faktura.Data_wystawienia = dataWystawieniaDtp.Value;
+                        BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
+                    }
+
                     foreach (var p in listaWybranychProduktow.Where(p => p.Id_produktu_sprzedanego == 0))
                     {
                         BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
                     }
+
                     BazaDanych.Polaczenie.SubmitChanges();
                     DialogResult = DialogResult.OK;
                     Close();
@@ -204,8 +213,7 @@ namespace Warehouse_Management_System
             {
                 homeForm.Activate();
             }
-        }     
- 
+        }
         public void SetTotalPriceLabel()
         {
             decimal totalNetto = 0;
