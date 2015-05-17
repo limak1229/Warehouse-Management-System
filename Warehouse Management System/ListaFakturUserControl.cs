@@ -99,7 +99,7 @@ namespace Warehouse_Management_System
 
         private void HtmlBtn_Click(object sender, EventArgs e)
         {
-            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\faktura numer " + f.Nr_faktury + ".html";
+            string filePath = Environment.CurrentDirectory + "\\faktura numer " + f.Nr_faktury + ".html";
             StreamWriter sw = new StreamWriter(filePath);
             List<ProductSummary> Podsumowanie = new List<ProductSummary>();
             if(f.Poprzednia_faktura_id != null)

@@ -191,7 +191,7 @@ namespace Warehouse_Management_System
                         faktura.Data_wystawienia = dataWystawieniaDtp.Value;
                         BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
 
-                        foreach (var p in listaWybranychProduktow.Where(p => p.Id_produktu_sprzedanego == 0))
+                        foreach (var p in listaWybranychProduktow)
                         {
                             BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
                         }
