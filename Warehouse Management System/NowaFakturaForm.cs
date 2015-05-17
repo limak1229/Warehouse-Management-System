@@ -15,6 +15,8 @@ namespace Warehouse_Management_System
     public partial class NowaFakturaForm : MetroForm
     {
         public List<Produkty_sprzedane> listaWybranychProduktow = new List<Produkty_sprzedane>();
+        public List<Produkty_sprzedane> listaStarychProduktow = new List<Produkty_sprzedane>();
+        public List<Produkty_sprzedane> listaDoKopiowania = new List<Produkty_sprzedane>();
         public Faktury faktura;
         public Faktury kfaktura;
         private Uzytkownicy zalogowanyUzytkownik;
@@ -38,12 +40,42 @@ namespace Warehouse_Management_System
             NowaFaktura();
         }
 
-        public NowaFakturaForm(HomeForm homeForm, Faktury f)
+        public NowaFakturaForm(Uzytkownicy zalogowanyUzytkownik, HomeForm homeForm, Faktury f)
         {
             InitializeComponent();
             this.homeForm = homeForm;
             this.faktura = f;
+            this.zalogowanyUzytkownik = zalogowanyUzytkownik;
             podgladFaktury();
+            kopiaProduktow();
+        }
+
+        private void kopiaProduktow()
+        {
+            foreach (Produkty_sprzedane p in listaWybranychProduktow)
+            {
+                Produkty_sprzedane p2 = new Produkty_sprzedane();
+                p2.Korekta = 0;
+                p2.Cena_jednostkowa_netto = p.Cena_jednostkowa_netto;
+                p2.Ilosc = p.Ilosc;
+                p2.Kod_produktu = p.Kod_produktu;
+                p2.Nazwa_produktu = p.Nazwa_produktu;
+                p2.vat = p.vat;
+                listaStarychProduktow.Add(p2);
+                BazaDanych.Polaczenie.Produkty_sprzedanes.DeleteOnSubmit(p);
+            }
+
+            foreach (Produkty_sprzedane p in listaWybranychProduktow)
+            {
+                Produkty_sprzedane p2 = new Produkty_sprzedane();
+                p2.Korekta = 0;
+                p2.Cena_jednostkowa_netto = p.Cena_jednostkowa_netto;
+                p2.Ilosc = p.Ilosc;
+                p2.Kod_produktu = p.Kod_produktu;
+                p2.Nazwa_produktu = p.Nazwa_produktu;
+                p2.vat = p.vat;
+                listaDoKopiowania.Add(p2);
+            }
         }
 
         private void podgladFaktury()
@@ -114,7 +146,14 @@ namespace Warehouse_Management_System
                 produktNaFakturze.Nazwa_produktu = ListaProduktowForm.produktWybrany.Nazwa;
                 produktNaFakturze.Cena_jednostkowa_netto = ListaProduktowForm.produktWybrany.Cena_netto;
                 produktNaFakturze.vat = ListaProduktowForm.produktWybrany.Vat;
-                produktNaFakturze.Faktury = faktura;
+                if (edit)
+                {
+                    produktNaFakturze.Faktury = kfaktura;
+                }
+                else
+                {
+                    produktNaFakturze.Faktury = faktura;
+                }
                 listaWybranychProduktow.Add(produktNaFakturze);
                
                 WczytajProdukty();
@@ -139,25 +178,45 @@ namespace Warehouse_Management_System
 
         private void zapiszBtn_Click(object sender, EventArgs e)
         {
-            if (faktura.Klienci != null)
+            if(!edit)
             {
-                if (faktura.Produkty_sprzedanes.Count > 0)
-                {                
-                    faktura.Data_sprzedazy = dataSprzedazyDtp.Value;
-                    faktura.Termin_zaplaty = terminZaplatyDtp.Value;
-                    if (!edit)
+                if (faktura.Klienci != null)
+                {
+                    if (faktura.Produkty_sprzedanes.Count > 0)
                     {
+                        faktura.Data_sprzedazy = dataSprzedazyDtp.Value;
+                        faktura.Termin_zaplaty = terminZaplatyDtp.Value;
                         faktura.DaneFirmy = DaneFirmy;
                         faktura.Uzytkownicy = zalogowanyUzytkownik;
                         faktura.Data_wystawienia = dataWystawieniaDtp.Value;
                         BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(faktura);
-                    }
 
-                    foreach (var p in listaWybranychProduktow.Where(p => p.Id_produktu_sprzedanego == 0))
+                        foreach (var p in listaWybranychProduktow.Where(p => p.Id_produktu_sprzedanego == 0))
+                        {
+                            BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
+                        }
+
+                        BazaDanych.Polaczenie.SubmitChanges();
+                        DialogResult = DialogResult.OK;
+                        Close();
+                    }
+                    else
                     {
-                        BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
+                        MessageBox.Show("Proszę wybrać produkty.", "Błąd", MessageBoxButtons.OK);
                     }
 
+                }
+                else
+                {
+                    MessageBox.Show("Proszę wybrać klienta.", "Błąd", MessageBoxButtons.OK);
+                }  
+            }
+            else
+            {
+                if (listaWybranychProduktow.Count > 0)
+                {
+                    Korekta();
+                    BazaDanych.Polaczenie.Fakturies.InsertOnSubmit(kfaktura);
                     BazaDanych.Polaczenie.SubmitChanges();
                     DialogResult = DialogResult.OK;
                     Close();
@@ -167,11 +226,8 @@ namespace Warehouse_Management_System
                     MessageBox.Show("Proszę wybrać produkty.", "Błąd", MessageBoxButtons.OK);
                 }
                 
-            } 
-            else
-            {
-                MessageBox.Show("Proszę wybrać klienta.", "Błąd", MessageBoxButtons.OK);
-            }  
+            }
+            
         }
 
         private string pobierzNumerFaktury(DateTime data)
@@ -197,6 +253,7 @@ namespace Warehouse_Management_System
                 PNFUC.Name = "produktSprzedany" + i.ToString();
                 produktyNaFakturzeMetroPanel.Controls.Add(PNFUC);
             }
+
             if (listaWybranychProduktow.Count() > 0)
             {
                 l1.Visible = l2.Visible = l3.Visible = l4.Visible = l5.Visible = l6.Visible = true;
@@ -225,6 +282,45 @@ namespace Warehouse_Management_System
             }
             sumaNettoLbl.Text = totalNetto.ToString() + " zł.";
             sumaBruttoLbl.Text = totalBrutto.ToString() + " zł.";
+        }
+
+        private void Korekta()
+        {
+            kfaktura = new Faktury();
+            kfaktura.Data_korekty = DateTime.Now;
+            kfaktura.DaneFirmy = faktura.DaneFirmy;
+            kfaktura.Data_sprzedazy = faktura.Data_sprzedazy;
+            kfaktura.Data_wystawienia = faktura.Data_wystawienia;
+            kfaktura.Klienci = faktura.Klienci;
+            kfaktura.Nr_faktury = faktura.Nr_faktury + "-K";
+            kfaktura.Termin_zaplaty = faktura.Termin_zaplaty;
+            kfaktura.Uzytkownicy = zalogowanyUzytkownik;
+            kfaktura.Poprzednia_faktura_id = faktura.Id_faktury;
+
+            foreach (var p in listaWybranychProduktow)
+            {
+                Produkty_sprzedane p2 = new Produkty_sprzedane();
+                p2.Faktury = kfaktura;
+                p2.Korekta = 1;
+                p2.Cena_jednostkowa_netto = p.Cena_jednostkowa_netto;
+                p2.Ilosc = p.Ilosc;
+                p2.Kod_produktu = p.Kod_produktu;
+                p2.Nazwa_produktu = p.Nazwa_produktu;
+                p2.vat = p.vat;
+                BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p2);
+            }
+
+            foreach (var p in listaStarychProduktow)
+            {
+                p.Faktury = kfaktura;
+                BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
+            }
+
+            foreach (var p in listaDoKopiowania)
+            {
+                p.Faktury = faktura;
+                BazaDanych.Polaczenie.Produkty_sprzedanes.InsertOnSubmit(p);
+            }
         }
     }
 }

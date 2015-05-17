@@ -176,7 +176,7 @@ namespace Warehouse_Management_System
             Int32 i = 0;
             foreach (Faktury f in BazaDanych.Polaczenie.Fakturies.OrderByDescending(f => f.Id_faktury))
             {
-                ListaFakturUserControl LFUC = new ListaFakturUserControl(this, f);
+                ListaFakturUserControl LFUC = new ListaFakturUserControl(zalogowanyUzytkownik, this, f);
                 LFUC.Location = new System.Drawing.Point(0, (i++) * (LFUC.Height));
                 LFUC.Name = "faktura" + i.ToString();
                 this.FakturyMetroPanel.Controls.Add(LFUC);
