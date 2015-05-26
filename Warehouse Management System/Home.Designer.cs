@@ -63,6 +63,7 @@
             this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.iloscKlientowLabel = new MetroFramework.Controls.MetroLabel();
             this.KlienciMetroPanel = new MetroFramework.Controls.MetroPanel();
+            this.importujKlientowBtn = new MetroFramework.Controls.MetroButton();
             this.DodajKlientaBtn = new MetroFramework.Controls.MetroButton();
             this.UzytkownicyTabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel14 = new MetroFramework.Controls.MetroLabel();
@@ -82,13 +83,20 @@
             this.FakturyMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
-            this.importujKlientowBtn = new MetroFramework.Controls.MetroButton();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.zapiszHasloBtn = new MetroFramework.Controls.MetroButton();
+            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
+            this.pass2 = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel27 = new MetroFramework.Controls.MetroLabel();
+            this.pass = new MetroFramework.Controls.MetroTextBox();
+            this.metroLabel26 = new MetroFramework.Controls.MetroLabel();
             this.UstawieniaTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
             this.UzytkownicyTabPage.SuspendLayout();
             this.FakturyTabPage.SuspendLayout();
             this.MetroTabControl.SuspendLayout();
+            this.metroTabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // WylogujBtn
@@ -458,6 +466,17 @@
             this.KlienciMetroPanel.VerticalScrollbarHighlightOnWheel = false;
             this.KlienciMetroPanel.VerticalScrollbarSize = 10;
             // 
+            // importujKlientowBtn
+            // 
+            this.importujKlientowBtn.Location = new System.Drawing.Point(110, 3);
+            this.importujKlientowBtn.Name = "importujKlientowBtn";
+            this.importujKlientowBtn.Size = new System.Drawing.Size(110, 23);
+            this.importujKlientowBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.importujKlientowBtn.TabIndex = 7;
+            this.importujKlientowBtn.Text = "Importuj klientów";
+            this.importujKlientowBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.importujKlientowBtn.Click += new System.EventHandler(this.importujKlientowBtn_Click);
+            // 
             // DodajKlientaBtn
             // 
             this.DodajKlientaBtn.Location = new System.Drawing.Point(3, 3);
@@ -661,26 +680,87 @@
             // MetroTabControl
             // 
             this.MetroTabControl.Controls.Add(this.FakturyTabPage);
+            this.MetroTabControl.Controls.Add(this.metroTabPage1);
             this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
             this.MetroTabControl.Controls.Add(this.KlienciTabPage);
             this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
             this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 1;
+            this.MetroTabControl.SelectedIndex = 0;
             this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
             this.MetroTabControl.TabIndex = 0;
             // 
-            // importujKlientowBtn
+            // metroTabPage1
             // 
-            this.importujKlientowBtn.Location = new System.Drawing.Point(110, 3);
-            this.importujKlientowBtn.Name = "importujKlientowBtn";
-            this.importujKlientowBtn.Size = new System.Drawing.Size(110, 23);
-            this.importujKlientowBtn.Style = MetroFramework.MetroColorStyle.Teal;
-            this.importujKlientowBtn.TabIndex = 7;
-            this.importujKlientowBtn.Text = "Importuj klientów";
-            this.importujKlientowBtn.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.importujKlientowBtn.Click += new System.EventHandler(this.importujKlientowBtn_Click);
+            this.metroTabPage1.Controls.Add(this.zapiszHasloBtn);
+            this.metroTabPage1.Controls.Add(this.metroLabel28);
+            this.metroTabPage1.Controls.Add(this.pass2);
+            this.metroTabPage1.Controls.Add(this.metroLabel27);
+            this.metroTabPage1.Controls.Add(this.pass);
+            this.metroTabPage1.Controls.Add(this.metroLabel26);
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 35);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(608, 308);
+            this.metroTabPage1.TabIndex = 5;
+            this.metroTabPage1.Text = "Ustawienia";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            // 
+            // zapiszHasloBtn
+            // 
+            this.zapiszHasloBtn.Location = new System.Drawing.Point(153, 114);
+            this.zapiszHasloBtn.Name = "zapiszHasloBtn";
+            this.zapiszHasloBtn.Size = new System.Drawing.Size(61, 23);
+            this.zapiszHasloBtn.TabIndex = 5;
+            this.zapiszHasloBtn.Text = "Zapisz";
+            this.zapiszHasloBtn.Click += new System.EventHandler(this.zapiszHasloBtn_Click);
+            // 
+            // metroLabel28
+            // 
+            this.metroLabel28.AutoSize = true;
+            this.metroLabel28.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel28.Location = new System.Drawing.Point(57, 18);
+            this.metroLabel28.Name = "metroLabel28";
+            this.metroLabel28.Size = new System.Drawing.Size(113, 25);
+            this.metroLabel28.TabIndex = 4;
+            this.metroLabel28.Text = "Zmiana hasła";
+            // 
+            // pass2
+            // 
+            this.pass2.Location = new System.Drawing.Point(101, 85);
+            this.pass2.Name = "pass2";
+            this.pass2.PasswordChar = '●';
+            this.pass2.Size = new System.Drawing.Size(113, 23);
+            this.pass2.TabIndex = 3;
+            this.pass2.UseSystemPasswordChar = true;
+            // 
+            // metroLabel27
+            // 
+            this.metroLabel27.AutoSize = true;
+            this.metroLabel27.Location = new System.Drawing.Point(2, 86);
+            this.metroLabel27.Name = "metroLabel27";
+            this.metroLabel27.Size = new System.Drawing.Size(93, 19);
+            this.metroLabel27.TabIndex = 2;
+            this.metroLabel27.Text = "Powtórz hasło:";
+            // 
+            // pass
+            // 
+            this.pass.Location = new System.Drawing.Point(101, 55);
+            this.pass.Name = "pass";
+            this.pass.PasswordChar = '●';
+            this.pass.Size = new System.Drawing.Size(113, 23);
+            this.pass.TabIndex = 3;
+            this.pass.UseSystemPasswordChar = true;
+            // 
+            // metroLabel26
+            // 
+            this.metroLabel26.AutoSize = true;
+            this.metroLabel26.Location = new System.Drawing.Point(15, 56);
+            this.metroLabel26.Name = "metroLabel26";
+            this.metroLabel26.Size = new System.Drawing.Size(80, 19);
+            this.metroLabel26.TabIndex = 2;
+            this.metroLabel26.Text = "Nowe hasło:";
             // 
             // HomeForm
             // 
@@ -709,6 +789,8 @@
             this.FakturyTabPage.ResumeLayout(false);
             this.FakturyTabPage.PerformLayout();
             this.MetroTabControl.ResumeLayout(false);
+            this.metroTabPage1.ResumeLayout(false);
+            this.metroTabPage1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -771,6 +853,13 @@
         private MetroFramework.Controls.MetroLabel metroLabel25;
         private MetroFramework.Controls.MetroButton importujProduktyBtn;
         private MetroFramework.Controls.MetroButton importujKlientowBtn;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroLabel metroLabel28;
+        private MetroFramework.Controls.MetroTextBox pass2;
+        private MetroFramework.Controls.MetroLabel metroLabel27;
+        private MetroFramework.Controls.MetroTextBox pass;
+        private MetroFramework.Controls.MetroLabel metroLabel26;
+        private MetroFramework.Controls.MetroButton zapiszHasloBtn;
 
 
 
