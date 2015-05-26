@@ -55,6 +55,7 @@
             this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.ProduktyMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.iloscProduktowLabel = new MetroFramework.Controls.MetroLabel();
+            this.importujProduktyBtn = new MetroFramework.Controls.MetroButton();
             this.DodajProduktBtn = new MetroFramework.Controls.MetroButton();
             this.KlienciTabPage = new MetroFramework.Controls.MetroTabPage();
             this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
@@ -81,6 +82,7 @@
             this.FakturyMetroPanel = new MetroFramework.Controls.MetroPanel();
             this.DodajFaktureBtn = new MetroFramework.Controls.MetroButton();
             this.MetroTabControl = new MetroFramework.Controls.MetroTabControl();
+            this.importujKlientowBtn = new MetroFramework.Controls.MetroButton();
             this.UstawieniaTabPage.SuspendLayout();
             this.ProduktyTabPage.SuspendLayout();
             this.KlienciTabPage.SuspendLayout();
@@ -286,6 +288,7 @@
             this.ProduktyTabPage.Controls.Add(this.metroLabel18);
             this.ProduktyTabPage.Controls.Add(this.ProduktyMetroPanel);
             this.ProduktyTabPage.Controls.Add(this.iloscProduktowLabel);
+            this.ProduktyTabPage.Controls.Add(this.importujProduktyBtn);
             this.ProduktyTabPage.Controls.Add(this.DodajProduktBtn);
             this.ProduktyTabPage.HorizontalScrollbar = true;
             this.ProduktyTabPage.HorizontalScrollbarBarColor = true;
@@ -361,11 +364,22 @@
             // iloscProduktowLabel
             // 
             this.iloscProduktowLabel.AutoSize = true;
-            this.iloscProduktowLabel.Location = new System.Drawing.Point(110, 5);
+            this.iloscProduktowLabel.Location = new System.Drawing.Point(232, 5);
             this.iloscProduktowLabel.Name = "iloscProduktowLabel";
             this.iloscProduktowLabel.Size = new System.Drawing.Size(94, 19);
             this.iloscProduktowLabel.TabIndex = 3;
             this.iloscProduktowLabel.Text = "ilość rekordów";
+            // 
+            // importujProduktyBtn
+            // 
+            this.importujProduktyBtn.Location = new System.Drawing.Point(110, 3);
+            this.importujProduktyBtn.Name = "importujProduktyBtn";
+            this.importujProduktyBtn.Size = new System.Drawing.Size(116, 23);
+            this.importujProduktyBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.importujProduktyBtn.TabIndex = 3;
+            this.importujProduktyBtn.Text = "Importuj produkty";
+            this.importujProduktyBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.importujProduktyBtn.Click += new System.EventHandler(this.importujProduktyBtn_Click);
             // 
             // DodajProduktBtn
             // 
@@ -385,6 +399,7 @@
             this.KlienciTabPage.Controls.Add(this.metroLabel19);
             this.KlienciTabPage.Controls.Add(this.iloscKlientowLabel);
             this.KlienciTabPage.Controls.Add(this.KlienciMetroPanel);
+            this.KlienciTabPage.Controls.Add(this.importujKlientowBtn);
             this.KlienciTabPage.Controls.Add(this.DodajKlientaBtn);
             this.KlienciTabPage.HorizontalScrollbarBarColor = true;
             this.KlienciTabPage.Location = new System.Drawing.Point(4, 35);
@@ -424,7 +439,7 @@
             // iloscKlientowLabel
             // 
             this.iloscKlientowLabel.AutoSize = true;
-            this.iloscKlientowLabel.Location = new System.Drawing.Point(110, 5);
+            this.iloscKlientowLabel.Location = new System.Drawing.Point(226, 5);
             this.iloscKlientowLabel.Name = "iloscKlientowLabel";
             this.iloscKlientowLabel.Size = new System.Drawing.Size(113, 19);
             this.iloscKlientowLabel.TabIndex = 10;
@@ -646,15 +661,26 @@
             // MetroTabControl
             // 
             this.MetroTabControl.Controls.Add(this.FakturyTabPage);
-            this.MetroTabControl.Controls.Add(this.KlienciTabPage);
             this.MetroTabControl.Controls.Add(this.ProduktyTabPage);
+            this.MetroTabControl.Controls.Add(this.KlienciTabPage);
             this.MetroTabControl.Controls.Add(this.UzytkownicyTabPage);
             this.MetroTabControl.Controls.Add(this.UstawieniaTabPage);
             this.MetroTabControl.Location = new System.Drawing.Point(23, 63);
             this.MetroTabControl.Name = "MetroTabControl";
-            this.MetroTabControl.SelectedIndex = 0;
+            this.MetroTabControl.SelectedIndex = 1;
             this.MetroTabControl.Size = new System.Drawing.Size(616, 347);
             this.MetroTabControl.TabIndex = 0;
+            // 
+            // importujKlientowBtn
+            // 
+            this.importujKlientowBtn.Location = new System.Drawing.Point(110, 3);
+            this.importujKlientowBtn.Name = "importujKlientowBtn";
+            this.importujKlientowBtn.Size = new System.Drawing.Size(110, 23);
+            this.importujKlientowBtn.Style = MetroFramework.MetroColorStyle.Teal;
+            this.importujKlientowBtn.TabIndex = 7;
+            this.importujKlientowBtn.Text = "Importuj klientów";
+            this.importujKlientowBtn.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.importujKlientowBtn.Click += new System.EventHandler(this.importujKlientowBtn_Click);
             // 
             // HomeForm
             // 
@@ -743,6 +769,8 @@
         private MetroFramework.Controls.MetroLabel iloscFakturLabel;
         private MetroFramework.Controls.MetroLabel metroLabel24;
         private MetroFramework.Controls.MetroLabel metroLabel25;
+        private MetroFramework.Controls.MetroButton importujProduktyBtn;
+        private MetroFramework.Controls.MetroButton importujKlientowBtn;
 
 
 

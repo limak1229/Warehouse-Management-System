@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
 using Warehouse_Management_System;
 
 namespace Warehouse_Management_System
@@ -218,6 +220,122 @@ namespace Warehouse_Management_System
             else
             {
                 MessageBox.Show("Wprowadź prawidłowe dane.", "Błąd", MessageBoxButtons.OK);
+            }
+        }
+
+        private void importujProduktyBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.DefaultExt = "xml";
+            ofd.Filter = "XML Files (*.xml)|*.xml";
+            ofd.FilterIndex = 0;
+            ofd.ShowDialog();
+
+            if (ofd.FileName != string.Empty)
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(ofd.FileName);
+
+                foreach (XmlNode produkt in doc.DocumentElement.ChildNodes)
+                {
+                    if (produkt.HasChildNodes)
+                    {
+                        XmlNode nazwaNode = produkt.SelectSingleNode("nazwa");
+                        XmlNode cenaNode = produkt.SelectSingleNode("cena");
+                        XmlNode iloscNode = produkt.SelectSingleNode("ilosc");
+                        XmlNode vatNode = produkt.SelectSingleNode("vat");
+                        XmlNode kodNode = produkt.SelectSingleNode("kod");
+                        if (nazwaNode != null && cenaNode != null && iloscNode != null && vatNode != null && kodNode != null)
+                        {
+                            Produkty p = new Produkty();
+                            p.Nazwa = nazwaNode.InnerText;
+                            p.Cena_netto= decimal.Parse(cenaNode.InnerText);
+                            p.Ilosc = Int32.Parse(iloscNode.InnerText);
+                            p.Vat = Int32.Parse(vatNode.InnerText);
+                            p.Kod_produktu = kodNode.InnerText;
+
+                            Produkty produktAktualizacja = BazaDanych.Polaczenie.Produkties.Where(p2 => p2.Kod_produktu == p.Kod_produktu).FirstOrDefault();
+                            
+                            if (produktAktualizacja != null)
+                            {
+                                produktAktualizacja.Ilosc = p.Ilosc;
+                                produktAktualizacja.Nazwa = p.Nazwa;
+                                produktAktualizacja.Cena_netto = p.Cena_netto;
+                                produktAktualizacja.Vat = p.Vat;
+                            }
+                            else
+                            {
+                                BazaDanych.Polaczenie.Produkties.InsertOnSubmit(p);
+                            }
+                            BazaDanych.Polaczenie.SubmitChanges();
+                        }
+                    }
+                }
+                WczytajProdukty();
+            }
+        }
+
+        private void importujKlientowBtn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.DefaultExt = "xml";
+            ofd.Filter = "XML Files (*.xml)|*.xml";
+            ofd.FilterIndex = 0;
+            ofd.ShowDialog();
+
+            if (ofd.FileName != string.Empty)
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load(ofd.FileName);
+
+                foreach (XmlNode klient in doc.DocumentElement.ChildNodes)
+                {
+                    if (klient.HasChildNodes)
+                    {
+                        XmlNode nazwaNode = klient.SelectSingleNode("nazwa");
+                        XmlNode ulicaNode = klient.SelectSingleNode("ulica");
+                        XmlNode nrBudynkuNode = klient.SelectSingleNode("nrBudynku");
+                        XmlNode nrMieszkaniaNode = klient.SelectSingleNode("nrMieszkania");
+                        XmlNode miastoNode = klient.SelectSingleNode("miasto");
+                        XmlNode nipNode = klient.SelectSingleNode("nip");
+                        XmlNode telefonNode = klient.SelectSingleNode("telefon");
+                        XmlNode kodNode = klient.SelectSingleNode("kod");
+
+                        if (nazwaNode != null && ulicaNode != null && nrBudynkuNode != null && nrMieszkaniaNode != null && miastoNode != null && nipNode != null && telefonNode != null && kodNode != null)
+                        {
+                            Klienci k = new Klienci();
+                            k.Kod_pocztowy = kodNode.InnerText;
+                            k.Ulica = ulicaNode.InnerText;
+                            k.Miasto = miastoNode.InnerText;
+                            k.Nazwa = nazwaNode.InnerText;
+                            k.Nip = nipNode.InnerText;
+                            k.Nr_budynku = nrBudynkuNode.InnerText;
+                            k.Nr_mieszkania = nrMieszkaniaNode.InnerText;
+                            k.Telefon = telefonNode.InnerText;
+
+                            Klienci klientAktualizacja = BazaDanych.Polaczenie.Kliencis.Where(k2 => k2.Nip == k.Nip).FirstOrDefault();
+
+                            if (klientAktualizacja != null)
+                            {
+                                klientAktualizacja.Kod_pocztowy = k.Kod_pocztowy;
+                                klientAktualizacja.Miasto = k.Miasto;
+                                klientAktualizacja.Ulica = k.Ulica;
+                                klientAktualizacja.Nazwa = k.Nazwa;
+                                klientAktualizacja.Nr_budynku = k.Nr_budynku;
+                                klientAktualizacja.Nr_mieszkania = k.Nr_mieszkania;
+                                klientAktualizacja.Telefon = k.Telefon;
+                            }
+                            else
+                            {
+                                BazaDanych.Polaczenie.Kliencis.InsertOnSubmit(k);
+                            }
+                            BazaDanych.Polaczenie.SubmitChanges();
+                        }
+                    }
+                }
+                WczytajKlientow();
             }
         }
     }
