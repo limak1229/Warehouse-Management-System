@@ -338,5 +338,19 @@ namespace Warehouse_Management_System
                 WczytajKlientow();
             }
         }
+
+        private void zapiszHasloBtn_Click(object sender, EventArgs e)
+        {
+            if (pass.Text.Length > 0 && pass2.Text.Length > 0 && pass2.Text == pass.Text)
+            {
+                zalogowanyUzytkownik.Haslo = Program.hashPass(pass.Text);
+                BazaDanych.Polaczenie.SubmitChanges();
+                MessageBox.Show("Hasło zostało zmienione.", "Zmiana hasła", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Hasła nie mogą się od siebie róznić.", "Nieprawidłowe hasło", MessageBoxButtons.OK);
+            }
+        }
     }
 }
