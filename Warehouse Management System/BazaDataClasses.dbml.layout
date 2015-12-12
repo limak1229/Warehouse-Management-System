@@ -38,14 +38,14 @@
         <elementListCompartment Id="1d28c7c2-020f-4951-bf0b-3f0e32758c40" absoluteBounds="0.765, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(3.53125 : 5.625); (3.53125 : 1.28125); (6.25 : 1.28125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(3.53125 : 5.625); (3.53125 : 1.28125); (6.25 : 1.28125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BazaDataClassesDataContext/DaneFirmy/DaneFirmy_Faktury" />
       <nodes>
         <classShapeMoniker Id="bb081634-eb87-4828-a6ad-57d336bac6b4" />
         <classShapeMoniker Id="ab4e6653-3632-4554-87ba-612dfbedfa31" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(5.5 : 10.1450512695312); (6.46875 : 10.1450512695312); (6.46875 : 3.73240397135417)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.5 : 10.1450512695312); (6.46875 : 10.1450512695312); (6.46875 : 3.73240397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BazaDataClassesDataContext/Klienci/Klienci_Faktury" />
       <nodes>
         <classShapeMoniker Id="85f02eb7-77e4-4aaa-9e9a-72fd80ee2013" />
@@ -65,14 +65,14 @@
         <elementListCompartment Id="01c6ca05-f821-4051-abd5-90962f3f7d1f" absoluteBounds="3.6399999999999997, 2.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(5.625 : 2.67870198567708); (6.25 : 2.67870198567708)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(5.625 : 2.67870198567708); (6.25 : 2.67870198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BazaDataClassesDataContext/Uzytkownicy/Uzytkownicy_Faktury" />
       <nodes>
         <classShapeMoniker Id="0df19665-711c-496a-b029-6ef32703cee3" />
         <classShapeMoniker Id="ab4e6653-3632-4554-87ba-612dfbedfa31" />
       </nodes>
     </associationConnector>
-    <associationConnector edgePoints="[(2.75 : 2.34699625651042); (3.44791666666667 : 2.34699625651042 : JumpStart); (3.61458333333333 : 2.34699625651042 : JumpEnd); (3.625 : 2.34699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+    <associationConnector edgePoints="[(2.75 : 2.34699625651042); (3.44791666666667 : 2.34699625651042 : JumpStart); (3.61458333333333 : 2.34699625651042 : JumpEnd); (3.625 : 2.34699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
       <AssociationMoniker Name="/BazaDataClassesDataContext/Uprawnienia/Uprawnienia_Uzytkownicy" />
       <nodes>
         <classShapeMoniker Id="ba84f5dc-b200-4206-b234-a790bb17c6c0" />

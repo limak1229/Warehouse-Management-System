@@ -18,6 +18,7 @@ namespace Warehouse_Management_System
         {
             InitializeComponent();
             this.AcceptButton = ZalogujButton;
+            //BazaDanych.Polaczenie.CreateDatabase();
         }
 
         private void ZalogujButton_Click(object sender, EventArgs e)
