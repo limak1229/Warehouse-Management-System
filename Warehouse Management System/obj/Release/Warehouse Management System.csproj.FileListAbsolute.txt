@@ -1,0 +1,32 @@
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Warehouse Management System.exe.config
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Warehouse Management System.exe
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Warehouse Management System.pdb
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\MetroFramework.dll
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\MetroFramework.Fonts.dll
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.Browser.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.KlienciDoFakturyUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.KlienciUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ListaFakturUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ProduktyDoWyboruUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ProduktyNaFakturzeUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.UzytkownicyUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.HomeForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ListaKlientówForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ListaProduktowForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.LoginForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.NowaFakturaForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.Nowy_KlientForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.NowyProduktForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.NowyUzytkownikForm.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.ProductUserControl.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse_Management_System.Properties.Resources.resources
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.csproj.GenerateResource.Cache
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.exe
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.pdb
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.csprojResolveAssemblyReference.cache
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Warehouse Management System.exe.manifest
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Warehouse Management System.application
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.exe.manifest
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Release\Warehouse Management System.application
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Database.mdf
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Release\Database_log.ldf

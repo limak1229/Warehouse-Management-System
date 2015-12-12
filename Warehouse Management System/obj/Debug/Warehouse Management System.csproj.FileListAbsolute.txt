@@ -75,3 +75,4 @@ C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management
 C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\bin\Debug\Warehouse Management System.application
 C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.exe.manifest
 C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.application
+C:\Users\Kamil\Documents\GitHub\Warehouse-Management-System\Warehouse Management System\obj\Debug\Warehouse Management System.csprojResolveAssemblyReference.cache
