@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Warehouse Management System.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Warehouse Management System.exe" version="1.0.0.11" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Warehouse Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -78,24 +78,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Warehouse Management System.exe" size="117248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Warehouse Management System.exe" size="118784">
       <assemblyIdentity name="Warehouse Management System" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sk7nyfGULI+tsjRckyItoJDQHs76LWVsb4rVEYdWPMo=</dsig:DigestValue>
+        <dsig:DigestValue>MhcnJiJE1pmr+HOeqfrCiB9gxMwYdB3EADkoupbdTww=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Database.mdf" size="3211264">
+  <file name="Database.mdf" size="3211264" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9uWg7hCSV9w+r7lo6Iwedp/+7EcCi4KyyHMT4lp8kaM=</dsig:DigestValue>
+      <dsig:DigestValue>kMet7zFKFP4lKOp4t06flP7kbcLRHHHokiQaXWc9P0U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Database_log.ldf" size="516096" writeableType="applicationData">
@@ -104,16 +104,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>zPE8kZK2tV7rBOsjXmP/kudAc2F1MfQ8z4aiqY4CHxo=</dsig:DigestValue>
+      <dsig:DigestValue>xQEsZswnZYDT9Leg+uzLWym4XrZn1nkpEh34iJ8Zkls=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Warehouse Management System.exe.config" size="1323">
+  <file name="Warehouse Management System.exe.config" size="580">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>a59mpVGX+M8iZo//LyCDlUnFX8sl8PwfVUra2wzfQEA=</dsig:DigestValue>
+      <dsig:DigestValue>06W0OUUkhxOvQqTptYER5f88GvyOa9Z+Wci5BOpUkZY=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

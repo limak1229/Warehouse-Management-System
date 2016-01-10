@@ -29,7 +29,7 @@ namespace Warehouse_Management_System
             {
                 ProduktyDoWyboruUserControl PDWUC = new ProduktyDoWyboruUserControl(p);
                 PDWUC.Location = new System.Drawing.Point(0, (i++) * (PDWUC.Height));
-                PDWUC.Name = "klient" + i.ToString();
+                PDWUC.Name = "produkt" + i.ToString();
                 PDWUC.Click += PDWUC_Click;
                 this.ProduktyFakturaMetroPanel.Controls.Add(PDWUC);
             }
@@ -71,6 +71,48 @@ namespace Warehouse_Management_System
                 MessageBox.Show("Wprowadź prawidłową ilość.", "Błąd", MessageBoxButtons.OK);
             }
             
+        }
+
+        private void szukajProduktuBtn_Click(object sender, EventArgs e)
+        {
+            if (pdwuc != null)
+            {
+                produktWybrany = null;
+                pdwuc.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+                pdwuc.checkedField = false;
+            }
+            if (szukajProduktTb.Text != string.Empty)
+            {
+                var szukanyProdukt = BazaDanych.Polaczenie.Produkties.Where(p => p.Kod_produktu == szukajProduktTb.Text).FirstOrDefault();
+                if(szukanyProdukt != null)
+                {
+                    this.ProduktyFakturaMetroPanel.Controls.Clear();
+                    ProduktyDoWyboruUserControl PDWUC = new ProduktyDoWyboruUserControl(szukanyProdukt);
+                    PDWUC.Location = new System.Drawing.Point(0, 0);
+                    PDWUC.Name = "szukanyProdukt";
+                    PDWUC.Click += PDWUC_Click;
+                    this.ProduktyFakturaMetroPanel.Controls.Add(PDWUC);
+                }
+                else
+                {
+                    MessageBox.Show("Brak produktu o podanym kodzie", "Brak produktu", MessageBoxButtons.OK);
+                }
+
+            } 
+            else
+            {
+                this.ProduktyFakturaMetroPanel.Controls.Clear();
+                Int32 i = 0;
+                foreach (Produkty p in BazaDanych.Polaczenie.Produkties)
+                {
+                    ProduktyDoWyboruUserControl PDWUC = new ProduktyDoWyboruUserControl(p);
+                    PDWUC.Location = new System.Drawing.Point(0, (i++) * (PDWUC.Height));
+                    PDWUC.Name = "produkt" + i.ToString();
+                    PDWUC.Click += PDWUC_Click;
+                    this.ProduktyFakturaMetroPanel.Controls.Add(PDWUC);
+                }
+            }
+           
         }
     }
 }
